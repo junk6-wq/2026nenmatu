@@ -1,0 +1,1485 @@
+<title>冬旅三案</title>
+
+<style>
+:root{
+  --paper:#E8EDF3;
+  --surface:#FFFFFF;
+  --surface-2:#F1F5FA;
+  --line:#C4D1DE;
+  --line-soft:#DCE5EE;
+  --ink:#0C1826;
+  --ink-2:#33465B;
+  --muted:#5F7186;
+  --gold:#A8781F;
+  --gold-fill:#E3B355;
+  --a:#2C6A85;
+  --b:#98452C;
+  --c:#A96A10;
+  --warn:#A2331C;
+  --ok:#2C6647;
+  --drive:#7C8FA3;
+  --night:#07101C;
+  --sea:#16324B;
+
+  --f-disp:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP","Songti SC",serif;
+  --f-body:"Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;
+  --f-data:ui-monospace,"SFMono-Regular","Menlo","Consolas",monospace;
+
+  --w:min(1100px,92vw);
+  --r:3px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#09121D;
+    --surface:#101D2D;
+    --surface-2:#15263A;
+    --line:#2A4159;
+    --line-soft:#1D3245;
+    --ink:#E1EAF3;
+    --ink-2:#B2C3D4;
+    --muted:#8497AB;
+    --gold:#DFB35A;
+    --gold-fill:#C9993C;
+    --a:#6FADC7;
+    --b:#D2846A;
+    --c:#DFA548;
+    --warn:#E28871;
+    --ok:#6DB491;
+    --drive:#5C7086;
+    --sea:#0C1F30;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#09121D;
+  --surface:#101D2D;
+  --surface-2:#15263A;
+  --line:#2A4159;
+  --line-soft:#1D3245;
+  --ink:#E1EAF3;
+  --ink-2:#B2C3D4;
+  --muted:#8497AB;
+  --gold:#DFB35A;
+  --gold-fill:#C9993C;
+  --a:#6FADC7;
+  --b:#D2846A;
+  --c:#DFA548;
+  --warn:#E28871;
+  --ok:#6DB491;
+  --drive:#5C7086;
+  --sea:#0C1F30;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--f-body);font-size:16px;line-height:1.85;
+  -webkit-text-size-adjust:100%;overflow-x:hidden;
+}
+h1,h2,h3,h4,h5{font-family:var(--f-disp);font-weight:600;text-wrap:balance;margin:0;line-height:1.35;letter-spacing:.04em}
+p{margin:0}
+a{color:inherit}
+svg{display:block;max-width:100%;height:auto}
+
+/* ---------------- hero ---------------- */
+.hero{position:relative;background:var(--night);color:#E8F0F8;overflow:hidden;
+  padding:clamp(64px,12vh,124px) 0 clamp(48px,9vh,88px)}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(227,179,85,.55),transparent)}
+#snow{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero-in{position:relative;width:var(--w);margin:0 auto;
+  display:grid;gap:40px;grid-template-columns:1fr}
+@media(min-width:900px){.hero-in{grid-template-columns:1.15fr .85fr;align-items:center}}
+.eyebrow{font-family:var(--f-data);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  color:#E3B355;margin-bottom:20px}
+.hero h1{font-size:clamp(44px,9.5vw,88px);letter-spacing:.14em;color:#F4F9FD;margin-bottom:6px}
+.hero .sub{font-family:var(--f-disp);font-size:clamp(15px,2.6vw,19px);letter-spacing:.2em;
+  color:#9DB5CB;margin-bottom:28px}
+.hero .lede{max-width:32em;color:#BCCDDD;font-size:15px;line-height:2}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:26px}
+.chip{font-family:var(--f-data);font-size:11px;letter-spacing:.06em;
+  border:1px solid rgba(157,181,203,.34);color:#B7CADC;padding:4px 10px;border-radius:99px;white-space:nowrap}
+.hero-fig{opacity:.95}
+
+/* ---------------- shell ---------------- */
+main{width:var(--w);margin:0 auto;padding:0 0 90px}
+section{padding-top:clamp(54px,8.5vw,88px)}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:22px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(22px,4.4vw,32px)}
+.sec-head .tag{font-family:var(--f-data);font-size:11px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
+.card{background:var(--surface);border:1px solid var(--line-soft);border-radius:var(--r);
+  padding:clamp(20px,3.4vw,32px)}
+.stack{display:flex;flex-direction:column;gap:20px}
+
+figure{margin:0}
+figcaption{font-size:12.5px;color:var(--muted);line-height:1.75;margin-top:12px;
+  padding-left:14px;border-left:2px solid var(--line)}
+.fig-t{font-family:var(--f-data);font-size:10px;letter-spacing:.18em;color:var(--muted);
+  text-transform:uppercase;margin-bottom:10px}
+
+/* ---------------- verdict ---------------- */
+.verdict{border-top:3px solid var(--gold-fill)}
+.pick{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;margin-bottom:22px}
+.pick .num{font-family:var(--f-disp);font-size:56px;line-height:.9;color:var(--gold)}
+.pick h3{font-size:clamp(19px,3.6vw,26px);margin-bottom:6px}
+.pick .why{color:var(--ink-2);font-size:14.5px;max-width:44em}
+.vgrid{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:720px){.vgrid{grid-template-columns:1fr 1fr}}
+.vbox{border:1px solid var(--line-soft);border-radius:var(--r);padding:16px 18px;background:var(--surface-2)}
+.vbox h4{font-size:15px;margin-bottom:6px}
+.vbox p{font-size:13.5px;color:var(--ink-2);line-height:1.8}
+
+/* ---------------- map ---------------- */
+.maprow{display:grid;gap:26px;grid-template-columns:1fr}
+@media(min-width:900px){.maprow{grid-template-columns:1fr 320px;align-items:start}}
+.mapwrap{max-width:520px;margin:0 auto;width:100%}
+.mlegend{display:flex;flex-direction:column;gap:14px}
+.mleg{display:flex;gap:12px;align-items:flex-start;padding-bottom:14px;border-bottom:1px solid var(--line-soft)}
+.mleg .sw{width:26px;height:4px;border-radius:2px;flex:none;margin-top:9px;background:var(--h)}
+.mleg h5{font-size:14.5px;letter-spacing:.06em}
+.mleg .n{font-family:var(--f-data);font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.mleg p{font-size:12.5px;color:var(--ink-2);line-height:1.75;margin-top:4px}
+
+/* ---------------- calendar ---------------- */
+.cal{display:grid;grid-template-columns:repeat(9,1fr);gap:4px;margin:20px 0 14px}
+.cal .d{border:1px solid var(--line-soft);border-radius:2px;padding:8px 2px 9px;text-align:center;background:var(--surface)}
+.cal .d .dow{font-family:var(--f-data);font-size:9.5px;letter-spacing:.06em;color:var(--muted);display:block}
+.cal .d .dn{font-family:var(--f-data);font-size:14px;font-variant-numeric:tabular-nums;display:block;margin-top:2px}
+.cal .d.pickd{background:var(--gold-fill);border-color:var(--gold-fill);color:#0B1420}
+.cal .d.pickd .dow{color:rgba(11,20,32,.72)}
+.cal .d.peak{background:var(--surface-2);color:var(--muted)}
+.cal-key{display:flex;gap:16px;flex-wrap:wrap;font-family:var(--f-data);font-size:11px;color:var(--muted)}
+.cal-key i{display:inline-block;width:10px;height:10px;border:1px solid var(--line);vertical-align:-1px;margin-right:5px}
+.cal-key i.g{background:var(--gold-fill);border-color:var(--gold-fill)}
+.cal-key i.p{background:var(--surface-2)}
+
+/* ---------------- compare cards ---------------- */
+.cmp{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:880px){.cmp{grid-template-columns:repeat(3,1fr)}}
+.plan-card{background:var(--surface);border:1px solid var(--line-soft);border-radius:var(--r);
+  overflow:hidden;display:flex;flex-direction:column;border-top:3px solid var(--h);
+  transition:transform .35s cubic-bezier(.2,.7,.3,1),border-color .35s}
+@media(hover:hover){.plan-card:hover{transform:translateY(-3px);border-color:var(--h)}}
+.scene{display:block;width:100%;height:auto;background:var(--sea)}
+.pc-body{padding:20px;display:flex;flex-direction:column;gap:13px;flex:1}
+.plan-card .kicker{font-family:var(--f-data);font-size:11px;letter-spacing:.2em;color:var(--h)}
+.plan-card h3{font-size:22px;letter-spacing:.08em;margin-top:-6px}
+.metrics{display:flex;flex-direction:column;border-top:1px solid var(--line-soft)}
+.metrics div{display:flex;justify-content:space-between;gap:10px;padding:7px 0;
+  border-bottom:1px solid var(--line-soft);font-size:13px}
+.metrics span:first-child{color:var(--muted)}
+.metrics span:last-child{font-family:var(--f-data);font-variant-numeric:tabular-nums;text-align:right}
+.plan-card .vl{font-size:13px;color:var(--ink-2);line-height:1.8}
+.jump{margin-top:auto;font-family:var(--f-data);font-size:11.5px;letter-spacing:.14em;
+  color:var(--h);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;align-self:flex-start}
+
+/* ---------------- timeline ---------------- */
+.tl{margin:18px 0 6px}
+.tl-axis{position:relative;height:16px;margin-left:76px;border-bottom:1px solid var(--line-soft)}
+.tl-axis span{position:absolute;top:0;transform:translateX(-50%);
+  font-family:var(--f-data);font-size:9.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.tl-row{display:flex;align-items:center;gap:0;margin-top:7px}
+.tl-lab{width:76px;flex:none;font-family:var(--f-data);font-size:10.5px;color:var(--muted);
+  letter-spacing:.08em;line-height:1.4}
+.tl-lab b{display:block;color:var(--ink);font-weight:600;font-size:11px}
+.tl-track{position:relative;height:26px;flex:1;background:var(--surface-2);
+  border-radius:2px;overflow:hidden;border:1px solid var(--line-soft)}
+.sg{position:absolute;top:0;bottom:0;border-radius:1px}
+.sg.drive{background:repeating-linear-gradient(135deg,var(--drive) 0 3px,transparent 3px 6px);
+  border-top:1px solid var(--drive);border-bottom:1px solid var(--drive)}
+.sg.rest{background:var(--line-soft)}
+.sg.sight{background:var(--h)}
+.sg.meal{background:var(--gold-fill)}
+.sg.stay{background:var(--line);opacity:.5}
+.tl-key{display:flex;flex-wrap:wrap;gap:14px;margin:14px 0 0 76px;
+  font-family:var(--f-data);font-size:10.5px;color:var(--muted)}
+.tl-key span{display:flex;align-items:center;gap:5px}
+.tl-key i{width:14px;height:9px;border-radius:1px;display:inline-block}
+.tl-key i.drive{background:repeating-linear-gradient(135deg,var(--drive) 0 3px,transparent 3px 6px);border:1px solid var(--drive)}
+.tl-key i.rest{background:var(--line-soft)}
+.tl-key i.sight{background:var(--h)}
+.tl-key i.meal{background:var(--gold-fill)}
+.tl-key i.stay{background:var(--line);opacity:.5}
+@media(max-width:600px){
+  .tl-axis,.tl-key{margin-left:60px}
+  .tl-lab{width:60px;font-size:9.5px}
+}
+
+/* ---------------- plan detail ---------------- */
+.plan{scroll-margin-top:16px}
+.plan-head{border-top:3px solid var(--h);padding-top:22px;margin-bottom:6px}
+.plan-head .kicker{font-family:var(--f-data);font-size:11px;letter-spacing:.22em;color:var(--h);margin-bottom:8px}
+.plan-head h2{font-size:clamp(26px,5.4vw,40px);letter-spacing:.1em}
+.plan-head .lede{margin-top:12px;color:var(--ink-2);font-size:14.5px;max-width:42em;line-height:1.95}
+.plan-banner{margin-top:18px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line-soft)}
+
+.day{margin-top:32px}
+.day-bar{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+  padding-bottom:8px;border-bottom:2px solid var(--h)}
+.day-bar .dnum{font-family:var(--f-data);font-size:11px;letter-spacing:.2em;color:var(--h)}
+.day-bar h4{font-size:17px;letter-spacing:.06em}
+.day-bar .meta{margin-left:auto;font-family:var(--f-data);font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;border-bottom:1px solid var(--line-soft)}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:13px}
+thead th{font-family:var(--f-data);font-weight:400;font-size:10.5px;letter-spacing:.14em;
+  color:var(--muted);text-align:left;padding:10px 12px 9px;border-bottom:1px solid var(--line);
+  white-space:nowrap;text-transform:uppercase}
+tbody td{padding:12px;border-bottom:1px solid var(--line-soft);vertical-align:top;line-height:1.7}
+tbody tr:last-child td{border-bottom:none}
+td.t{font-family:var(--f-data);font-variant-numeric:tabular-nums;white-space:nowrap;font-size:13px}
+td.dest{font-weight:600;min-width:8em}
+td.dest a{color:var(--h);text-decoration:none;border-bottom:1px dotted currentColor}
+tr.meal td{background:var(--surface-2)}
+tr.move td{color:var(--muted);font-size:12.5px}
+
+.conf{font-family:var(--f-data);font-size:9.5px;letter-spacing:.06em;padding:1px 5px;border-radius:2px;
+  border:1px solid var(--line);color:var(--muted);white-space:nowrap;display:inline-block;
+  vertical-align:1px;margin-left:2px}
+.conf.ok{border-color:var(--ok);color:var(--ok)}
+.conf.chk{border-color:var(--warn);color:var(--warn)}
+
+.notes{display:grid;gap:14px;grid-template-columns:1fr;margin-top:24px}
+@media(min-width:760px){.notes{grid-template-columns:1fr 1fr}}
+.note{border:1px solid var(--line-soft);border-radius:var(--r);padding:16px 18px;background:var(--surface)}
+.note.alert{border-left:3px solid var(--warn)}
+.note.rain{border-left:3px solid var(--a)}
+.note h5{font-size:14px;margin:0 0 8px}
+.note ul{margin:0;padding-left:1.15em}
+.note li{font-size:13px;color:var(--ink-2);line-height:1.85;margin-bottom:4px}
+.note li::marker{color:var(--h,var(--muted))}
+
+.cost{margin-top:26px}
+.cost table{min-width:520px}
+.cost td.n{font-family:var(--f-data);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.cost tfoot td{border-top:2px solid var(--line);padding-top:12px;font-weight:600}
+
+.rate{margin-top:24px;display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:660px){.rate{grid-template-columns:1fr 1fr}}
+.rrow{display:flex;align-items:center;gap:12px}
+.rrow .lbl{font-size:13px;width:6.5em;flex:none;color:var(--ink-2)}
+.pips{display:flex;gap:4px;flex:none}
+.pip{width:16px;height:8px;background:var(--line-soft);border-radius:1px}
+.pip.on{background:var(--h)}
+.pip.low{background:var(--warn)}
+.rrow .cmt{font-size:12px;color:var(--muted);line-height:1.6}
+
+.banner{border:1px solid var(--warn);border-left:4px solid var(--warn);border-radius:var(--r);
+  padding:16px 18px;margin-top:18px;background:var(--surface)}
+.banner strong{font-family:var(--f-disp);letter-spacing:.06em;color:var(--warn);display:block;margin-bottom:6px;font-size:14.5px}
+.banner p{font-size:13.5px;color:var(--ink-2);line-height:1.85}
+
+.src ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;grid-template-columns:1fr}
+@media(min-width:700px){.src ul{grid-template-columns:1fr 1fr}}
+.src li{font-size:13px;border-bottom:1px solid var(--line-soft);padding-bottom:8px}
+.src a{color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line)}
+.src a:hover{color:var(--gold);border-color:var(--gold)}
+.src .k{font-family:var(--f-data);font-size:10px;letter-spacing:.12em;color:var(--muted);display:block}
+
+footer{border-top:1px solid var(--line-soft);margin-top:56px;padding:26px 0 0;
+  font-size:12px;color:var(--muted);line-height:1.9}
+a:focus-visible,.jump:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="hero">
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <div class="hero-in">
+    <div>
+      <div class="eyebrow">Mito &rarr; 2 nights &middot; winter 2026</div>
+      <h1>冬旅三案</h1>
+      <div class="sub">松島 ／ 伊香保 ／ 伊豆</div>
+      <p class="lede">水戸発・車・2泊3日。年末休みのどこかに置く旅を、三つの方角で組みました。決め手は予算ではありません——予算はどの案でも余ります。効いてくるのは<strong>ハンドルを握っている時間</strong>です。</p>
+      <div class="chips">
+        <span class="chip">水戸駅発</span><span class="chip">車 / 運転者 実質1名</span>
+        <span class="chip">妻 妊娠中（27年5月予定）</span><span class="chip">生もの不可</span>
+        <span class="chip">貝・海老・甲殻類 回避</span><span class="chip">連続3h / 日7h</span>
+        <span class="chip">出発 8:00以降</span><span class="chip">総額 20万円</span>
+      </div>
+    </div>
+
+    <div class="hero-fig">
+      <!-- 3案の初日運転量を一目で -->
+      <svg viewBox="0 0 340 250" role="img" aria-label="初日の運転時間の比較。案A4時間、案B3時間20分、案C5時間30分。連続運転の上限は3時間。">
+        <defs>
+          <pattern id="hd" width="6" height="6" patternTransform="rotate(135)" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="0" y2="6" stroke="#8AA0B6" stroke-width="3"/>
+          </pattern>
+        </defs>
+        <text x="0" y="14" fill="#E3B355" font-family="ui-monospace,monospace" font-size="10" letter-spacing="2.4">DAY 1 DRIVING TIME</text>
+        <!-- 3h reference -->
+        <line x1="88" y1="34" x2="88" y2="230" stroke="#E3B355" stroke-width="1" stroke-dasharray="3 4" opacity=".85"/>
+        <text x="92" y="46" fill="#E3B355" font-family="ui-monospace,monospace" font-size="9.5">連続運転の上限 3h</text>
+
+        <!-- A -->
+        <text x="0" y="82" fill="#9DB5CB" font-family="ui-monospace,monospace" font-size="10">案 A</text>
+        <rect x="0" y="90" width="240" height="20" fill="url(#hd)"/>
+        <rect x="0" y="90" width="240" height="20" fill="none" stroke="#8AA0B6" stroke-width="1"/>
+        <text x="248" y="104" fill="#DCE8F2" font-family="ui-monospace,monospace" font-size="11">4h00</text>
+        <text x="0" y="70" fill="#E8F0F8" font-family="serif" font-size="13" letter-spacing="1.5">松島</text>
+
+        <!-- B -->
+        <text x="0" y="142" fill="#9DB5CB" font-family="ui-monospace,monospace" font-size="10">案 B</text>
+        <rect x="0" y="150" width="200" height="20" fill="url(#hd)"/>
+        <rect x="0" y="150" width="200" height="20" fill="none" stroke="#8AA0B6" stroke-width="1"/>
+        <text x="208" y="164" fill="#DCE8F2" font-family="ui-monospace,monospace" font-size="11">3h20</text>
+        <text x="0" y="130" fill="#E8F0F8" font-family="serif" font-size="13" letter-spacing="1.5">伊香保</text>
+
+        <!-- C -->
+        <text x="0" y="202" fill="#9DB5CB" font-family="ui-monospace,monospace" font-size="10">案 C</text>
+        <rect x="0" y="210" width="330" height="20" fill="url(#hd)"/>
+        <rect x="0" y="210" width="330" height="20" fill="none" stroke="#E0836A" stroke-width="1.5"/>
+        <text x="236" y="246" fill="#E0836A" font-family="ui-monospace,monospace" font-size="11">5h30 — 上限の1.8倍</text>
+        <text x="0" y="190" fill="#E8F0F8" font-family="serif" font-size="13" letter-spacing="1.5">伊豆</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- ================= VERDICT ================= -->
+<section id="verdict">
+  <div class="sec-head"><h2>結論</h2><span class="tag">the call</span></div>
+  <div class="card verdict">
+    <div class="pick">
+      <div class="num">A</div>
+      <div>
+        <h3>松島・仙台を推します</h3>
+        <p class="why">「近すぎないところ」という条件に対して、負担が破綻しない上限がここです。片道約270km・実走4時間。常磐道はほぼ平地で峠越えがなく、太平洋側は年末でも積雪がまれ。冬タイヤなしでも成立する数少ない“遠出”です。食も、牛たん・穴子・寿司と、貝と甲殻類を避けても選択肢が残ります。</p>
+      </div>
+    </div>
+    <div class="vgrid">
+      <div class="vbox">
+        <h4>体調を最優先にするなら → 案B（伊香保）</h4>
+        <p>片道3時間20分。移動が一段軽く、宿もこの予算帯で最も選べます。ただし石段365段と冬の山道という別の負担があるので、そこは回避前提で組んでいます。</p>
+      </div>
+      <div class="vbox">
+        <h4>案C（伊豆）は今回は薦めません</h4>
+        <p>水戸から伊豆は首都圏を縦断します。年末の渋滞込みで初日5〜6時間。連続運転3時間の上限を守れず、妊娠中の同乗としても長すぎます。行くなら3泊、または途中1泊を挟む前提です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MAP ================= -->
+<section id="map">
+  <div class="sec-head"><h2>三つの方角</h2><span class="tag">one map</span></div>
+  <div class="card">
+    <div class="maprow">
+      <figure>
+        <div class="fig-t">Figure 1 — route comparison</div>
+        <div class="mapwrap">
+        <svg viewBox="0 0 700 790" role="img" aria-label="水戸から三方向へのルート図。案Aは常磐道を北へ松島まで270km。案Bは北関東道を西へ伊香保まで200km。案Cは圏央道と東名で東京の外周を回り込み伊豆まで330km。">
+          <defs>
+            <linearGradient id="seaG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="var(--sea)" stop-opacity=".16"/>
+              <stop offset="1" stop-color="var(--sea)" stop-opacity=".05"/>
+            </linearGradient>
+            <marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+              <path d="M0,1 L9,5 L0,9 z" fill="context-stroke"/>
+            </marker>
+          </defs>
+
+          <rect x="0" y="0" width="700" height="790" fill="url(#seaG)"/>
+
+          <!-- 本州（模式図） -->
+          <path d="M0,304 L110,253 L210,148 L296,91 L324,0 L700,0
+                   L660,51 L620,67 L606,82 L586,127 L596,171 L580,334 L532,399 L520,454
+                   L544,519 L574,564 L500,618 L464,675 L380,722 L366,699 L384,631
+                   L372,580 L356,585 L328,619 L324,676 L316,652 L296,646 L230,656
+                   L216,684 L222,709 L190,766 L168,779 L154,751 L156,709 L172,684
+                   L136,678 L100,699 L64,728 L46,779 L0,779 Z"
+                fill="var(--surface-2)" stroke="var(--line)" stroke-width="1.25" stroke-linejoin="round"/>
+
+          <!-- 富士山 -->
+          <path d="M132,650 L146,626 L160,650 Z" fill="var(--line)" opacity=".85"/>
+          <text x="146" y="664" text-anchor="middle" fill="var(--muted)" font-family="var(--f-data)" font-size="9.5">富士</text>
+
+          <!-- 東京（案Cの迂回対象） -->
+          <circle cx="338" cy="572" r="16" fill="none" stroke="var(--muted)" stroke-width="1" stroke-dasharray="2 3" opacity=".8"/>
+          <text x="338" y="576" text-anchor="middle" fill="var(--muted)" font-family="var(--f-body)" font-size="10.5">東京</text>
+
+          <!-- ROUTE A -->
+          <path d="M494,443 Q545,390 578,313 Q610,235 596,171 Q588,115 574,82 L612,63"
+                fill="none" stroke="var(--a)" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arw)"/>
+          <!-- ROUTE B -->
+          <path d="M494,443 Q430,430 360,437 Q270,445 202,452 L184,420"
+                fill="none" stroke="var(--b)" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arw)"/>
+          <path d="M202,452 L178,466" fill="none" stroke="var(--b)" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round"/>
+          <!-- ROUTE C -->
+          <path d="M494,443 Q452,472 416,498 Q348,545 274,595 L278,617 Q236,655 200,690 L186,709"
+                fill="none" stroke="var(--c)" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arw)"/>
+          <path d="M186,709 Q202,700 216,684" fill="none" stroke="var(--c)" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round"/>
+
+          <!-- 距離ラベル -->
+          <text x="626" y="240" text-anchor="end" fill="var(--a)" font-family="var(--f-data)" font-size="12" font-weight="600">270km / 4h00</text>
+          <text x="330" y="424" text-anchor="middle" fill="var(--b)" font-family="var(--f-data)" font-size="12" font-weight="600">200km / 3h20</text>
+          <text x="352" y="668" text-anchor="middle" fill="var(--c)" font-family="var(--f-data)" font-size="12" font-weight="600">330km / 5h30</text>
+
+          <!-- 都市 -->
+          <g font-family="var(--f-body)" font-size="12.5" fill="var(--ink)">
+            <circle cx="494" cy="443" r="7" fill="var(--gold-fill)" stroke="var(--ink)" stroke-width="1.5"/>
+            <text x="482" y="437" text-anchor="end" font-weight="700">水戸</text>
+            <text x="482" y="453" text-anchor="end" font-family="var(--f-data)" font-size="9.5" fill="var(--muted)">START</text>
+
+            <circle cx="612" cy="63" r="5.5" fill="var(--a)"/>
+            <text x="600" y="52" text-anchor="end" font-weight="600">松島</text>
+            <circle cx="574" cy="82" r="3.5" fill="var(--a)" opacity=".7"/>
+            <text x="562" y="92" text-anchor="end" font-size="11" fill="var(--muted)">仙台</text>
+            <circle cx="578" cy="313" r="3" fill="var(--muted)"/>
+            <text x="566" y="317" text-anchor="end" font-size="10.5" fill="var(--muted)">いわき</text>
+
+            <circle cx="184" cy="420" r="5.5" fill="var(--b)"/>
+            <text x="196" y="414" font-weight="600">伊香保</text>
+            <circle cx="178" cy="466" r="3.5" fill="var(--b)" opacity=".7"/>
+            <text x="190" y="474" font-size="11" fill="var(--muted)">富岡</text>
+
+            <circle cx="186" cy="709" r="5.5" fill="var(--c)"/>
+            <text x="198" y="722" font-weight="600">修善寺</text>
+            <circle cx="216" cy="684" r="3.5" fill="var(--c)" opacity=".7"/>
+            <text x="228" y="682" font-size="11" fill="var(--muted)">熱海</text>
+            <circle cx="278" cy="617" r="3" fill="var(--muted)"/>
+            <text x="290" y="614" font-size="10.5" fill="var(--muted)">海老名JCT</text>
+          </g>
+
+          <!-- 方位 -->
+          <g opacity=".7">
+            <line x1="40" y1="60" x2="40" y2="24" stroke="var(--muted)" stroke-width="1.2" marker-end="url(#arw)"/>
+            <text x="40" y="76" text-anchor="middle" fill="var(--muted)" font-family="var(--f-data)" font-size="10">N</text>
+          </g>
+        </svg>
+        </div>
+        <figcaption>模式図（縮尺は正確ではありません）。案Aと案Bは水戸から一直線に伸びるが、<strong>案Cだけが東京の外周を大きく回り込む</strong>。この迂回が片道1時間半の差を生んでいる。破線は現地での2日目の移動。</figcaption>
+      </figure>
+
+      <div class="mlegend">
+        <div class="mleg" style="--h:var(--a)">
+          <i class="sw"></i>
+          <div>
+            <h5>案A 松島・仙台</h5>
+            <div class="n">常磐道 → 三陸道 ／ 峠なし</div>
+            <p>ほぼ全区間が高速道路。海沿いの平地を北上するだけで、標高を上げない。太平洋側なので12月末の積雪リスクが三案で最も低い。</p>
+          </div>
+        </div>
+        <div class="mleg" style="--h:var(--b)">
+          <i class="sw"></i>
+          <div>
+            <h5>案B 伊香保・北群馬</h5>
+            <div class="n">北関東道 → 関越道 ／ 最短</div>
+            <p>横断路が一本で通っているため距離も時間も最小。ただし目的地の伊香保は標高700m、その先の榛名はさらに上。<strong>雪と凍結は目的地側にある。</strong></p>
+          </div>
+        </div>
+        <div class="mleg" style="--h:var(--c)">
+          <i class="sw"></i>
+          <div>
+            <h5>案C 伊豆・修善寺</h5>
+            <div class="n">圏央道 → 東名 ／ 首都圏縦断</div>
+            <p>直線距離では伊香保と大差ないのに、東京を避けて回り込むぶん距離が1.65倍になる。海老名JCT周辺は年末渋滞の常習区間。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DRIVING LOAD ================= -->
+<section id="load">
+  <div class="sec-head"><h2>運転の総量</h2><span class="tag">the deciding axis</span></div>
+  <div class="card">
+    <figure>
+      <div class="fig-t">Figure 2 — driving hours per day</div>
+      <svg viewBox="0 0 600 250" role="img" aria-label="日別の運転時間。案Aは4時間・1.5時間・4時間。案Bは3.3時間・2.3時間・3.3時間。案Cは5.5時間・1.5時間・4.5時間で、初日と最終日が突出している。">
+        <defs>
+          <pattern id="hd2" width="6" height="6" patternTransform="rotate(135)" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="0" y2="6" stroke="var(--drive)" stroke-width="3"/>
+          </pattern>
+          <pattern id="hd3" width="6" height="6" patternTransform="rotate(135)" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="0" y2="6" stroke="var(--warn)" stroke-width="3"/>
+          </pattern>
+        </defs>
+
+        <!-- y grid -->
+        <g stroke="var(--line-soft)" stroke-width="1">
+          <line x1="42" y1="180" x2="590" y2="180"/>
+          <line x1="42" y1="155" x2="590" y2="155"/>
+          <line x1="42" y1="130" x2="590" y2="130"/>
+          <line x1="42" y1="80" x2="590" y2="80"/>
+          <line x1="42" y1="55" x2="590" y2="55"/>
+          <line x1="42" y1="30" x2="590" y2="30"/>
+        </g>
+        <g fill="var(--muted)" font-family="var(--f-data)" font-size="9.5" text-anchor="end">
+          <text x="34" y="184">0h</text><text x="34" y="159">1h</text><text x="34" y="134">2h</text>
+          <text x="34" y="84">4h</text><text x="34" y="59">5h</text><text x="34" y="34">6h</text>
+        </g>
+
+        <!-- 3h reference -->
+        <line x1="42" y1="105" x2="590" y2="105" stroke="var(--gold)" stroke-width="1.4" stroke-dasharray="4 4"/>
+        <text x="590" y="100" text-anchor="end" fill="var(--gold)" font-family="var(--f-data)" font-size="10">連続運転の上限 3h — 超える日は休憩での分割が必須</text>
+
+        <!-- group A x=70 -->
+        <g>
+          <rect x="70"  y="80"   width="28" height="100" fill="url(#hd2)" stroke="var(--drive)"/>
+          <rect x="104" y="142.5" width="28" height="37.5" fill="url(#hd2)" stroke="var(--drive)"/>
+          <rect x="138" y="80"   width="28" height="100" fill="url(#hd2)" stroke="var(--drive)"/>
+          <text x="118" y="200" text-anchor="middle" fill="var(--a)" font-family="var(--f-body)" font-size="13" font-weight="600">案A 松島</text>
+          <text x="118" y="216" text-anchor="middle" fill="var(--muted)" font-family="var(--f-data)" font-size="10">合計 9h30</text>
+        </g>
+        <!-- group B x=240 -->
+        <g>
+          <rect x="240" y="96.8"  width="28" height="83.2" fill="url(#hd2)" stroke="var(--drive)"/>
+          <rect x="274" y="121.8" width="28" height="58.2" fill="url(#hd2)" stroke="var(--drive)"/>
+          <rect x="308" y="96.8"  width="28" height="83.2" fill="url(#hd2)" stroke="var(--drive)"/>
+          <text x="288" y="200" text-anchor="middle" fill="var(--b)" font-family="var(--f-body)" font-size="13" font-weight="600">案B 伊香保</text>
+          <text x="288" y="216" text-anchor="middle" fill="var(--muted)" font-family="var(--f-data)" font-size="10">合計 9h00</text>
+        </g>
+        <!-- group C x=410 -->
+        <g>
+          <rect x="410" y="42.5"  width="28" height="137.5" fill="url(#hd3)" stroke="var(--warn)"/>
+          <rect x="444" y="142.5" width="28" height="37.5" fill="url(#hd2)" stroke="var(--drive)"/>
+          <rect x="478" y="67.5"  width="28" height="112.5" fill="url(#hd3)" stroke="var(--warn)"/>
+          <text x="458" y="200" text-anchor="middle" fill="var(--c)" font-family="var(--f-body)" font-size="13" font-weight="600">案C 伊豆</text>
+          <text x="458" y="216" text-anchor="middle" fill="var(--warn)" font-family="var(--f-data)" font-size="10">合計 11h30</text>
+        </g>
+
+        <!-- day labels -->
+        <g fill="var(--muted)" font-family="var(--f-data)" font-size="9" text-anchor="middle">
+          <text x="84" y="240">D1</text><text x="118" y="240">D2</text><text x="152" y="240">D3</text>
+          <text x="254" y="240">D1</text><text x="288" y="240">D2</text><text x="322" y="240">D3</text>
+          <text x="424" y="240">D1</text><text x="458" y="240">D2</text><text x="492" y="240">D3</text>
+        </g>
+      </svg>
+      <figcaption>合計時間の差（9h30 / 9h00 / 11h30）以上に効くのは<strong>1日あたりの偏り</strong>です。案Cは初日5h30・最終日4h30と、上限3時間を大きく超える日が2日ある。案Bは3日とも平準化されていて、これが「体が楽」の正体です。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= DATES ================= -->
+<section id="dates">
+  <div class="sec-head"><h2>日取り</h2><span class="tag">best value window</span></div>
+  <div class="card">
+    <p style="font-size:14.5px;color:var(--ink-2);max-width:44em">12/26〜1/3の9日間のうち、宿代が跳ねるのは<strong>12/29から1/3</strong>です。多くの宿がこの区間を年末年始特別料金にし、平常時の1.5〜2倍になります。逆に言えば、その直前の日曜発・月曜泊が最も安く、しかも空いています。</p>
+
+    <div class="cal">
+      <div class="d pickd"><span class="dow">SAT</span><span class="dn">26</span></div>
+      <div class="d pickd"><span class="dow">SUN</span><span class="dn">27</span></div>
+      <div class="d pickd"><span class="dow">MON</span><span class="dn">28</span></div>
+      <div class="d peak"><span class="dow">TUE</span><span class="dn">29</span></div>
+      <div class="d peak"><span class="dow">WED</span><span class="dn">30</span></div>
+      <div class="d peak"><span class="dow">THU</span><span class="dn">31</span></div>
+      <div class="d peak"><span class="dow">FRI</span><span class="dn">1</span></div>
+      <div class="d peak"><span class="dow">SAT</span><span class="dn">2</span></div>
+      <div class="d peak"><span class="dow">SUN</span><span class="dn">3</span></div>
+    </div>
+
+    <figure style="margin-top:4px">
+      <svg viewBox="0 0 620 150" role="img" aria-label="12月26日から1月3日の宿泊料金と混雑の推移。26日から28日は平常料金で低く、29日から1月3日にかけて1.5倍から2倍に上昇する。">
+        <g stroke="var(--line-soft)" stroke-width="1">
+          <line x1="46" y1="112" x2="608" y2="112"/><line x1="46" y1="74" x2="608" y2="74"/><line x1="46" y1="36" x2="608" y2="36"/>
+        </g>
+        <g fill="var(--muted)" font-family="var(--f-data)" font-size="9" text-anchor="end">
+          <text x="40" y="116">1.0x</text><text x="40" y="78">1.5x</text><text x="40" y="40">2.0x</text>
+        </g>
+        <!-- price curve: x per day, 9 days from 66 to 594 step 66 -->
+        <path d="M66,112 L132,110 L198,108 L264,72 L330,50 L396,36 L462,38 L528,48 L594,70"
+              fill="none" stroke="var(--warn)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M66,112 L132,110 L198,108 L264,72 L330,50 L396,36 L462,38 L528,48 L594,70 L594,124 L66,124 Z"
+              fill="var(--warn)" opacity=".08"/>
+        <!-- window highlight -->
+        <rect x="118" y="20" width="94" height="104" fill="var(--gold-fill)" opacity=".16"/>
+        <rect x="118" y="20" width="94" height="104" fill="none" stroke="var(--gold)" stroke-width="1.2" stroke-dasharray="3 3"/>
+        <text x="165" y="16" text-anchor="middle" fill="var(--gold)" font-family="var(--f-data)" font-size="10" font-weight="600">推奨 27–29</text>
+        <g fill="var(--muted)" font-family="var(--f-data)" font-size="9.5" text-anchor="middle">
+          <text x="66" y="140">12/26</text><text x="132" y="140">27</text><text x="198" y="140">28</text>
+          <text x="264" y="140">29</text><text x="330" y="140">30</text><text x="396" y="140">31</text>
+          <text x="462" y="140">1/1</text><text x="528" y="140">2</text><text x="594" y="140">3</text>
+        </g>
+        <g fill="var(--warn)"><circle cx="264" cy="72" r="3.5"/></g>
+        <text x="272" y="66" fill="var(--warn)" font-family="var(--f-data)" font-size="9.5">ここから年末料金</text>
+      </svg>
+      <figcaption>宿泊料金の倍率は例年の傾向にもとづく<span class="conf">推定</span>。29日を境に跳ね上がり、31日〜1/1で頂点に達する。<strong>推奨枠の最終日（29日）は帰るだけの日</strong>なので、値上がりの影響を受けません。</figcaption>
+    </figure>
+
+    <div class="notes">
+      <div class="note" style="--h:var(--gold)">
+        <h5>推奨：2026/12/27（日）発 &mdash; 12/29（火）帰着</h5>
+        <ul>
+          <li>泊まるのは日曜夜・月曜夜。宿の最安ゾーンで、年末特別料金の開始直前。</li>
+          <li>高速の下り渋滞ピークは12/29〜30。その手前で動き切れる。</li>
+          <li>飲食店・観光施設の年末休業（多くは12/30または12/31から）に一切かからない。</li>
+          <li>12/26（土）発でも成立するが、土曜泊のぶん宿代が上がる。</li>
+        </ul>
+      </div>
+      <div class="note alert" style="--h:var(--warn)">
+        <h5>1/1〜1/3にかける場合の注意</h5>
+        <ul>
+          <li>個人経営の食事処はほぼ休業。「行けば何かある」が通用しない期間です。</li>
+          <li>初詣渋滞が寺社周辺の道と駐車場を潰します。松島（瑞巌寺）も伊香保も該当。</li>
+          <li>宿代が上がるうえ、2泊3日では予約自体が取りにくくなります。</li>
+          <li>この期間に行くなら、<strong>食事は全て宿で完結する2食付きプラン</strong>に切り替えるのが現実的です。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPARE ================= -->
+<section id="compare">
+  <div class="sec-head"><h2>三案の比較</h2><span class="tag">side by side</span></div>
+  <div class="cmp">
+
+    <!-- CARD A -->
+    <div class="plan-card" style="--h:var(--a)">
+      <svg class="scene" viewBox="0 0 400 170" role="img" aria-label="冬の松島湾のイメージ。低い冬の陽と、松の生えた島影が層になって並ぶ。">
+        <defs>
+          <linearGradient id="skyA" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0E2A3E"/><stop offset=".62" stop-color="#2C5F72"/><stop offset="1" stop-color="#7A9AA4"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="170" fill="url(#skyA)"/>
+        <circle cx="298" cy="92" r="17" fill="#E7C67A" opacity=".92"/>
+        <!-- far islands -->
+        <g fill="#1A4054" opacity=".85">
+          <path d="M0,116 q26,-16 52,-2 q22,12 46,2 l0,54 -98,0 z"/>
+          <path d="M120,118 q30,-18 62,-3 q20,10 40,3 l0,52 -102,0 z"/>
+          <path d="M244,120 q34,-14 66,-1 q24,10 46,1 l0,50 -112,0 z"/>
+        </g>
+        <!-- near islands with pines -->
+        <g fill="#0B2433">
+          <path d="M28,140 q30,-20 60,-6 q24,11 44,6 l0,30 -104,0 z"/>
+          <path d="M188,143 q36,-19 72,-4 q22,9 44,4 l0,27 -116,0 z"/>
+        </g>
+        <g stroke="#0B2433" stroke-width="2.2" stroke-linecap="round" fill="none">
+          <path d="M54,138 l0,-13 M48,127 l6,-5 6,5 M50,120 l4,-4 4,4"/>
+          <path d="M96,136 l0,-11 M91,126 l5,-4 5,4"/>
+          <path d="M226,141 l0,-14 M220,130 l6,-5 6,5 M222,123 l4,-4 4,4"/>
+          <path d="M272,139 l0,-11 M267,129 l5,-4 5,4"/>
+        </g>
+        <!-- sea strokes -->
+        <g stroke="#4E7B8C" stroke-width="1.6" opacity=".55" stroke-linecap="round">
+          <path d="M20,158 h44 M84,164 h60 M164,157 h38 M226,165 h52 M300,158 h56 M46,168 h30"/>
+        </g>
+      </svg>
+      <div class="pc-body">
+        <div class="kicker">案 A</div>
+        <h3>松島・仙台</h3>
+        <div class="metrics">
+          <div><span>片道距離</span><span>約 270 km</span></div>
+          <div><span>初日の実走</span><span>4h00</span></div>
+          <div><span>3日間 総運転</span><span>9h30</span></div>
+          <div><span>費用見込</span><span>約 116,400 円</span></div>
+          <div><span>雪リスク</span><span>低</span></div>
+        </div>
+        <p class="vl">遠さと負担のバランスが最も良い。常磐道は平地で走りやすく、太平洋側は雪が少ない。食の選択肢も広い。</p>
+        <a class="jump" href="#planA">旅程を見る →</a>
+      </div>
+    </div>
+
+    <!-- CARD B -->
+    <div class="plan-card" style="--h:var(--b)">
+      <svg class="scene" viewBox="0 0 400 170" role="img" aria-label="伊香保の石段街のイメージ。提灯の灯りが並ぶ石段が奥へ続き、湯気が立ちのぼる。">
+        <defs>
+          <linearGradient id="skyB" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#20161A"/><stop offset="1" stop-color="#4A2E28"/>
+          </linearGradient>
+          <radialGradient id="lampB" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#F2C572" stop-opacity=".95"/><stop offset="1" stop-color="#F2C572" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="400" height="170" fill="url(#skyB)"/>
+        <!-- steam -->
+        <g stroke="#8C7468" stroke-width="2" fill="none" opacity=".4" stroke-linecap="round">
+          <path d="M60,60 q10,-14 0,-26 q-9,-11 1,-22"/>
+          <path d="M330,54 q11,-15 1,-27 q-9,-11 2,-21"/>
+        </g>
+        <!-- stone steps, receding -->
+        <g fill="#33221E" stroke="#5A3B31" stroke-width="1">
+          <rect x="150" y="70" width="100" height="9"/>
+          <rect x="142" y="80" width="116" height="10"/>
+          <rect x="132" y="91" width="136" height="11"/>
+          <rect x="120" y="103" width="160" height="12"/>
+          <rect x="104" y="116" width="192" height="13"/>
+          <rect x="84"  y="130" width="232" height="14"/>
+          <rect x="60"  y="145" width="280" height="15"/>
+          <rect x="32"  y="161" width="336" height="16"/>
+        </g>
+        <!-- buildings flanking -->
+        <g fill="#241715">
+          <path d="M0,30 L110,58 L110,170 L0,170 Z"/>
+          <path d="M400,30 L290,58 L290,170 L400,170 Z"/>
+        </g>
+        <!-- lanterns -->
+        <g>
+          <circle cx="86" cy="72" r="20" fill="url(#lampB)"/>
+          <rect x="80" y="64" width="12" height="17" rx="5" fill="#E8A84E"/>
+          <circle cx="316" cy="66" r="20" fill="url(#lampB)"/>
+          <rect x="310" y="58" width="12" height="17" rx="5" fill="#E8A84E"/>
+          <circle cx="112" cy="112" r="15" fill="url(#lampB)"/>
+          <rect x="107" y="106" width="10" height="14" rx="4" fill="#E8A84E"/>
+          <circle cx="290" cy="106" r="15" fill="url(#lampB)"/>
+          <rect x="285" y="100" width="10" height="14" rx="4" fill="#E8A84E"/>
+        </g>
+        <text x="200" y="46" text-anchor="middle" fill="#B08B6E" font-family="var(--f-data)" font-size="10" letter-spacing="3">365 STEPS</text>
+      </svg>
+      <div class="pc-body">
+        <div class="kicker">案 B</div>
+        <h3>伊香保・北群馬</h3>
+        <div class="metrics">
+          <div><span>片道距離</span><span>約 200 km</span></div>
+          <div><span>初日の実走</span><span>3h20</span></div>
+          <div><span>3日間 総運転</span><span>9h00</span></div>
+          <div><span>費用見込</span><span>約 86,200 円</span></div>
+          <div><span>雪リスク</span><span>中（山側）</span></div>
+        </div>
+        <p class="vl">最も体が楽で最も安い。ただし石段街と榛名の山道は妊娠中には向かないので、そこを外した組み方が要る。</p>
+        <a class="jump" href="#planB">旅程を見る →</a>
+      </div>
+    </div>
+
+    <!-- CARD C -->
+    <div class="plan-card" style="--h:var(--c)">
+      <svg class="scene" viewBox="0 0 400 170" role="img" aria-label="伊豆の冬の海のイメージ。駿河湾に沈む夕日と、遠くに富士の稜線。">
+        <defs>
+          <linearGradient id="skyC" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2A2036"/><stop offset=".5" stop-color="#8A5535"/><stop offset="1" stop-color="#D9974A"/>
+          </linearGradient>
+          <linearGradient id="seaC" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#8C6448"/><stop offset="1" stop-color="#2E2432"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="170" fill="url(#skyC)"/>
+        <circle cx="130" cy="112" r="22" fill="#F6D89A" opacity=".95"/>
+        <!-- Fuji -->
+        <path d="M20,118 L74,52 L128,118 Z" fill="#3A2C3C"/>
+        <path d="M58,71 L74,52 L90,71 q-8,5 -16,0 q-8,5 -16,0 z" fill="#C9C3D2" opacity=".9"/>
+        <!-- headland right -->
+        <path d="M400,118 L330,88 L282,118 Z" fill="#2B2231"/>
+        <!-- sea -->
+        <rect x="0" y="118" width="400" height="52" fill="url(#seaC)"/>
+        <!-- sun path on water -->
+        <g fill="#F0C888" opacity=".38">
+          <rect x="118" y="124" width="24" height="3" rx="1.5"/>
+          <rect x="112" y="132" width="36" height="3" rx="1.5"/>
+          <rect x="106" y="141" width="48" height="3" rx="1.5"/>
+          <rect x="98"  y="151" width="64" height="3" rx="1.5"/>
+          <rect x="90"  y="162" width="80" height="3" rx="1.5"/>
+        </g>
+        <!-- citrus -->
+        <g>
+          <circle cx="336" cy="140" r="13" fill="#E5913A"/>
+          <circle cx="336" cy="140" r="13" fill="none" stroke="#F5C98C" stroke-width="1"/>
+          <path d="M336,131 q7,-6 13,-3 q-4,7 -13,3z" fill="#5C7A4B"/>
+          <circle cx="364" cy="152" r="9" fill="#DC8630"/>
+        </g>
+        <text x="200" y="34" text-anchor="middle" fill="#EBC38C" font-family="var(--f-data)" font-size="10" letter-spacing="3">8–10&#176;C IN WINTER</text>
+      </svg>
+      <div class="pc-body">
+        <div class="kicker">案 C</div>
+        <h3>伊豆・修善寺</h3>
+        <div class="metrics">
+          <div><span>片道距離</span><span>約 330 km</span></div>
+          <div><span>初日の実走</span><span>5h30</span></div>
+          <div><span>3日間 総運転</span><span>11h30</span></div>
+          <div><span>費用見込</span><span>約 110,200 円</span></div>
+          <div><span>雪リスク</span><span>ほぼ無</span></div>
+        </div>
+        <p class="vl">気候と食は三案で最良。だが首都圏縦断が重すぎる。2泊3日では移動に旅の3分の1を使う。</p>
+        <a class="jump" href="#planC">旅程を見る →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- COST STACK -->
+  <figure style="margin-top:26px">
+    <div class="card">
+      <div class="fig-t">Figure 3 — cost against the 200,000 yen budget</div>
+      <svg viewBox="0 0 640 230" role="img" aria-label="予算20万円に対する費用の内訳。案Aは11万6千円、案Bは8万6千円、案Cは11万円で、いずれも予算の6割以下。">
+        <!-- scale: 0..200000 over x 60..600 -->
+        <line x1="60" y1="36" x2="60" y2="176" stroke="var(--line)" stroke-width="1"/>
+        <line x1="600" y1="26" x2="600" y2="186" stroke="var(--gold)" stroke-width="1.6" stroke-dasharray="4 4"/>
+        <text x="596" y="20" text-anchor="end" fill="var(--gold)" font-family="var(--f-data)" font-size="11" font-weight="600">予算 200,000円</text>
+
+        <!-- A : 50000/12600/7900/35000/8400/2500 => widths (x2.7 per 1000) -->
+        <g>
+          <text x="52" y="58" text-anchor="end" fill="var(--a)" font-family="var(--f-body)" font-size="12.5" font-weight="600">案A</text>
+          <rect x="60"    y="42" width="135"  height="24" fill="var(--a)"/>
+          <rect x="195"   y="42" width="34"   height="24" fill="var(--a)" opacity=".72"/>
+          <rect x="229"   y="42" width="21.3" height="24" fill="var(--a)" opacity=".55"/>
+          <rect x="250.3" y="42" width="94.5" height="24" fill="var(--gold-fill)"/>
+          <rect x="344.8" y="42" width="22.7" height="24" fill="var(--gold-fill)" opacity=".6"/>
+          <rect x="367.5" y="42" width="6.8"  height="24" fill="var(--muted)"/>
+          <text x="384" y="59" fill="var(--ink)" font-family="var(--f-data)" font-size="11.5" font-weight="600">116,400円</text>
+        </g>
+        <!-- B : 44000/12000/6700/18000/4000/1500 -->
+        <g>
+          <text x="52" y="106" text-anchor="end" fill="var(--b)" font-family="var(--f-body)" font-size="12.5" font-weight="600">案B</text>
+          <rect x="60"    y="90" width="118.8" height="24" fill="var(--b)"/>
+          <rect x="178.8" y="90" width="32.4"  height="24" fill="var(--b)" opacity=".72"/>
+          <rect x="211.2" y="90" width="18.1"  height="24" fill="var(--b)" opacity=".55"/>
+          <rect x="229.3" y="90" width="48.6"  height="24" fill="var(--gold-fill)"/>
+          <rect x="277.9" y="90" width="10.8"  height="24" fill="var(--gold-fill)" opacity=".6"/>
+          <rect x="288.7" y="90" width="4.1"   height="24" fill="var(--muted)"/>
+          <text x="302" y="107" fill="var(--ink)" font-family="var(--f-data)" font-size="11.5" font-weight="600">86,200円</text>
+        </g>
+        <!-- C : 58000/16000/10200/18000/2000/6000 -->
+        <g>
+          <text x="52" y="154" text-anchor="end" fill="var(--c)" font-family="var(--f-body)" font-size="12.5" font-weight="600">案C</text>
+          <rect x="60"    y="138" width="156.6" height="24" fill="var(--c)"/>
+          <rect x="216.6" y="138" width="43.2"  height="24" fill="var(--c)" opacity=".72"/>
+          <rect x="259.8" y="138" width="27.5"  height="24" fill="var(--c)" opacity=".55"/>
+          <rect x="287.3" y="138" width="48.6"  height="24" fill="var(--gold-fill)"/>
+          <rect x="335.9" y="138" width="5.4"   height="24" fill="var(--gold-fill)" opacity=".6"/>
+          <rect x="341.3" y="138" width="16.2"  height="24" fill="var(--muted)"/>
+          <text x="366" y="155" fill="var(--ink)" font-family="var(--f-data)" font-size="11.5" font-weight="600">110,200円</text>
+        </g>
+
+        <!-- legend -->
+        <g font-family="var(--f-data)" font-size="10" fill="var(--muted)">
+          <rect x="60"  y="196" width="12" height="10" fill="var(--muted)" opacity=".9"/><text x="78" y="205">宿泊</text>
+          <rect x="128" y="196" width="12" height="10" fill="var(--muted)" opacity=".65"/><text x="146" y="205">高速代</text>
+          <rect x="210" y="196" width="12" height="10" fill="var(--muted)" opacity=".45"/><text x="228" y="205">ガソリン</text>
+          <rect x="300" y="196" width="12" height="10" fill="var(--gold-fill)"/><text x="318" y="205">食事</text>
+          <rect x="368" y="196" width="12" height="10" fill="var(--gold-fill)" opacity=".6"/><text x="386" y="205">入場料</text>
+          <rect x="444" y="196" width="12" height="10" fill="var(--muted)"/><text x="462" y="205">駐車場</text>
+        </g>
+        <text x="60" y="224" fill="var(--ink-2)" font-family="var(--f-body)" font-size="11.5">どの案も予算の6割以下。<tspan font-weight="600" fill="var(--gold)">余る8〜11万円は「訪問数」ではなく「宿」に使うべき。</tspan></text>
+      </svg>
+    </div>
+    <figcaption>費用は2名・2泊3日の総額<span class="conf">推定</span>。三案の差は最大3万円で、20万円の予算に対しては誤差の範囲です。<strong>予算は選択の判断材料になりません。</strong></figcaption>
+  </figure>
+</section>
+
+<!-- ================= PLAN A ================= -->
+<section class="plan" id="planA" style="--h:var(--a)">
+  <div class="plan-head">
+    <div class="kicker">案 A ／ 12月27日（日）— 29日（火）</div>
+    <h2>松島・仙台</h2>
+    <p class="lede">冬の松島は、湾が凪いで島影が硬く見える季節です。人も夏よりずっと少ない。初日に距離を使い切り、2日目は仙台市内で車をほぼ動かさない——この配分が、この案が成立する条件です。</p>
+  </div>
+
+  <div class="day">
+    <div class="day-bar"><span class="dnum">DAY 1</span><h4>水戸 → 松島</h4><span class="meta">運転 4h00 ／ 観光 2件</span></div>
+    <div class="tl" data-tl="A1"></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>時刻</th><th>行き先</th><th>滞在</th><th>移動・所要</th><th>駐車場</th><th>営業時間</th><th>メモ</th></tr></thead>
+        <tbody>
+          <tr><td class="t">8:30</td><td class="dest">水戸駅 出発</td><td>—</td><td>—</td><td>—</td><td>—</td><td>朝食は自宅で。渋滞のない時間帯</td></tr>
+          <tr class="move"><td class="t">8:30–10:00</td><td>常磐道 北上</td><td></td><td>車 90分</td><td></td><td></td><td>水戸IC → 中郷SAまで約100km</td></tr>
+          <tr class="meal"><td class="t">10:00</td><td class="dest">中郷SA</td><td>20分</td><td>—</td><td>無料</td><td>24時間<span class="conf">推定</span></td><td>1回目の休憩。連続運転90分で区切る</td></tr>
+          <tr class="move"><td class="t">10:20–11:40</td><td>常磐道 いわき・相馬経由</td><td></td><td>車 80分</td><td></td><td></td><td>いわき以北は片側1車線区間あり。無理に飛ばさない</td></tr>
+          <tr><td class="t">11:40</td><td class="dest">南相馬鹿島SA</td><td>20分</td><td>—</td><td>無料</td><td>24時間<span class="conf">推定</span></td><td>2回目の休憩。ここまでで連続3h上限に触れない</td></tr>
+          <tr class="move"><td class="t">12:00–13:00</td><td>仙台東部道路 → 三陸道</td><td></td><td>車 60分</td><td></td><td></td><td>松島海岸IC下車</td></tr>
+          <tr class="meal"><td class="t">13:00</td><td class="dest">松島で昼食</td><td>70分</td><td>—</td><td>店舗による</td><td>11:00–15:00<span class="conf chk">要確認</span></td><td><strong>穴子・牛たん・焼き魚の店を選ぶ</strong>。かき小屋は貝が苦手なので不可、妻も生食不可のため生牡蠣は対象外</td></tr>
+          <tr><td class="t">14:20</td><td class="dest"><a href="https://www.zuiganji.or.jp/" target="_blank" rel="noopener">瑞巌寺</a></td><td>50分</td><td>徒歩 5分</td><td>町営 有料</td><td>冬季 8:00–15:30<br>最終受付 15:00<span class="conf ok">確認済 08-16</span></td><td>拝観 大人700円。<strong>15:00の最終受付が実質の締切</strong>。伽藍は屋内で平坦、妊娠中でも負担少</td></tr>
+          <tr><td class="t">15:20</td><td class="dest">五大堂・透かし橋</td><td>30分</td><td>徒歩 7分</td><td>同上</td><td>境内 8:00–日没<span class="conf">推定</span></td><td>拝観無料。透かし橋は足元が空いているので、<strong>手すりを持ってゆっくり</strong></td></tr>
+          <tr><td class="t">16:00</td><td class="dest">宿 チェックイン</td><td>—</td><td>車 15–30分</td><td>無料</td><td>15:00–<span class="conf chk">要確認</span></td><td>明るいうちに着ける。駐車場直結の宿を選ぶ</td></tr>
+          <tr class="meal"><td class="t">18:00</td><td class="dest">夕食（宿）</td><td>90分</td><td>—</td><td>—</td><td>—</td><td><strong>1泊目は宿食を推奨</strong>。夜に車を出さずに済む</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-bar"><span class="dnum">DAY 2</span><h4>松島湾 → 仙台市内</h4><span class="meta">運転 1h30 ／ 観光 3件</span></div>
+    <div class="tl" data-tl="A2"></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>時刻</th><th>行き先</th><th>滞在</th><th>移動・所要</th><th>駐車場</th><th>営業時間</th><th>メモ</th></tr></thead>
+        <tbody>
+          <tr><td class="t">8:00</td><td class="dest">朝食（宿）</td><td>60分</td><td>—</td><td>—</td><td>—</td><td>ゆっくり。急ぐ理由のない日</td></tr>
+          <tr><td class="t">10:00</td><td class="dest"><a href="https://www.matsushima.or.jp/" target="_blank" rel="noopener">松島島巡り観光船</a></td><td>60分</td><td>車 10分＋徒歩</td><td>周辺有料</td><td>冬季 8:30–16:00<br>最終便 15:00<span class="conf ok">確認済 08-16</span></td><td>大人1,500円・約50分。<strong>冬は船内が冷えるので防寒必須</strong>。荒天時は運休あり<span class="conf chk">要確認</span></td></tr>
+          <tr class="move"><td class="t">11:20–12:10</td><td>三陸道 → 仙台市内</td><td></td><td>車 50分</td><td></td><td></td><td>市内は年末でも混む。時間に余裕を見る</td></tr>
+          <tr class="meal"><td class="t">12:20</td><td class="dest">牛たん 昼食（仙台駅周辺）</td><td>70分</td><td>徒歩</td><td>宿 or コインP</td><td><a href="https://www.rikyu-gyutan.co.jp/" target="_blank" rel="noopener">利久</a>ほか 11:30–<span class="conf ok">確認済 08-16</span></td><td>年末年始は店舗ごとに営業が異なる<span class="conf chk">要確認</span>。夫婦とも肉が好物なので、この案の核</td></tr>
+          <tr><td class="t">14:00</td><td class="dest">瑞鳳殿</td><td>60分</td><td>車 10分</td><td>無料</td><td>冬季 9:00–16:00<span class="conf chk">要確認</span></td><td><strong>石段が長い</strong>。妊娠中の負担を考えるなら、次の水族館に振り替えるほうが良い</td></tr>
+          <tr><td class="t">14:00<br>（代案）</td><td class="dest">仙台うみの杜水族館</td><td>120分</td><td>車 25分</td><td>有料</td><td>9:00–17:30<span class="conf chk">要確認</span></td><td><strong>こちらを推奨</strong>。全て屋内・平坦・ベンチ多数・暖かい。雨天代替も兼ねる</td></tr>
+          <tr><td class="t">16:30</td><td class="dest">宿 チェックイン（仙台市内）</td><td>—</td><td>車 20分</td><td>無料</td><td>15:00–<span class="conf chk">要確認</span></td><td>2泊目を仙台にすると<strong>3日目の帰路が20分短くなる</strong></td></tr>
+          <tr class="meal"><td class="t">18:30</td><td class="dest">夕食（市内・徒歩圏）</td><td>90分</td><td>徒歩 5–10分</td><td>—</td><td>店舗による<span class="conf chk">要確認</span></td><td>宿から歩ける店に限定。<strong>予約必須</strong>（年末は満席になる）</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-bar"><span class="dnum">DAY 3</span><h4>仙台 → 水戸</h4><span class="meta">運転 4h00 ／ 観光 1件</span></div>
+    <div class="tl" data-tl="A3"></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>時刻</th><th>行き先</th><th>滞在</th><th>移動・所要</th><th>駐車場</th><th>営業時間</th><th>メモ</th></tr></thead>
+        <tbody>
+          <tr><td class="t">8:30</td><td class="dest">朝食（宿）</td><td>60分</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td class="t">10:00</td><td class="dest">チェックアウト・出発</td><td>—</td><td>—</td><td>—</td><td>—</td><td>土産は前日に買っておく</td></tr>
+          <tr class="move"><td class="t">10:00–11:40</td><td>常磐道 南下</td><td></td><td>車 100分</td><td></td><td></td><td>—</td></tr>
+          <tr class="meal"><td class="t">11:40</td><td class="dest">四倉PA / いわき市内で昼食</td><td>60分</td><td>—</td><td>無料</td><td>PAは通年営業<span class="conf">推定</span></td><td>休憩と昼食を兼ねる。ここで<strong>3時間連続運転を回避</strong></td></tr>
+          <tr><td class="t">13:00</td><td class="dest">アクアマリンふくしま（任意）</td><td>90分</td><td>車 15分</td><td>有料</td><td>冬季 9:00–17:00<span class="conf chk">要確認</span></td><td>疲れていれば省く。<strong>省いても旅程は成立する</strong>設計にしてある</td></tr>
+          <tr class="move"><td class="t">14:40–16:10</td><td>常磐道 いわき → 水戸</td><td></td><td>車 90分</td><td></td><td></td><td>途中1回休憩</td></tr>
+          <tr><td class="t">16:10</td><td class="dest">水戸 帰着</td><td>—</td><td>—</td><td>—</td><td>—</td><td>明るいうちに帰着。夕食は自宅で軽く</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="notes">
+    <div class="note rain">
+      <h5>雨天・休館日の代替</h5>
+      <ul>
+        <li><strong>Day 1：</strong>遊覧船が荒天欠航なら、瑞巌寺・五大堂は屋根と屋内が多いのでそのまま実行可。雨なら松島さかな市場（屋内）へ。</li>
+        <li><strong>Day 2：</strong>全面雨なら仙台うみの杜水族館＋仙台駅ビルで完結。この日は<strong>車をほぼ使わずに1日成立する</strong>ように組んである。</li>
+        <li><strong>Day 3：</strong>アクアマリンふくしまは屋内なので雨でも可。晴れて元気なら小名浜の魚介土産へ。</li>
+      </ul>
+    </div>
+    <div class="note alert">
+      <h5>隠れた負担（該当あり）</h5>
+      <ul>
+        <li><strong>初日4時間・最終日4時間の運転</strong>が実質1人にかかる。休憩を削ると連続3時間の上限を超えるので、上の休憩は省略不可。</li>
+        <li><strong>瑞巌寺の15:00最終受付</strong>が初日の全てを規定する。昼食が30分延びると入れない。遅れたら瑞巌寺を2日目午前に回すこと。</li>
+        <li><strong>瑞鳳殿の石段</strong>は妊娠中には薦めない。水族館への振り替えを既定案としている。</li>
+        <li>冬の遊覧船は<strong>体が冷える</strong>。妊娠中は冷えを避けたいので、寒がるようなら乗らない判断も正解。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cost">
+    <div class="day-bar" style="border-bottom-width:1px"><span class="dnum">COST</span><h4>費用の内訳</h4><span class="meta">2名・2泊3日</span></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>項目</th><th>内容</th><th style="text-align:right">概算</th></tr></thead>
+        <tbody>
+          <tr><td>宿泊</td><td>2泊 × 1室25,000円（朝食付・駐車場無料）<span class="conf chk">要確認</span></td><td class="n">50,000</td></tr>
+          <tr><td>高速代</td><td>水戸IC〜仙台方面 往復（普通車・ETC）<span class="conf">推定</span></td><td class="n">12,600</td></tr>
+          <tr><td>ガソリン</td><td>往復約540km ／ 12km/L ／ 175円/L<span class="conf">推定</span></td><td class="n">7,900</td></tr>
+          <tr><td>食事</td><td>昼3回・夕2回（1泊目は宿食）<span class="conf">推定</span></td><td class="n">35,000</td></tr>
+          <tr><td>入場料</td><td>瑞巌寺1,400 ／ 遊覧船3,000 ／ 水族館4,000</td><td class="n">8,400</td></tr>
+          <tr><td>駐車場</td><td>松島・仙台の有料P<span class="conf">推定</span></td><td class="n">2,500</td></tr>
+        </tbody>
+        <tfoot><tr><td>合計</td><td>予算に約83,600円の余裕</td><td class="n">約 116,400 円</td></tr></tfoot>
+      </table>
+    </div>
+  </div>
+
+  <div class="rate">
+    <div class="rrow"><span class="lbl">実行可能性</span><span class="pips"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i></span><span class="cmt">★4 — 瑞巌寺の締切だけが唯一の綱渡り</span></div>
+    <div class="rrow"><span class="lbl">移動効率</span><span class="pips"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i></span><span class="cmt">★4 — 往復に無駄がなく、2日目は車を使わない</span></div>
+    <div class="rrow"><span class="lbl">余裕</span><span class="pips"><i class="pip low"></i><i class="pip low"></i><i class="pip low"></i><i class="pip"></i><i class="pip"></i></span><span class="cmt">★3 — 初日と最終日が重い。<strong>改善案：2泊とも仙台にして初日を松島だけにすると、最終日の運転が15分減り2日目の朝が楽になる</strong></span></div>
+    <div class="rrow"><span class="lbl">コスパ</span><span class="pips"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i></span><span class="cmt">★5 — 予算の6割弱で収まる</span></div>
+  </div>
+</section>
+
+<!-- ================= PLAN B ================= -->
+<section class="plan" id="planB" style="--h:var(--b)">
+  <div class="plan-head">
+    <div class="kicker">案 B ／ 12月27日（日）— 29日（火）</div>
+    <h2>伊香保・北群馬</h2>
+    <p class="lede">三案でいちばん体が楽で、いちばん安い案です。ただし伊香保の名物は<strong>365段の石段</strong>と<strong>標高900mの榛名神社</strong>——妊娠中の冬に、この二つは薦められません。だから「伊香保に泊まるが、伊香保らしい難所は登らない」という組み方をしています。</p>
+  </div>
+
+  <figure class="plan-banner">
+    <div class="card" style="border:none">
+      <div class="fig-t">Figure 4 — why the itinerary stops at Ikaho</div>
+      <svg viewBox="0 0 600 210" role="img" aria-label="標高断面図。渋川市街150m、伊香保温泉700m、榛名神社900m、榛名湖1084m。12月末の凍結想定ラインは標高600m付近で、伊香保より上は全て凍結域に入る。">
+        <defs>
+          <linearGradient id="terr" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="var(--b)" stop-opacity=".38"/>
+            <stop offset="1" stop-color="var(--b)" stop-opacity=".06"/>
+          </linearGradient>
+          <pattern id="excl" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="0" y2="7" stroke="var(--warn)" stroke-width="1.4" opacity=".55"/>
+          </pattern>
+        </defs>
+
+        <!-- terrain -->
+        <path d="M40,160 L40,143 L200,84 L360,62 L520,42 L520,160 Z" fill="url(#terr)"/>
+        <path d="M40,143 L200,84 L360,62 L520,42" fill="none" stroke="var(--b)" stroke-width="2.5" stroke-linejoin="round"/>
+
+        <!-- excluded zone -->
+        <rect x="200" y="20" width="320" height="140" fill="url(#excl)"/>
+        <line x1="200" y1="20" x2="200" y2="160" stroke="var(--warn)" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="360" y="182" text-anchor="middle" fill="var(--warn)" font-family="var(--f-body)" font-size="12.5" font-weight="600">この範囲は旅程から除外</text>
+
+        <!-- freeze line -->
+        <line x1="40" y1="95" x2="560" y2="95" stroke="var(--warn)" stroke-width="1.4" stroke-dasharray="6 4"/>
+        <text x="560" y="90" text-anchor="end" fill="var(--warn)" font-family="var(--f-data)" font-size="10">12月末の路面凍結 想定ライン ≒ 600m</text>
+
+        <!-- axis -->
+        <line x1="40" y1="160" x2="560" y2="160" stroke="var(--line)" stroke-width="1"/>
+        <g fill="var(--muted)" font-family="var(--f-data)" font-size="9.5" text-anchor="end">
+          <text x="34" y="164">0m</text><text x="34" y="99">600</text><text x="34" y="46">1100</text>
+        </g>
+
+        <!-- points -->
+        <g>
+          <circle cx="40" cy="143" r="5" fill="var(--b)"/>
+          <text x="46" y="136" fill="var(--ink)" font-family="var(--f-body)" font-size="11.5">渋川 150m</text>
+          <circle cx="200" cy="84" r="6.5" fill="var(--b)" stroke="var(--surface)" stroke-width="2"/>
+          <text x="200" y="74" text-anchor="middle" fill="var(--ink)" font-family="var(--f-body)" font-size="12.5" font-weight="700">伊香保 700m</text>
+          <text x="200" y="58" text-anchor="middle" fill="var(--b)" font-family="var(--f-data)" font-size="10">宿はここ・ここまで</text>
+          <circle cx="360" cy="62" r="5" fill="var(--muted)"/>
+          <text x="360" y="52" text-anchor="middle" fill="var(--muted)" font-family="var(--f-body)" font-size="11.5">榛名神社 900m</text>
+          <circle cx="520" cy="42" r="5" fill="var(--muted)"/>
+          <text x="520" y="32" text-anchor="middle" fill="var(--muted)" font-family="var(--f-body)" font-size="11.5">榛名湖 1084m</text>
+        </g>
+
+        <!-- kept range -->
+        <line x1="40" y1="196" x2="200" y2="196" stroke="var(--b)" stroke-width="3" stroke-linecap="round"/>
+        <text x="120" y="190" text-anchor="middle" fill="var(--b)" font-family="var(--f-body)" font-size="12" font-weight="600">旅程はここまで</text>
+      </svg>
+    </div>
+    <figcaption>伊香保温泉自体がすでに標高700m——凍結想定ラインの上にあります。宿までは除雪された県道で問題になりにくい一方、そこから先の榛名は<strong>登るほど条件が悪くなる一方向の道</strong>で、引き返す判断が遅れます。だから最初から行かない前提で組みました。</figcaption>
+  </figure>
+
+  <div class="banner">
+    <strong>先に言っておくべきこと</strong>
+    <p>石段街も榛名湖も外すと、伊香保は「温泉に浸かって、うどんを食べて、平地の施設を回る旅」になります。それで満足できるかどうかが、この案を選ぶかどうかの分かれ目です。逆に言えば、<strong>宿でゆっくりすることが主目的なら、この案が三案で最も良い</strong>。</p>
+  </div>
+
+  <div class="day">
+    <div class="day-bar"><span class="dnum">DAY 1</span><h4>水戸 → 伊香保</h4><span class="meta">運転 3h20 ／ 観光 2件</span></div>
+    <div class="tl" data-tl="B1"></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>時刻</th><th>行き先</th><th>滞在</th><th>移動・所要</th><th>駐車場</th><th>営業時間</th><th>メモ</th></tr></thead>
+        <tbody>
+          <tr><td class="t">9:00</td><td class="dest">水戸駅 出発</td><td>—</td><td>—</td><td>—</td><td>—</td><td>案Aより30分遅く出られる</td></tr>
+          <tr class="move"><td class="t">9:00–10:30</td><td>北関東道 西行き</td><td></td><td>車 90分</td><td></td><td></td><td>友部JCT → 岩舟JCT。ほぼ直線で走りやすい</td></tr>
+          <tr><td class="t">10:30</td><td class="dest">波志江PA / 上里SA</td><td>20分</td><td>—</td><td>無料</td><td>24時間<span class="conf">推定</span></td><td>1回だけの休憩で足りる距離</td></tr>
+          <tr class="move"><td class="t">10:50–12:00</td><td>関越道 → 渋川伊香保IC</td><td></td><td>車 70分</td><td></td><td></td><td>—</td></tr>
+          <tr class="meal"><td class="t">12:10</td><td class="dest"><a href="https://www.osawaya.co.jp/" target="_blank" rel="noopener">水沢うどん 大澤屋</a></td><td>60分</td><td>車 10分</td><td>無料</td><td>平日 10:00–16:00<br>土日祝 9:30–16:00<span class="conf ok">確認済 08-16</span></td><td>日本三大うどん。年末年始の営業は<strong>公式サイト新着情報で要確認</strong><span class="conf chk">要確認</span>。天ぷらは海老を外して野菜で頼める</td></tr>
+          <tr><td class="t">13:30</td><td class="dest">水澤寺（水澤観音）</td><td>40分</td><td>車 3分</td><td>無料</td><td>8:00–17:00<span class="conf chk">要確認</span></td><td>境内は比較的平坦。うどん店の隣で移動ゼロ</td></tr>
+          <tr><td class="t">14:40</td><td class="dest">伊香保グリーン牧場</td><td>70分</td><td>車 10分</td><td>無料</td><td>冬季 10:00–16:00<span class="conf chk">要確認</span></td><td>平坦で歩きやすい。寒ければ省略可</td></tr>
+          <tr><td class="t">16:00</td><td class="dest">宿 チェックイン</td><td>—</td><td>車 10分</td><td>無料<span class="conf chk">要確認</span></td><td>15:00–<span class="conf chk">要確認</span></td><td><strong>石段の中腹にある宿は避ける</strong>。荷物を持って階段を上ることになる。駐車場から平坦に入れる宿を選ぶこと</td></tr>
+          <tr class="meal"><td class="t">18:00</td><td class="dest">夕食（宿）</td><td>90分</td><td>—</td><td>—</td><td>—</td><td>予約時に<strong>刺身を加熱料理に変更</strong>できるか確認。マタニティプランのある宿なら標準対応</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-bar"><span class="dnum">DAY 2</span><h4>富岡・甘楽方面</h4><span class="meta">運転 2h20 ／ 観光 2件</span></div>
+    <div class="tl" data-tl="B2"></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>時刻</th><th>行き先</th><th>滞在</th><th>移動・所要</th><th>駐車場</th><th>営業時間</th><th>メモ</th></tr></thead>
+        <tbody>
+          <tr><td class="t">8:30</td><td class="dest">朝食（宿）</td><td>60分</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td class="t">10:00</td><td class="dest">出発（連泊のため荷物はそのまま）</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>連泊にすると荷物の積み下ろしが1回で済む</strong>。これが妊娠中には大きい</td></tr>
+          <tr class="move"><td class="t">10:00–11:10</td><td>関越道 → 富岡IC</td><td></td><td>車 70分</td><td></td><td></td><td>—</td></tr>
+          <tr><td class="t">11:20</td><td class="dest">富岡製糸場</td><td>90分</td><td>徒歩 8分</td><td>市営 有料</td><td>9:00–17:00<br>最終受付 16:30<span class="conf chk">要確認</span></td><td>世界遺産。大人1,000円前後<span class="conf chk">要確認</span>。<strong>敷地は平坦で屋内展示が中心</strong>。年末休業日あり<span class="conf chk">要確認</span></td></tr>
+          <tr class="meal"><td class="t">13:00</td><td class="dest">昼食（富岡市内）</td><td>60分</td><td>徒歩</td><td>—</td><td>店舗による<span class="conf chk">要確認</span></td><td>上州牛・ホルモンの店が多い。肉好きの夫婦向き</td></tr>
+          <tr><td class="t">14:15</td><td class="dest">こんにゃくパーク</td><td>60分</td><td>車 15分</td><td>無料</td><td>9:00–17:00<span class="conf chk">要確認</span></td><td><strong>入場無料・バイキング無料</strong>。全て屋内で暖かい。雨天代替も兼ねる</td></tr>
+          <tr class="move"><td class="t">15:30–16:40</td><td>関越道で伊香保へ戻る</td><td></td><td>車 70分</td><td></td><td></td><td>—</td></tr>
+          <tr><td class="t">16:40</td><td class="dest">宿 帰着・温泉</td><td>—</td><td>—</td><td>無料</td><td>—</td><td>明るいうちに戻る。夜の山道を走らない</td></tr>
+          <tr class="meal"><td class="t">18:30</td><td class="dest">夕食（宿）</td><td>90分</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-bar"><span class="dnum">DAY 3</span><h4>伊香保 → 水戸</h4><span class="meta">運転 3h20 ／ 観光 1件</span></div>
+    <div class="tl" data-tl="B3"></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>時刻</th><th>行き先</th><th>滞在</th><th>移動・所要</th><th>駐車場</th><th>営業時間</th><th>メモ</th></tr></thead>
+        <tbody>
+          <tr><td class="t">8:30</td><td class="dest">朝食（宿）</td><td>60分</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td class="t">10:00</td><td class="dest">石段街（上部のみ）</td><td>50分</td><td>車 5分＋徒歩</td><td>石段上・有料</td><td>店舗により10:00–<span class="conf chk">要確認</span></td><td><strong>上の駐車場に停めて、下りだけ歩く</strong>。365段を登らない唯一の方法。湯乃花まんじゅう・玉こんにゃくはここで</td></tr>
+          <tr class="move"><td class="t">11:10–12:30</td><td>関越道 → 北関東道</td><td></td><td>車 80分</td><td></td><td></td><td>—</td></tr>
+          <tr class="meal"><td class="t">12:30</td><td class="dest">佐野SA / 出流原PA で昼食</td><td>60分</td><td>—</td><td>無料</td><td>—</td><td>休憩と昼食を兼ねる</td></tr>
+          <tr class="move"><td class="t">13:30–15:00</td><td>北関東道 東行き</td><td></td><td>車 90分</td><td></td><td></td><td>—</td></tr>
+          <tr><td class="t">15:00</td><td class="dest">水戸 帰着</td><td>—</td><td>—</td><td>—</td><td>—</td><td>三案で最も早く帰れる</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="notes">
+    <div class="note rain">
+      <h5>雨天・休館日の代替</h5>
+      <ul>
+        <li><strong>Day 1：</strong>グリーン牧場は屋外なので雨なら中止。原美術館ARC（屋内）か、宿に早く入って温泉に切り替え。</li>
+        <li><strong>Day 2：</strong>富岡製糸場が年末休業なら、こんにゃくパーク＋群馬サファリパーク（車内から観覧できるので雨でも可）に振り替え。</li>
+        <li><strong>Day 3：</strong>石段街は雨・雪だと路面が滑るので<strong>中止一択</strong>。そのまま帰路につけば帰着が1時間早まる。</li>
+      </ul>
+    </div>
+    <div class="note alert">
+      <h5>隠れた負担（該当あり）</h5>
+      <ul>
+        <li><strong>石段365段は妊娠中に薦めません。</strong>上部の駐車場から下りだけ歩く前提で組んでいます。往復で歩く旅程を組んではいけない。</li>
+        <li><strong>榛名神社・榛名湖は旅程から外しました。</strong>上のFigure 4のとおり、伊香保より上は全て凍結想定域です。</li>
+        <li><strong>伊香保の宿は坂の上にあるものが多い。</strong>「駐車場無料」でも、駐車場から玄関まで階段という宿があります。予約前に確認を。</li>
+        <li>「近すぎないところ」という希望に対しては、片道3時間20分は<strong>やや近い</strong>。物足りなさが残る可能性がある。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cost">
+    <div class="day-bar" style="border-bottom-width:1px"><span class="dnum">COST</span><h4>費用の内訳</h4><span class="meta">2名・2泊3日</span></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>項目</th><th>内容</th><th style="text-align:right">概算</th></tr></thead>
+        <tbody>
+          <tr><td>宿泊</td><td>2泊 × 1室22,000円（2食付・駐車場無料）<span class="conf chk">要確認</span></td><td class="n">44,000</td></tr>
+          <tr><td>高速代</td><td>水戸IC〜渋川伊香保IC 往復＋2日目の富岡往復<span class="conf">推定</span></td><td class="n">12,000</td></tr>
+          <tr><td>ガソリン</td><td>往復＋現地 約460km ／ 12km/L ／ 175円/L<span class="conf">推定</span></td><td class="n">6,700</td></tr>
+          <tr><td>食事</td><td>昼3回（夕食は宿食）<span class="conf">推定</span></td><td class="n">18,000</td></tr>
+          <tr><td>入場料</td><td>富岡製糸場2,000 ／ グリーン牧場2,000 ／ こんにゃくパーク無料</td><td class="n">4,000</td></tr>
+          <tr><td>駐車場</td><td>富岡・石段街<span class="conf">推定</span></td><td class="n">1,500</td></tr>
+        </tbody>
+        <tfoot><tr><td>合計</td><td>三案で最も安い。予算に約114,000円の余裕</td><td class="n">約 86,200 円</td></tr></tfoot>
+      </table>
+    </div>
+  </div>
+
+  <div class="rate">
+    <div class="rrow"><span class="lbl">実行可能性</span><span class="pips"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i></span><span class="cmt">★5 — 時間の綱渡りが1箇所もない</span></div>
+    <div class="rrow"><span class="lbl">移動効率</span><span class="pips"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i></span><span class="cmt">★4 — 連泊で荷物移動が1回。2日目の富岡往復だけが往復動線</span></div>
+    <div class="rrow"><span class="lbl">余裕</span><span class="pips"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i></span><span class="cmt">★5 — 毎日16:40までに宿に戻れる</span></div>
+    <div class="rrow"><span class="lbl">コスパ</span><span class="pips"><i class="pip low"></i><i class="pip low"></i><i class="pip low"></i><i class="pip"></i><i class="pip"></i></span><span class="cmt">★3 — 安いが「わざわざ感」が薄い。<strong>改善案：宿を1泊35,000円に上げても総額12万円台。予算が余っているので、ここに使うのが最も効く</strong></span></div>
+  </div>
+</section>
+
+<!-- ================= PLAN C ================= -->
+<section class="plan" id="planC" style="--h:var(--c)">
+  <div class="plan-head">
+    <div class="kicker">案 C ／ 参考案</div>
+    <h2>伊豆・修善寺</h2>
+    <p class="lede">気候も食も、三案で最良です。真冬でも8〜10℃、金目鯛の煮付けは加熱調理なので妊娠中でも食べられて、貝も甲殻類も避けられる。問題は一つだけ——<strong>遠すぎる</strong>。</p>
+  </div>
+
+  <figure class="plan-banner">
+    <div class="card" style="border:none">
+      <div class="fig-t">Figure 5 — where the three days go</div>
+      <svg viewBox="0 0 600 200" role="img" aria-label="3日間の時間配分の比較。案Aは移動22パーセント、案Bは20パーセント、案Cは移動が33パーセントを占める。">
+        <defs>
+          <pattern id="hd4" width="6" height="6" patternTransform="rotate(135)" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="0" y2="6" stroke="var(--drive)" stroke-width="3"/>
+          </pattern>
+          <pattern id="hd5" width="6" height="6" patternTransform="rotate(135)" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="0" y2="6" stroke="var(--warn)" stroke-width="3"/>
+          </pattern>
+        </defs>
+        <!-- each bar = 36 waking hours (8:00-20:00 x3), width 480 -->
+        <g font-family="var(--f-body)" font-size="12.5">
+          <!-- A -->
+          <text x="52" y="46" text-anchor="end" fill="var(--a)" font-weight="600">案A</text>
+          <rect x="60" y="30" width="127" height="22" fill="url(#hd4)" stroke="var(--drive)"/>
+          <rect x="187" y="30" width="180" height="22" fill="var(--a)"/>
+          <rect x="367" y="30" width="93" height="22" fill="var(--gold-fill)"/>
+          <rect x="460" y="30" width="80" height="22" fill="var(--line)"/>
+          <text x="548" y="46" fill="var(--muted)" font-family="var(--f-data)" font-size="10.5">移動 26%</text>
+          <!-- B -->
+          <text x="52" y="96" text-anchor="end" fill="var(--b)" font-weight="600">案B</text>
+          <rect x="60" y="80" width="120" height="22" fill="url(#hd4)" stroke="var(--drive)"/>
+          <rect x="180" y="80" width="160" height="22" fill="var(--b)"/>
+          <rect x="340" y="80" width="100" height="22" fill="var(--gold-fill)"/>
+          <rect x="440" y="80" width="100" height="22" fill="var(--line)"/>
+          <text x="548" y="96" fill="var(--muted)" font-family="var(--f-data)" font-size="10.5">移動 25%</text>
+          <!-- C -->
+          <text x="52" y="146" text-anchor="end" fill="var(--c)" font-weight="600">案C</text>
+          <rect x="60" y="130" width="153" height="22" fill="url(#hd5)" stroke="var(--warn)"/>
+          <rect x="213" y="130" width="107" height="22" fill="var(--c)"/>
+          <rect x="320" y="130" width="120" height="22" fill="var(--gold-fill)"/>
+          <rect x="440" y="130" width="100" height="22" fill="var(--line)"/>
+          <text x="548" y="146" fill="var(--warn)" font-family="var(--f-data)" font-size="10.5" font-weight="600">移動 32%</text>
+        </g>
+        <g font-family="var(--f-data)" font-size="10" fill="var(--muted)">
+          <rect x="60" y="168" width="12" height="10" fill="url(#hd4)" stroke="var(--drive)"/><text x="78" y="177">運転</text>
+          <rect x="122" y="168" width="12" height="10" fill="var(--muted)"/><text x="140" y="177">観光</text>
+          <rect x="184" y="168" width="12" height="10" fill="var(--gold-fill)"/><text x="202" y="177">食事</text>
+          <rect x="246" y="168" width="12" height="10" fill="var(--line)"/><text x="264" y="177">宿・休息</text>
+          <text x="60" y="196" fill="var(--ink-2)" font-family="var(--f-body)" font-size="11.5">起きている36時間（8:00–20:00 × 3日）の使いみち</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>案Cは観光にあてられる時間が案Aの6割しかありません。<strong>費用は同じくらいなのに、得られる体験が少ない。</strong>これが「薦めない」の実質的な理由です。</figcaption>
+  </figure>
+
+  <div class="banner">
+    <strong>この予定は薦めません</strong>
+    <p>水戸から伊豆は、常磐道 → 圏央道 → 東名という首都圏縦断ルートです。渋滞なしでも約330km・4時間20分。年末の実走は<strong>5〜6時間</strong>を見るべきで、連続運転3時間の上限を守ろうとすると休憩を3回挟むことになり、初日は移動だけで終わります。運転者が実質1名、同乗者が妊娠中という条件では、この往復を2泊3日に押し込むべきではありません。以下は「それでも行くなら」の形です。</p>
+  </div>
+
+  <div class="day">
+    <div class="day-bar"><span class="dnum">DAY 1</span><h4>水戸 → 修善寺（移動日）</h4><span class="meta">運転 5h30 ／ 観光 0件</span></div>
+    <div class="tl" data-tl="C1"></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>時刻</th><th>行き先</th><th>滞在</th><th>移動・所要</th><th>駐車場</th><th>営業時間</th><th>メモ</th></tr></thead>
+        <tbody>
+          <tr><td class="t">8:00</td><td class="dest">水戸駅 出発</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>8:00は下限ぎりぎり</strong>。これより遅いと日没後の到着になる</td></tr>
+          <tr class="move"><td class="t">8:00–10:00</td><td>常磐道 → 圏央道</td><td></td><td>車 120分</td><td></td><td></td><td>つくば・成田方面へ迂回。首都高より確実</td></tr>
+          <tr><td class="t">10:00</td><td class="dest">菖蒲PA</td><td>25分</td><td>—</td><td>無料</td><td>24時間<span class="conf">推定</span></td><td>1回目</td></tr>
+          <tr class="move"><td class="t">10:25–12:15</td><td>圏央道 → 東名</td><td></td><td>車 110分</td><td></td><td></td><td>海老名JCT周辺は年末渋滞の常習区間<span class="conf chk">要確認</span></td></tr>
+          <tr class="meal"><td class="t">12:15</td><td class="dest">海老名SA で昼食</td><td>70分</td><td>—</td><td>無料</td><td>—</td><td>2回目の休憩を兼ねる。混雑必至</td></tr>
+          <tr class="move"><td class="t">13:25–15:00</td><td>東名 → 伊豆縦貫道</td><td></td><td>車 95分</td><td></td><td></td><td>—</td></tr>
+          <tr><td class="t">15:10</td><td class="dest">宿 チェックイン（修善寺）</td><td>—</td><td>—</td><td>無料<span class="conf chk">要確認</span></td><td>15:00–<span class="conf chk">要確認</span></td><td>この時点で<strong>初日の観光はゼロ</strong>。これがこの案の最大の弱点</td></tr>
+          <tr><td class="t">17:00</td><td class="dest"><a href="https://www.shuzenji-kankou.com/illumination.html" target="_blank" rel="noopener">竹林の小径</a>（ライトアップ）</td><td>40分</td><td>徒歩</td><td>—</td><td>日没–23:00<span class="conf ok">確認済 08-16</span></td><td>宿から徒歩圏なら成立。<strong>車を出す必要がある宿なら省く</strong></td></tr>
+          <tr class="meal"><td class="t">18:30</td><td class="dest">夕食（宿・金目鯛の煮付け）</td><td>90分</td><td>—</td><td>—</td><td>—</td><td>加熱調理なので妊娠中も可。貝・甲殻類を外した献立を予約時に依頼</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-bar"><span class="dnum">DAY 2</span><h4>修善寺 → 熱海</h4><span class="meta">運転 1h30 ／ 観光 3件</span></div>
+    <div class="tl" data-tl="C2"></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>時刻</th><th>行き先</th><th>滞在</th><th>移動・所要</th><th>駐車場</th><th>営業時間</th><th>メモ</th></tr></thead>
+        <tbody>
+          <tr><td class="t">8:30</td><td class="dest">朝食（宿）</td><td>60分</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td class="t">10:00</td><td class="dest">修禅寺・独鈷の湯</td><td>50分</td><td>徒歩</td><td>温泉場P 有料</td><td>8:30–16:00<span class="conf chk">要確認</span></td><td>温泉街は平坦で歩きやすい</td></tr>
+          <tr class="meal"><td class="t">11:30</td><td class="dest">昼食（修善寺温泉場）</td><td>60分</td><td>徒歩</td><td>—</td><td>店舗による<span class="conf chk">要確認</span></td><td>猪鍋・そばなど。肉の選択肢あり</td></tr>
+          <tr class="move"><td class="t">13:00–14:00</td><td>修善寺 → 熱海</td><td></td><td>車 60分</td><td></td><td></td><td>県道路線。山越えだが標高は低い</td></tr>
+          <tr><td class="t">14:10</td><td class="dest">來宮神社</td><td>50分</td><td>車</td><td>無料</td><td>9:00–17:00<span class="conf chk">要確認</span></td><td>大楠。<strong>年始は初詣で駐車不可</strong>になるので12月中に行くこと</td></tr>
+          <tr><td class="t">15:20</td><td class="dest">熱海サンビーチ・親水公園</td><td>40分</td><td>徒歩</td><td>周辺 有料</td><td>常時</td><td>平坦な海沿い散歩。冬でも暖かい</td></tr>
+          <tr><td class="t">16:30</td><td class="dest">宿 チェックイン（熱海）</td><td>—</td><td>車 10分</td><td><strong>要確認</strong><span class="conf chk">要確認</span></td><td>15:00–<span class="conf chk">要確認</span></td><td><strong>熱海は駐車場有料の宿が多い</strong>。1泊1,500〜2,500円が相場。無料条件を満たす宿は限られる</td></tr>
+          <tr class="meal"><td class="t">18:30</td><td class="dest">夕食（宿）</td><td>90分</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-bar"><span class="dnum">DAY 3</span><h4>熱海 → 水戸（移動日）</h4><span class="meta">運転 4h30 ／ 観光 0件</span></div>
+    <div class="tl" data-tl="C3"></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>時刻</th><th>行き先</th><th>滞在</th><th>移動・所要</th><th>駐車場</th><th>営業時間</th><th>メモ</th></tr></thead>
+        <tbody>
+          <tr><td class="t">8:30</td><td class="dest">朝食（宿）</td><td>60分</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td class="t">10:00</td><td class="dest">チェックアウト・出発</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr class="move"><td class="t">10:00–11:45</td><td>小田原厚木道路 → 東名 → 圏央道</td><td></td><td>車 105分</td><td></td><td></td><td>—</td></tr>
+          <tr class="meal"><td class="t">11:45</td><td class="dest">厚木PA / 菖蒲PA で昼食</td><td>60分</td><td>—</td><td>無料</td><td>—</td><td>—</td></tr>
+          <tr class="move"><td class="t">12:45–15:00</td><td>圏央道 → 常磐道</td><td></td><td>車 135分</td><td></td><td></td><td>途中1回休憩</td></tr>
+          <tr><td class="t">15:00</td><td class="dest">水戸 帰着</td><td>—</td><td>—</td><td>—</td><td>—</td><td>渋滞があれば17:00以降になる<span class="conf chk">要確認</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="notes">
+    <div class="note rain">
+      <h5>雨天・休館日の代替</h5>
+      <ul>
+        <li><strong>Day 1：</strong>竹林の小径は雨なら中止。宿の温泉のみ。</li>
+        <li><strong>Day 2：</strong>雨なら MOA美術館（熱海・全て屋内）に差し替え。海沿い散歩は中止。</li>
+        <li><strong>Day 3：</strong>移動日なので雨天の影響なし。ただし雨天時は<strong>所要時間を1時間上乗せ</strong>して見ること。</li>
+      </ul>
+    </div>
+    <div class="note alert">
+      <h5>隠れた負担（重大）</h5>
+      <ul>
+        <li><strong>初日5時間30分・最終日4時間30分。</strong>3日間のうち2日が移動で潰れる。観光は実質1日だけ。</li>
+        <li><strong>渋滞が読めない。</strong>海老名JCT・大和トンネル周辺は年末に長時間の停止が発生します。妊娠中に渋滞で動けない状況は、トイレの問題も含めてリスクです。</li>
+        <li><strong>熱海の宿は駐車場有料が多い。</strong>「駐車場無料・1室2万円・朝食付」という条件を三案で最も満たしにくい。</li>
+        <li><strong>宿を2箇所に分けている</strong>ので、荷物の積み下ろしが往路・中日・復路の3回発生する。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cost">
+    <div class="day-bar" style="border-bottom-width:1px"><span class="dnum">COST</span><h4>費用の内訳</h4><span class="meta">2名・2泊3日</span></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>項目</th><th>内容</th><th style="text-align:right">概算</th></tr></thead>
+        <tbody>
+          <tr><td>宿泊</td><td>修善寺28,000＋熱海30,000（2食付）<span class="conf chk">要確認</span></td><td class="n">58,000</td></tr>
+          <tr><td>高速代</td><td>常磐道・圏央道・東名 往復（普通車・ETC）<span class="conf">推定</span></td><td class="n">16,000</td></tr>
+          <tr><td>ガソリン</td><td>往復＋現地 約700km ／ 12km/L ／ 175円/L<span class="conf">推定</span></td><td class="n">10,200</td></tr>
+          <tr><td>食事</td><td>昼3回（夕食は宿食）<span class="conf">推定</span></td><td class="n">18,000</td></tr>
+          <tr><td>入場料</td><td>修禅寺・來宮神社ほか<span class="conf">推定</span></td><td class="n">2,000</td></tr>
+          <tr><td>駐車場</td><td>熱海の宿P（有料の場合）・温泉場P<span class="conf chk">要確認</span></td><td class="n">6,000</td></tr>
+        </tbody>
+        <tfoot><tr><td>合計</td><td>予算内だが、費やす時間に対して得るものが少ない</td><td class="n">約 110,200 円</td></tr></tfoot>
+      </table>
+    </div>
+  </div>
+
+  <div class="rate">
+    <div class="rrow"><span class="lbl">実行可能性</span><span class="pips"><i class="pip low"></i><i class="pip low"></i><i class="pip"></i><i class="pip"></i><i class="pip"></i></span><span class="cmt">★2 — 年末の渋滞次第で初日が破綻する。<strong>改善案：3泊4日にするか、往路に厚木・小田原で1泊挟む</strong></span></div>
+    <div class="rrow"><span class="lbl">移動効率</span><span class="pips"><i class="pip low"></i><i class="pip low"></i><i class="pip"></i><i class="pip"></i><i class="pip"></i></span><span class="cmt">★2 — 3日中2日が移動日。宿も2箇所に分散</span></div>
+    <div class="rrow"><span class="lbl">余裕</span><span class="pips"><i class="pip low"></i><i class="pip low"></i><i class="pip"></i><i class="pip"></i><i class="pip"></i></span><span class="cmt">★2 — 初日8:00発が下限ぎりぎり。遅れの吸収余地がない</span></div>
+    <div class="rrow"><span class="lbl">コスパ</span><span class="pips"><i class="pip low"></i><i class="pip low"></i><i class="pip low"></i><i class="pip"></i><i class="pip"></i></span><span class="cmt">★3 — 予算には収まるが、費用より<strong>時間の使い方</strong>が悪い</span></div>
+  </div>
+</section>
+
+<!-- ================= COMMON ================= -->
+<section id="common">
+  <div class="sec-head"><h2>三案に共通する確認事項</h2><span class="tag">before booking</span></div>
+  <div class="card stack">
+    <div class="notes" style="margin-top:0">
+      <div class="note alert">
+        <h5>予約時に必ず伝えること</h5>
+        <ul>
+          <li><strong>妊娠中である旨。</strong>刺身・生ものを加熱料理へ変更できるか。多くの旅館は事前連絡で対応する。</li>
+          <li><strong>貝・海老・甲殻類が食べられない人がいる旨。</strong>会席の献立には高確率で入っている。</li>
+          <li><strong>駐車場から客室までの動線。</strong>「駐車場無料」でも階段しかない宿がある。</li>
+          <li>年末年始の<strong>チェックイン最終時刻</strong>と夕食開始時刻。</li>
+        </ul>
+      </div>
+      <div class="note" style="--h:var(--gold)">
+        <h5>予算の使い道について</h5>
+        <ul>
+          <li>三案とも総額11万円前後で、<strong>20万円の予算に8〜11万円が余ります</strong>。</li>
+          <li>余剰を訪問数に使うのは薦めません。1日4件の上限に既に近く、増やすと負担側が壊れます。</li>
+          <li>使うなら<strong>宿</strong>です。1泊25,000円を40,000円に上げても総額14万円台。露天風呂付き客室にすれば、移動を減らしたぶんの時間が宿で回収できます。</li>
+          <li>次点は<strong>日程を3泊に延ばすこと</strong>。案Cが成立するのはこの場合だけです。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="banner" style="border-color:var(--line);border-left-color:var(--gold)">
+      <strong style="color:var(--gold)">この提案書の情報の鮮度について</strong>
+      <p>調査日は<strong>2026年8月16日</strong>、対象は<strong>2026年12月末</strong>です。約4か月先のため、年末年始の営業日程・宿の料金設定・空室は<strong>まだ公表されていないものが大半</strong>です。<span class="conf ok">確認済</span>が付いているのは通年の営業時間など調査日時点で確認が取れた項目、<span class="conf">推定</span>は例年の傾向からの見込み、<span class="conf chk">要確認</span>は<strong>予約前に必ず個別確認が必要な項目</strong>です。特に「年末年始の営業日」「宿の年末料金」「高速の渋滞予測」は、11月以降に再確認してください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOURCES ================= -->
+<section id="src" class="src">
+  <div class="sec-head"><h2>出典</h2><span class="tag">sources</span></div>
+  <div class="card">
+    <ul>
+      <li><span class="k">案A / 松島</span><a href="https://www.zuiganji.or.jp/" target="_blank" rel="noopener">国宝 瑞巌寺 公式</a></li>
+      <li><span class="k">案A / 松島</span><a href="https://www.matsushima.or.jp/" target="_blank" rel="noopener">松島島巡り観光船 公式</a></li>
+      <li><span class="k">案A / 松島</span><a href="https://www.matsushima-kanko.com/" target="_blank" rel="noopener">日本三景 松島 観光協会</a></li>
+      <li><span class="k">案A / 仙台</span><a href="https://www.rikyu-gyutan.co.jp/" target="_blank" rel="noopener">牛たん炭焼 利久 公式</a></li>
+      <li><span class="k">案B / 伊香保</span><a href="https://www.ikaho-kankou.com/access/" target="_blank" rel="noopener">渋川伊香保温泉観光協会 アクセス</a></li>
+      <li><span class="k">案B / 伊香保</span><a href="https://www.osawaya.co.jp/shop.html" target="_blank" rel="noopener">水沢うどん 大澤屋 店舗案内</a></li>
+      <li><span class="k">案C / 伊豆</span><a href="https://www.shuzenji-kankou.com/" target="_blank" rel="noopener">修善寺温泉旅館協同組合</a></li>
+      <li><span class="k">案C / 伊豆</span><a href="https://www.shuzenji-kankou.com/illumination.html" target="_blank" rel="noopener">修善寺 温泉街ライトアップ</a></li>
+      <li><span class="k">高速料金</span><a href="https://www.driveplaza.com/search/e_tolls/" target="_blank" rel="noopener">ドラぷら 料金検索（NEXCO東日本）</a></li>
+      <li><span class="k">道路</span><a href="https://www.e-nexco.co.jp/" target="_blank" rel="noopener">NEXCO東日本（渋滞予測・冬季道路情報）</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <p>冬旅三案 ／ 水戸発・2泊3日・年末休み ／ 調査日 2026年8月16日</p>
+  <p>営業時間・料金・空室・所要時間は変動します。予約前に各公式情報で再確認してください。</p>
+</footer>
+
+</main>
+
+<script>
+/* ---------- 1日のタイムライン帯 ---------- */
+(function(){
+  var DAY = {
+    A1:[["8:30","10:00","drive"],["10:00","10:20","rest"],["10:20","11:40","drive"],["11:40","12:00","rest"],["12:00","13:00","drive"],["13:00","14:10","meal"],["14:20","15:10","sight"],["15:20","15:50","sight"],["15:50","16:00","drive"],["16:00","18:00","stay"],["18:00","19:30","meal"]],
+    A2:[["8:00","9:00","meal"],["9:00","10:00","stay"],["10:00","11:00","sight"],["11:20","12:10","drive"],["12:20","13:30","meal"],["14:00","16:00","sight"],["16:10","16:30","drive"],["16:30","18:30","stay"],["18:30","20:00","meal"]],
+    A3:[["8:30","9:30","meal"],["10:00","11:40","drive"],["11:40","12:40","meal"],["13:00","14:30","sight"],["14:40","16:10","drive"]],
+    B1:[["9:00","10:30","drive"],["10:30","10:50","rest"],["10:50","12:00","drive"],["12:10","13:10","meal"],["13:30","14:10","sight"],["14:40","15:50","sight"],["15:50","16:00","drive"],["16:00","18:00","stay"],["18:00","19:30","meal"]],
+    B2:[["8:30","9:30","meal"],["10:00","11:10","drive"],["11:20","12:50","sight"],["13:00","14:00","meal"],["14:15","15:15","sight"],["15:30","16:40","drive"],["16:40","18:30","stay"],["18:30","20:00","meal"]],
+    B3:[["8:30","9:30","meal"],["10:00","10:50","sight"],["11:10","12:30","drive"],["12:30","13:30","meal"],["13:30","15:00","drive"]],
+    C1:[["8:00","10:00","drive"],["10:00","10:25","rest"],["10:25","12:15","drive"],["12:15","13:25","meal"],["13:25","15:00","drive"],["15:10","17:00","stay"],["17:00","17:40","sight"],["18:30","20:00","meal"]],
+    C2:[["8:30","9:30","meal"],["10:00","10:50","sight"],["11:30","12:30","meal"],["13:00","14:00","drive"],["14:10","15:00","sight"],["15:20","16:00","sight"],["16:20","16:30","drive"],["16:30","18:30","stay"],["18:30","20:00","meal"]],
+    C3:[["8:30","9:30","meal"],["10:00","11:45","drive"],["11:45","12:45","meal"],["12:45","15:00","drive"]]
+  };
+  var NAME = {drive:"運転",rest:"休憩",sight:"観光",meal:"食事",stay:"宿・休息"};
+  var START = 8*60, SPAN = 12*60;
+
+  function m(s){ var p = s.split(":"); return (+p[0])*60 + (+p[1]); }
+
+  document.querySelectorAll("[data-tl]").forEach(function(host){
+    var key = host.getAttribute("data-tl");
+    var segs = DAY[key];
+    if(!segs) return;
+
+    var axis = document.createElement("div");
+    axis.className = "tl-axis";
+    [8,10,12,14,16,18,20].forEach(function(h){
+      var s = document.createElement("span");
+      s.textContent = h + ":00";
+      s.style.left = ((h*60 - START) / SPAN * 100) + "%";
+      axis.appendChild(s);
+    });
+    host.appendChild(axis);
+
+    var drive = 0;
+    var row = document.createElement("div");
+    row.className = "tl-row";
+    var lab = document.createElement("div");
+    lab.className = "tl-lab";
+    var track = document.createElement("div");
+    track.className = "tl-track";
+
+    segs.forEach(function(sg){
+      var a = m(sg[0]), b = m(sg[1]);
+      if(sg[2] === "drive") drive += (b - a);
+      var el = document.createElement("div");
+      el.className = "sg " + sg[2];
+      el.style.left = ((a - START) / SPAN * 100) + "%";
+      el.style.width = ((b - a) / SPAN * 100) + "%";
+      el.title = NAME[sg[2]] + " " + sg[0] + "–" + sg[1];
+      track.appendChild(el);
+    });
+
+    var h = Math.floor(drive / 60), mm = drive % 60;
+    lab.innerHTML = "<b>" + key.replace(/^[ABC]/, "DAY ") + "</b>運転 " + h + "h" + (mm ? String(mm).padStart(2,"0") : "00");
+    row.appendChild(lab);
+    row.appendChild(track);
+    host.appendChild(row);
+
+    var key2 = document.createElement("div");
+    key2.className = "tl-key";
+    ["drive","rest","sight","meal","stay"].forEach(function(k){
+      var s = document.createElement("span");
+      s.innerHTML = '<i class="' + k + '"></i>' + NAME[k];
+      key2.appendChild(s);
+    });
+    host.appendChild(key2);
+  });
+})();
+
+/* ---------- hero snowfall ---------- */
+(function(){
+  var c = document.getElementById("snow");
+  if(!c) return;
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var ctx = c.getContext("2d"), flakes = [], w = 0, h = 0, raf;
+
+  function size(){
+    var r = c.getBoundingClientRect();
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; h = r.height;
+    c.width = w * dpr; c.height = h * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    build();
+  }
+  function build(){
+    var n = Math.round(Math.min(w, 1200) / 14);
+    flakes = [];
+    for(var i = 0; i < n; i++){
+      flakes.push({
+        x: Math.random() * w, y: Math.random() * h,
+        r: Math.random() * 1.5 + 0.4,
+        vy: Math.random() * 0.28 + 0.10,
+        vx: (Math.random() - 0.5) * 0.16,
+        a: Math.random() * 0.4 + 0.12,
+        p: Math.random() * Math.PI * 2
+      });
+    }
+  }
+  function draw(){
+    ctx.clearRect(0, 0, w, h);
+    for(var i = 0; i < flakes.length; i++){
+      var f = flakes[i];
+      f.p += 0.008; f.y += f.vy; f.x += f.vx + Math.sin(f.p) * 0.18;
+      if(f.y > h + 4){ f.y = -4; f.x = Math.random() * w; }
+      if(f.x > w + 4) f.x = -4;
+      if(f.x < -4) f.x = w + 4;
+      ctx.beginPath();
+      ctx.fillStyle = "rgba(220,232,242," + f.a + ")";
+      ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    raf = requestAnimationFrame(draw);
+  }
+  size(); draw();
+  var t;
+  window.addEventListener("resize", function(){ clearTimeout(t); t = setTimeout(size, 180); });
+  document.addEventListener("visibilitychange", function(){
+    if(document.hidden){ cancelAnimationFrame(raf); }
+    else { raf = requestAnimationFrame(draw); }
+  });
+})();
+</script>
