@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>松島にこもる二泊</title>
+<title>松島の宿 五案</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&display=swap">
@@ -10,7 +10,6 @@
    冬の松島・連泊 — 寒色=外/移動、琥珀=宿/湯 の2軸で全体を通す
    ============================================================ */
 :root{
-  /* 冷たい側に寄せた中間色。純グレーは使わない */
   --ground:#EDF0F4;
   --surface:#FFFFFF;
   --sunken:#E4E9EF;
@@ -38,49 +37,26 @@
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --ground:#0A1119;
-    --surface:#121D28;
-    --sunken:#182634;
-    --line:#2C4155;
-    --hair:#1F3140;
-    --ink:#E3EAF1;
-    --ink-2:#B0C1D0;
-    --muted:#8296A9;
-    --cold:#74B0C8;
-    --cold-soft:#1B3340;
-    --ember:#E3AC5C;
-    --ember-fill:#C6913F;
-    --ember-soft:#2A2118;
-    --alert:#E08A6F;
-    --verify:#6DB491;
-    --hatch:#5A6E82;
+    --ground:#0A1119; --surface:#121D28; --sunken:#182634;
+    --line:#2C4155; --hair:#1F3140;
+    --ink:#E3EAF1; --ink-2:#B0C1D0; --muted:#8296A9;
+    --cold:#74B0C8; --cold-soft:#1B3340;
+    --ember:#E3AC5C; --ember-fill:#C6913F; --ember-soft:#2A2118;
+    --alert:#E08A6F; --verify:#6DB491; --hatch:#5A6E82;
   }
 }
 :root[data-theme="dark"]{
-  --ground:#0A1119;
-  --surface:#121D28;
-  --sunken:#182634;
-  --line:#2C4155;
-  --hair:#1F3140;
-  --ink:#E3EAF1;
-  --ink-2:#B0C1D0;
-  --muted:#8296A9;
-  --cold:#74B0C8;
-  --cold-soft:#1B3340;
-  --ember:#E3AC5C;
-  --ember-fill:#C6913F;
-  --ember-soft:#2A2118;
-  --alert:#E08A6F;
-  --verify:#6DB491;
-  --hatch:#5A6E82;
+  --ground:#0A1119; --surface:#121D28; --sunken:#182634;
+  --line:#2C4155; --hair:#1F3140;
+  --ink:#E3EAF1; --ink-2:#B0C1D0; --muted:#8296A9;
+  --cold:#74B0C8; --cold-soft:#1B3340;
+  --ember:#E3AC5C; --ember-fill:#C6913F; --ember-soft:#2A2118;
+  --alert:#E08A6F; --verify:#6DB491; --hatch:#5A6E82;
 }
 
 *{box-sizing:border-box}
-body{
-  margin:0;background:var(--ground);color:var(--ink);
-  font-family:var(--f-body);font-size:16px;line-height:1.9;
-  -webkit-text-size-adjust:100%;overflow-x:hidden;
-}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f-body);
+  font-size:16px;line-height:1.9;-webkit-text-size-adjust:100%;overflow-x:hidden}
 h1,h2,h3,h4{font-family:var(--f-disp);font-weight:700;margin:0;line-height:1.4;
   letter-spacing:.03em;text-wrap:balance}
 p{margin:0}
@@ -90,26 +66,32 @@ strong{font-weight:700}
 
 /* ---------------- hero ---------------- */
 .hero{position:relative;background:var(--night);color:#E6EEF6;overflow:hidden;
-  padding:clamp(52px,10vh,88px) 0 clamp(40px,7vh,64px)}
+  padding:clamp(48px,9vh,80px) 0 clamp(36px,6vh,56px)}
 #snow{position:absolute;inset:0;width:100%;height:100%;display:block}
-.hero-in{position:relative;width:var(--w);margin:0 auto;
-  display:grid;gap:clamp(28px,5vw,48px)}
-@media(min-width:860px){.hero-in{grid-template-columns:1.2fr .8fr;align-items:center}}
-.hero .when{font-family:var(--f-data);font-size:11.5px;letter-spacing:.18em;
-  color:var(--ember);margin-bottom:18px;font-variant-numeric:tabular-nums}
-.hero h1{font-size:clamp(38px,7.5vw,62px);letter-spacing:.1em;color:#F2F7FB;
+.hero-in{position:relative;width:var(--w);margin:0 auto}
+.hero .when{font-family:var(--f-data);font-size:11.5px;letter-spacing:.16em;
+  color:var(--ember);margin-bottom:16px;font-variant-numeric:tabular-nums}
+.hero h1{font-size:clamp(34px,7vw,56px);letter-spacing:.09em;color:#F2F7FB;
   font-weight:500;margin-bottom:10px}
-.hero .thesis{font-family:var(--f-disp);font-size:clamp(16px,2.6vw,21px);
-  color:var(--ember);letter-spacing:.08em;margin-bottom:22px;font-weight:500}
-.hero .lede{max-width:31em;color:#B6C8D8;font-size:14.5px;line-height:2.05}
-.terms{display:flex;flex-wrap:wrap;gap:6px;margin-top:24px}
+.hero .thesis{font-family:var(--f-disp);font-size:clamp(15px,2.5vw,20px);
+  color:var(--ember);letter-spacing:.07em;margin-bottom:20px;font-weight:500}
+.hero .lede{max-width:36em;color:#B6C8D8;font-size:14.5px;line-height:2.05}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:28px;
+  background:rgba(150,175,198,.22);border:1px solid rgba(150,175,198,.22)}
+@media(min-width:620px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stats div{background:var(--night);padding:12px 14px}
+.stats b{display:block;font-family:var(--f-data);font-size:20px;color:#F2F7FB;
+  font-variant-numeric:tabular-nums;line-height:1.3}
+.stats b.hi{color:var(--ember)}
+.stats span{display:block;font-size:11px;color:#93AABF;letter-spacing:.03em;margin-top:2px}
+.terms{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px}
 .terms span{font-family:var(--f-data);font-size:10.5px;letter-spacing:.05em;
   border:1px solid rgba(150,175,198,.3);color:#A9BFD2;padding:4px 9px;border-radius:2px;
   white-space:nowrap}
 
 /* ---------------- shell ---------------- */
 main{width:var(--w);margin:0 auto;padding:0 0 80px}
-section{padding-top:clamp(48px,7.5vw,76px)}
+section{padding-top:clamp(46px,7vw,72px)}
 section>h2{font-size:clamp(21px,4vw,29px);margin-bottom:6px}
 section>.sub{color:var(--muted);font-size:13.5px;margin-bottom:22px;max-width:44em}
 .card{background:var(--surface);border:1px solid var(--hair);border-radius:4px;
@@ -125,8 +107,7 @@ figcaption{font-size:12.5px;color:var(--muted);line-height:1.8;margin-top:14px;
 .notes{display:grid;gap:14px;grid-template-columns:1fr;margin-top:22px}
 @media(min-width:760px){.notes{grid-template-columns:1fr 1fr}}
 .note{border:1px solid var(--hair);border-radius:4px;padding:16px 18px;background:var(--surface)}
-/* 左罫は severity を符号化するときだけ使う（装飾では使わない） */
-.note.warn{border-left:3px solid var(--alert);background:var(--surface)}
+.note.warn{border-left:3px solid var(--alert)}
 .note.keep{border-left:3px solid var(--cold)}
 .note.warm{border-left:3px solid var(--ember-fill);background:var(--ember-soft)}
 .note h4{font-size:14.5px;margin-bottom:9px}
@@ -135,19 +116,50 @@ figcaption{font-size:12.5px;color:var(--muted);line-height:1.8;margin-top:14px;
 .note li::marker{color:var(--muted)}
 .note.warn li::marker{color:var(--alert)}
 
-/* ---------------- confidence badges ---------------- */
+/* ---------------- confidence ---------------- */
 .c{font-family:var(--f-data);font-size:9.5px;letter-spacing:.04em;padding:1px 5px;
   border-radius:2px;border:1px solid var(--line);color:var(--muted);white-space:nowrap;
   display:inline-block;vertical-align:1px;margin-left:3px}
 .c.ok{border-color:var(--verify);color:var(--verify)}
 .c.chk{border-color:var(--alert);color:var(--alert)}
 
+/* ---------------- 宿カード ---------------- */
+.hotels{display:flex;flex-direction:column;gap:14px}
+.hotel{border:1px solid var(--hair);border-radius:4px;background:var(--surface);overflow:hidden}
+.hotel.pick{border-color:var(--ember-fill);box-shadow:inset 3px 0 0 var(--ember-fill)}
+.htop{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;padding:15px 18px 12px}
+.htag{font-family:var(--f-data);font-size:10px;letter-spacing:.1em;padding:3px 8px;
+  border:1px solid var(--line);color:var(--muted);border-radius:2px;white-space:nowrap}
+.hotel.pick .htag{border-color:var(--ember-fill);background:var(--ember-fill);color:#12202C}
+.htop h3{font-size:18px;letter-spacing:.05em}
+.hlinks{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.hlinks a{font-family:var(--f-data);font-size:10px;letter-spacing:.04em;color:var(--cold);
+  text-decoration:none;border:1px solid var(--line);border-radius:2px;padding:2px 7px;
+  white-space:nowrap}
+.hlinks a:hover{border-color:var(--cold);background:var(--cold-soft)}
+.spec{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--hair)}
+@media(min-width:660px){.spec{grid-template-columns:repeat(4,1fr)}}
+.spec>div{padding:10px 18px;border-bottom:1px solid var(--hair);border-right:1px solid var(--hair)}
+.spec>div:last-child{border-right:none}
+.spec dt{font-family:var(--f-data);font-size:9.5px;letter-spacing:.07em;color:var(--muted);margin:0}
+.spec dd{margin:3px 0 0;font-size:13px;line-height:1.65}
+.spec dd .yen{font-family:var(--f-data);font-variant-numeric:tabular-nums}
+.hbody{padding:14px 18px 16px;font-size:13.5px;color:var(--ink-2);line-height:1.95}
+.hbody .against{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);
+  color:var(--muted);font-size:12.5px;line-height:1.8}
+.hbody .against b{color:var(--alert);font-weight:700}
+
+.dropped{margin-top:16px;border:1px dashed var(--line);border-radius:4px;padding:14px 18px;
+  background:var(--sunken)}
+.dropped h4{font-size:13.5px;margin-bottom:8px;color:var(--muted)}
+.dropped li{font-size:12.5px;color:var(--muted);line-height:1.85;margin-bottom:4px}
+.dropped ul{margin:0;padding-left:1.1em}
+
 /* ---------------- calendar ---------------- */
 .cal{display:grid;grid-template-columns:repeat(9,1fr);gap:3px;margin:0 0 12px}
 .cal div{border:1px solid var(--hair);border-radius:2px;padding:7px 1px 8px;
   text-align:center;background:var(--surface)}
-.cal b{font-family:var(--f-data);font-size:9px;letter-spacing:.04em;color:var(--muted);
-  display:block;font-weight:400}
+.cal b{font-family:var(--f-data);font-size:9px;color:var(--muted);display:block;font-weight:400}
 .cal i{font-family:var(--f-data);font-size:13.5px;font-variant-numeric:tabular-nums;
   display:block;font-style:normal;margin-top:1px}
 .cal .go{background:var(--ember-fill);border-color:var(--ember-fill);color:#0B1420}
@@ -160,14 +172,13 @@ figcaption{font-size:12.5px;color:var(--muted);line-height:1.8;margin-top:14px;
 .callegend em.g{background:var(--ember-fill);border-color:var(--ember-fill)}
 .callegend em.p{background:var(--sunken)}
 
-/* ---------------- timeline ribbon ---------------- */
+/* ---------------- timeline ---------------- */
 .tl{margin:16px 0 4px}
 .tlx{position:relative;height:15px;margin-left:70px;border-bottom:1px solid var(--hair)}
 .tlx span{position:absolute;top:0;transform:translateX(-50%);font-family:var(--f-data);
   font-size:9px;color:var(--muted);font-variant-numeric:tabular-nums}
 .tlr{display:flex;align-items:center;margin-top:7px}
-.tll{width:70px;flex:none;font-family:var(--f-data);font-size:10px;color:var(--muted);
-  line-height:1.45}
+.tll{width:70px;flex:none;font-family:var(--f-data);font-size:10px;color:var(--muted);line-height:1.45}
 .tll b{display:block;color:var(--ink);font-size:10.5px}
 .tlt{position:relative;height:24px;flex:1;background:var(--sunken);border-radius:2px;
   overflow:hidden;border:1px solid var(--hair)}
@@ -193,7 +204,7 @@ figcaption{font-size:12.5px;color:var(--muted);line-height:1.8;margin-top:14px;
   .tll{width:56px;font-size:9px}
 }
 
-/* ---------------- day ---------------- */
+/* ---------------- day / tables ---------------- */
 .day{margin-top:30px}
 .dayhead{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap;padding-bottom:7px;
   border-bottom:1px solid var(--line)}
@@ -203,7 +214,6 @@ figcaption{font-size:12.5px;color:var(--muted);line-height:1.8;margin-top:14px;
   font-variant-numeric:tabular-nums}
 .dayhead .m.quiet{color:var(--ember);font-weight:600}
 
-/* ---------------- tables ---------------- */
 .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 table{border-collapse:collapse;width:100%;font-size:13px}
 thead th{font-family:var(--f-data);font-weight:400;font-size:10px;letter-spacing:.1em;
@@ -216,18 +226,16 @@ td:empty::after{content:"—";color:var(--muted)}
 .place{font-weight:700;min-width:7.5em}
 .num{font-family:var(--f-data);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
 tr.eat td{background:var(--cold-soft)}
-tr.eat td:empty::after{color:var(--muted)}
 tr.go td{color:var(--muted);font-size:12.5px}
 tr.in td{background:var(--ember-soft)}
 tfoot td{border-top:2px solid var(--line);padding-top:12px;font-weight:700}
 
-/* 地図リンク */
 .map{font-family:var(--f-data);font-size:10px;letter-spacing:.04em;color:var(--cold);
   text-decoration:none;border:1px solid var(--line);border-radius:2px;padding:1px 5px;
   margin-left:6px;white-space:nowrap;display:inline-block;vertical-align:1px;font-weight:400}
 .map:hover{border-color:var(--cold);background:var(--cold-soft)}
 
-/* 旅程表：スマホでは表をやめてカードに組み替える（横スクロールさせない） */
+/* 旅程表：スマホでは表をやめてカードに組み替える */
 .itin{min-width:740px}
 @media(max-width:760px){
   .itin{min-width:0;display:block}
@@ -278,7 +286,6 @@ tfoot td{border-top:2px solid var(--line);padding-top:12px;font-weight:700}
 
 footer{border-top:1px solid var(--hair);margin-top:50px;padding:24px 0 0;font-size:12px;
   color:var(--muted);line-height:1.9}
-
 a:focus-visible,.map:focus-visible{outline:2px solid var(--ember);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -286,61 +293,40 @@ a:focus-visible,.map:focus-visible{outline:2px solid var(--ember);outline-offset
 <div class="hero">
   <canvas id="snow" aria-hidden="true"></canvas>
   <div class="hero-in">
-    <div>
-      <div class="when">2026.12.27 SUN — 12.29 TUE　／　水戸発・車・2泊3日</div>
-      <h1>松島にこもる</h1>
-      <div class="thesis">出かけるのは、二回だけ。</div>
-      <p class="lede">同じ宿に二泊して、荷物を動かさない。中日は車をほとんど出さない。旅の本体を観光地ではなく、<strong>宿そのもの</strong>に置き替えた旅程です。冬の松島は湾が凪いで、人も夏よりずっと少ない。</p>
-      <div class="terms">
-        <span>水戸駅発</span><span>運転者 実質1名</span><span>妻 妊娠中／27年5月予定</span>
-        <span>生もの不可</span><span>貝・海老・甲殻類 回避</span><span>連続3h・日7h</span>
-        <span>出発 8:00以降</span><span>総額 20万円</span>
-      </div>
+    <div class="when">2026.12.27 SUN — 12.29 TUE　／　水戸発・車・2泊3日</div>
+    <h1>松島の宿 五案</h1>
+    <div class="thesis">出かけるのは二回だけ。あとは宿にいます。</div>
+    <p class="lede">同じ宿に二泊して荷物を動かさず、中日は車をほとんど出さない。旅の本体を観光地ではなく<strong>宿そのもの</strong>に置いた旅程です。だから決めるべきことは実質ひとつ、<strong>どの宿に二泊するか</strong>。松島の五軒を、条件を先に決めてから比べました。</p>
+    <div class="stats">
+      <div><b class="hi">5</b><span>宿の候補</span></div>
+      <div><b>2</b><span>外出の回数</span></div>
+      <div><b>17h35</b><span>宿にいる時間</span></div>
+      <div><b>163,700</b><span>宿に使える上限（円・2泊）</span></div>
     </div>
-
-    <figure>
-      <svg viewBox="0 0 330 236" role="img" aria-label="3日間の運転時間。1日目4時間、2日目20分、3日目3時間30分。連続運転の上限は3時間。">
-        <defs>
-          <pattern id="hx" width="6" height="6" patternTransform="rotate(135)" patternUnits="userSpaceOnUse">
-            <line x1="0" y1="0" x2="0" y2="6" stroke="#8496A8" stroke-width="3"/>
-          </pattern>
-        </defs>
-        <text x="0" y="12" fill="#DDA75A" font-family="ui-monospace,monospace" font-size="9.5" letter-spacing="2.2">運転時間 ／ 60px = 1時間</text>
-        <line x1="180" y1="28" x2="180" y2="226" stroke="#DDA75A" stroke-width="1" stroke-dasharray="3 4" opacity=".8"/>
-        <text x="176" y="40" text-anchor="end" fill="#DDA75A" font-family="ui-monospace,monospace" font-size="9">連続運転の上限 3h</text>
-
-        <text x="0" y="66" fill="#F2F7FB" font-family="serif" font-size="12.5" letter-spacing="1.4">1日目　水戸 → 松島</text>
-        <rect x="0" y="74" width="240" height="18" fill="url(#hx)" stroke="#8496A8" stroke-width="1"/>
-        <text x="248" y="87" fill="#C6D6E4" font-family="ui-monospace,monospace" font-size="10.5">4h00</text>
-
-        <text x="0" y="128" fill="#F2F7FB" font-family="serif" font-size="12.5" letter-spacing="1.4">2日目　松島に滞在</text>
-        <rect x="0" y="136" width="20" height="18" fill="url(#hx)" stroke="#8496A8" stroke-width="1"/>
-        <text x="28" y="149" fill="#DDA75A" font-family="ui-monospace,monospace" font-size="10.5" font-weight="600">0h20 — ほぼ宿にいる日</text>
-
-        <text x="0" y="190" fill="#F2F7FB" font-family="serif" font-size="12.5" letter-spacing="1.4">3日目　松島 → 水戸</text>
-        <rect x="0" y="198" width="210" height="18" fill="url(#hx)" stroke="#8496A8" stroke-width="1"/>
-        <text x="218" y="211" fill="#C6D6E4" font-family="ui-monospace,monospace" font-size="10.5">3h30</text>
-      </svg>
-    </figure>
+    <div class="terms">
+      <span>水戸駅発</span><span>運転者 実質1名</span><span>妻 妊娠中／27年5月予定</span>
+      <span>生もの不可</span><span>貝・海老・甲殻類 回避</span><span>連続3h・日7h</span>
+      <span>出発 8:00以降</span><span>総額 20万円</span>
+    </div>
   </div>
 </div>
 
 <main>
 
-<!-- ========== 何を変えたか ========== -->
-<section id="shift">
-  <h2>何を変えたか</h2>
-  <p class="sub">前の案は松島泊→仙台泊の二箇所でした。中日が「荷造り→チェックアウト→90分運転→チェックイン」で埋まるため、時刻をずらしても直らず、構成から変えています。</p>
-  <div class="card">
+<!-- ========== 宿 ========== -->
+<section id="stay">
+  <h2>宿を選ぶ</h2>
+  <p class="sub">外出をここまで削ると、満足度はほぼ宿で決まります。移動と食事に使うのは約36,300円なので、宿には2泊で163,700円まで充てられる計算です。</p>
+
+  <div class="card stack">
     <figure>
-      <svg viewBox="0 0 600 178" role="img" aria-label="起きて動いている約30時間の内訳の比較。前の案は運転9時間30分・外出11時間20分・宿9時間20分。今回は運転7時間50分・外出5時間5分・宿17時間35分。">
+      <svg viewBox="0 0 600 178" role="img" aria-label="起きて動いている約30時間の内訳の比較。観光地を回る案は運転9時間30分・外出11時間20分・宿9時間20分。この案は運転7時間50分・外出5時間5分・宿17時間35分。">
         <defs>
           <pattern id="hy" width="6" height="6" patternTransform="rotate(135)" patternUnits="userSpaceOnUse">
             <line x1="0" y1="0" x2="0" y2="6" stroke="var(--hatch)" stroke-width="3"/>
           </pattern>
         </defs>
-
-        <text x="94" y="42" text-anchor="end" fill="var(--muted)" font-family="var(--f-body)" font-size="12.5">前の案</text>
+        <text x="94" y="42" text-anchor="end" fill="var(--muted)" font-family="var(--f-body)" font-size="12.5">観光中心なら</text>
         <rect x="102" y="26" width="151" height="24" fill="url(#hy)" stroke="var(--hatch)"/>
         <rect x="253" y="26" width="180" height="24" fill="var(--cold)"/>
         <rect x="433" y="26" width="149" height="24" fill="var(--ember-fill)"/>
@@ -348,7 +334,7 @@ a:focus-visible,.map:focus-visible{outline:2px solid var(--ember);outline-offset
         <text x="343" y="68" text-anchor="middle" fill="var(--cold)" font-family="var(--f-data)" font-size="10">11h20</text>
         <text x="508" y="68" text-anchor="middle" fill="var(--ember)" font-family="var(--f-data)" font-size="10">9h20</text>
 
-        <text x="94" y="116" text-anchor="end" fill="var(--ink)" font-family="var(--f-body)" font-size="12.5" font-weight="700">今回</text>
+        <text x="94" y="116" text-anchor="end" fill="var(--ink)" font-family="var(--f-body)" font-size="12.5" font-weight="700">この案</text>
         <rect x="102" y="100" width="123" height="24" fill="url(#hy)" stroke="var(--hatch)"/>
         <rect x="225" y="100" width="80" height="24" fill="var(--cold)"/>
         <rect x="305" y="100" width="277" height="24" fill="var(--ember-fill)"/>
@@ -362,93 +348,198 @@ a:focus-visible,.map:focus-visible{outline:2px solid var(--ember);outline-offset
           <rect x="316" y="160" width="12" height="10" fill="var(--ember-fill)"/><text x="333" y="169">宿にいる時間</text>
         </g>
       </svg>
-      <figcaption>起きて動いている約30時間（初日9:00発〜最終日15:30着、就寝時間を除く）の内訳。<strong>宿にいる時間が9時間20分から17時間35分へ、ほぼ倍になります。</strong>運転も1時間40分減りましたが、効いているのはそこではなく、外出を11時間20分から5時間05分に削ったことです。</figcaption>
+      <figcaption>起きて動いている約30時間（初日9:00発〜最終日15:30着、就寝時間を除く）の内訳。<strong>宿にいる時間が17時間35分。</strong>ここが旅の中身なので、宿の選定に予算と手間を寄せる価値があります。</figcaption>
     </figure>
 
-    <div class="notes">
-      <div class="note warm">
-        <h4>やめたこと</h4>
-        <ul>
-          <li><strong>宿の移動。</strong>松島に連泊へ。荷物の積み下ろしが3回から2回に減り、中日にチェックイン・アウトの時刻へ縛られなくなります。</li>
-          <li><strong>中日の仙台往復。</strong>1時間30分の運転が20分になります。</li>
-          <li><strong>遊覧船・瑞鳳殿・水族館。</strong>冬の遊覧船は体が冷え、瑞鳳殿は石段が長い。どちらも「ゆっくり」とは逆方向でした。</li>
-        </ul>
-      </div>
-      <div class="note keep">
-        <h4>残したこと</h4>
-        <ul>
-          <li><strong>牛たん。</strong>初日の昼に仙台で。松島へ向かう途中に通るので、<strong>寄り道の運転はゼロ</strong>です。</li>
-          <li><strong>瑞巌寺・五大堂。</strong>中日の午前に2時間だけ。屋内で平坦です。松島まで来て一度も外に出ないのも惜しいので、これだけ残しました。</li>
-          <li>外出はこの二回だけです。</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== 宿 ========== -->
-<section id="stay">
-  <h2>宿が旅の本体</h2>
-  <p class="sub">ここまで外出を削ると、満足度はほぼ宿で決まります。移動と食事に使うのは約36,000円なので、宿に15万円まで充てられる計算です。</p>
-  <div class="card stack">
     <div class="notes" style="margin-top:0">
       <div class="note warm">
-        <h4>宿に求める条件</h4>
+        <h4>先に決めた条件</h4>
         <ul>
-          <li><strong>客室に露天風呂か展望風呂があること。</strong>これが最優先。大浴場までの移動が要らず、混雑も気にせず、妻が自分のペースで何度でも入れます。</li>
+          <li><strong>客室に露天風呂か展望風呂があること。</strong>最優先。大浴場まで移動せず、混雑も気にせず、妻が自分のペースで何度でも入れます。</li>
           <li><strong>連泊できること。</strong>二泊とも同じ部屋。荷物を出したままにできるのが妊娠中には大きい。</li>
-          <li><strong>駐車場から部屋まで階段がないこと。</strong>松島の宿は高台に多く、ここは実際に差が出ます。</li>
+          <li><strong>駐車場が無料で、部屋まで階段がないこと。</strong>松島の宿は高台に多く、ここは実際に差が出ます。</li>
           <li><strong>2食付き。</strong>夜に車を出さないための条件です。</li>
-          <li><strong>部屋以外の居場所があること。</strong>ラウンジや読書スペース。こもる旅ではここが効きます。</li>
+          <li><strong>部屋以外の居場所があること。</strong>こもる旅では、中日の5時間をどこで過ごすかが効きます。</li>
         </ul>
       </div>
       <div class="note warn">
         <h4>温泉について（事実関係）</h4>
         <ul>
           <li>温泉の禁忌症にあった「妊娠中」の記載は、<strong>2014年に環境省が削除しました</strong>。医学的根拠がないというのが理由です<span class="c ok">確認済 08-16</span>。</li>
-          <li>削除されたのは「妊娠中だから入ってはいけない」という一般則であって、<strong>個別の注意が消えたわけではありません</strong>。のぼせ・脱水・浴室での転倒は妊娠中でなくても起きます。</li>
-          <li>実務的には<strong>長湯をしない・湯温を上げすぎない・一人で入らない・手すりのある浴室を選ぶ</strong>。客室露天を勧めているのは、この全部が自分の裁量でできるからです。</li>
+          <li>削除されたのは一般則であって、<strong>個別の注意が消えたわけではありません</strong>。のぼせ・脱水・浴室での転倒は妊娠中でなくても起きます。</li>
+          <li>実務的には<strong>長湯をしない・湯温を上げすぎない・一人で入らない</strong>。客室風呂を条件にしているのは、この全部が自分の裁量でできるからです。</li>
           <li><strong>かかりつけ医に一度確認してください。</strong>経過によっては個別に止められることがあります。</li>
         </ul>
       </div>
     </div>
 
-    <div>
-      <div class="dayhead"><span class="n">候補</span><h4>三件</h4><span class="m">2名1泊・2食付</span></div>
-      <div class="scroll">
-        <table style="min-width:640px;margin-top:2px">
-          <thead><tr><th>宿</th><th>客室風呂</th><th>1泊2名</th><th>位置</th><th>この旅への向き</th></tr></thead>
-          <tbody>
-            <tr>
-              <td class="place"><a href="https://www.ichinobo.com/matsushima/" target="_blank" rel="noopener">松島一の坊</a><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E4%B8%80%E3%81%AE%E5%9D%8A" target="_blank" rel="noopener">地図</a></td>
-              <td>露天風呂付き客室あり<span class="c chk">要確認</span></td>
-              <td class="num">72,600<br>〜151,410円<span class="c ok">確認済 08-16</span></td>
-              <td>高台・海側<br>瑞巌寺まで車5分</td>
-              <td><strong>こもる旅に最も向く。</strong>オールインクルーシブで、ラウンジのドリンク・スイーツ、館内アクティビティ、ガラス美術館が宿泊料に含まれる<span class="c ok">確認済 08-16</span>。酒を飲まない妊娠中でもソフトドリンクと甘味で元が取れる。連泊割引あり<span class="c chk">要確認</span>。ただし予算を使い切る</td>
-            </tr>
-            <tr>
-              <td class="place"><a href="https://www.taikanso.co.jp/" target="_blank" rel="noopener">ホテル松島大観荘</a><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%BE%E5%B3%B6%E5%A4%A7%E8%A6%B3%E8%8D%98" target="_blank" rel="noopener">地図</a></td>
-              <td>露天風呂付き客室あり<span class="c chk">要確認</span></td>
-              <td class="num">4〜5万円台<br>の想定<span class="c chk">要確認</span></td>
-              <td>一の坊の隣<br>（約20m）<span class="c ok">確認済 08-16</span></td>
-              <td>駐車場無料を確認済<span class="c ok">確認済 08-16</span>。高台からの眺望。<strong>予算的にはこちらが本命。</strong>一の坊と隣接なので立地条件はほぼ同じ</td>
-            </tr>
-            <tr>
-              <td class="place"><a href="https://komatsukan-kofutei.co.jp/oheya/with_roten/" target="_blank" rel="noopener">小松館 好風亭</a><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E6%B8%A9%E6%B3%89%20%E5%B0%8F%E6%9D%BE%E9%A4%A8%E5%A5%BD%E9%A2%A8%E4%BA%AD" target="_blank" rel="noopener">地図</a></td>
-              <td>展望温泉付き客室<br>ガラスシャッター付<span class="c ok">確認済 08-16</span></td>
-              <td class="num">要確認<span class="c chk">要確認</span></td>
-              <td>松島湾の<br>目の前<span class="c ok">確認済 08-16</span></td>
-              <td><strong>冬向き。</strong>客室風呂にガラスシャッターがあるので、寒い日は閉めて内風呂として使える。露天は冬に寒くて入れないことがあるが、これなら無駄にならない。IN15:00 ／ OUT10:00<span class="c ok">確認済 08-16</span></td>
-            </tr>
-          </tbody>
-        </table>
+    <figure>
+      <svg viewBox="0 0 600 246" role="img" aria-label="五軒の2泊料金と予算上限の比較。宿に使える上限は163,700円。大観荘は72,000から88,000円、好風亭は46,200円から、センチュリーホテルは52,800から255,200円、一の坊は145,200から302,820円、松庵は171,600円から。">
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M0,1 L9,5 L0,9 z" fill="var(--muted)"/>
+          </marker>
+        </defs>
+        <!-- 予算上限 -->
+        <rect x="360" y="18" width="220" height="176" fill="var(--alert)" opacity=".05"/>
+        <line x1="360" y1="18" x2="360" y2="200" stroke="var(--ember)" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <text x="356" y="14" text-anchor="end" fill="var(--ember)" font-family="var(--f-data)" font-size="10" font-weight="600">宿に使える上限 163,700円</text>
+        <text x="366" y="14" fill="var(--alert)" font-family="var(--f-data)" font-size="10">予算超過</text>
+
+        <!-- 大観荘 -->
+        <text x="124" y="40" text-anchor="end" fill="var(--ink)" font-family="var(--f-body)" font-size="12" font-weight="700">大観荘</text>
+        <rect x="231" y="26" width="23" height="18" fill="var(--ember-fill)"/>
+        <text x="262" y="40" fill="var(--ember)" font-family="var(--f-data)" font-size="10" font-weight="600">72,000–88,000</text>
+        <!-- 好風亭 -->
+        <text x="124" y="76" text-anchor="end" fill="var(--ink)" font-family="var(--f-body)" font-size="12">好風亭</text>
+        <rect x="195" y="62" width="4" height="18" fill="var(--cold)"/>
+        <line x1="199" y1="71" x2="300" y2="71" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#ar)"/>
+        <text x="310" y="76" fill="var(--muted)" font-family="var(--f-data)" font-size="10">46,200〜（上限 要確認）</text>
+        <!-- センチュリー -->
+        <text x="124" y="112" text-anchor="end" fill="var(--ink)" font-family="var(--f-body)" font-size="12">センチュリー</text>
+        <rect x="204" y="98" width="285" height="18" fill="var(--cold)" opacity=".55"/>
+        <text x="204" y="132" fill="var(--cold)" font-family="var(--f-data)" font-size="10">52,800–255,200（プラン幅が広い）</text>
+        <!-- 一の坊 -->
+        <text x="124" y="156" text-anchor="end" fill="var(--ink)" font-family="var(--f-body)" font-size="12">一の坊</text>
+        <rect x="334" y="142" width="222" height="18" fill="var(--alert)" opacity=".55"/>
+        <text x="334" y="176" fill="var(--alert)" font-family="var(--f-data)" font-size="10">145,200–302,820</text>
+        <!-- 松庵 -->
+        <text x="124" y="192" text-anchor="end" fill="var(--ink)" font-family="var(--f-body)" font-size="12">松庵</text>
+        <rect x="371" y="178" width="4" height="18" fill="var(--alert)"/>
+        <line x1="375" y1="187" x2="480" y2="187" stroke="var(--alert)" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#ar)"/>
+        <text x="490" y="192" fill="var(--alert)" font-family="var(--f-data)" font-size="10">171,600〜</text>
+
+        <!-- 軸 -->
+        <line x1="130" y1="206" x2="580" y2="206" stroke="var(--line)" stroke-width="1"/>
+        <g fill="var(--muted)" font-family="var(--f-data)" font-size="9" text-anchor="middle">
+          <text x="130" y="220">0</text><text x="271" y="220">10万</text>
+          <text x="411" y="220">20万</text><text x="552" y="220">30万</text>
+        </g>
+        <text x="130" y="240" fill="var(--muted)" font-family="var(--f-body)" font-size="11">2泊・2名・税込（円）</text>
+      </svg>
+      <figcaption>移動と食事の36,300円は動かせないので、宿に回せるのは<strong>2泊で163,700円まで</strong>。この線を引くと候補が三群に分かれます——<strong>確実に収まる</strong>のが大観荘と好風亭、<strong>プランの選び方次第</strong>がセンチュリー、<strong>予算を超える／使い切る</strong>のが一の坊と松庵。料金は調査日時点の公開範囲で、年末年始料金は別途<span class="c chk">要確認</span>。</figcaption>
+    </figure>
+  </div>
+
+  <div class="hotels" style="margin-top:16px">
+
+    <!-- 1 -->
+    <div class="hotel pick">
+      <div class="htop">
+        <span class="htag">本命</span>
+        <h3>ホテル松島大観荘</h3>
+        <span class="hlinks">
+          <a href="https://www.taikanso.co.jp/" target="_blank" rel="noopener">公式</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%BE%E5%B3%B6%E5%A4%A7%E8%A6%B3%E8%8D%98" target="_blank" rel="noopener">地図</a>
+        </span>
+      </div>
+      <div class="spec">
+        <div><dt>客室風呂</dt><dd>露天風呂付和室<span class="c ok">確認済 08-16</span></dd></div>
+        <div><dt>1泊2名・2食付</dt><dd><span class="yen">36,000〜44,000円</span><span class="c ok">確認済 08-16</span></dd></div>
+        <div><dt>駐車場</dt><dd>無料<span class="c ok">確認済 08-16</span></dd></div>
+        <div><dt>位置</dt><dd>高台・海側<br>瑞巌寺まで車5分</dd></div>
+      </div>
+      <div class="hbody">
+        <strong>条件を全部満たしたうえで、いちばん素直に予算に収まります。</strong>露天風呂付和室の1泊2食付が2名36,000〜44,000円と明示されており、2泊でも72,000〜88,000円。上限163,700円に対して半分程度で、余った分を部屋のグレードか食事に回せます。駐車場無料も確認済み。高台からの松島湾の眺望が売りで、一の坊とは約20mの隣接なので立地条件はほぼ同じです。
+        <div class="against"><b>弱いところ：</b>大型ホテルなので、こもる旅で効く「静けさ」では松庵に劣ります。館内で過ごす仕掛けも一の坊ほどではありません。</div>
       </div>
     </div>
 
-    <div class="callout">
-      <h4>「1室20,000円」の前提を外しています</h4>
-      <p>共通条件では宿を1室20,000円としていましたが、この旅程では<strong>そこが旅の中身そのもの</strong>なので、意図的に超過させています。45,000円前後（大観荘・好風亭クラス）で組むと総額は約126,000円、<strong>一の坊のオールインクルーシブ（1泊75,000円想定）で約186,000円</strong>。どちらも20万円の予算には収まりますが、後者はほぼ使い切ります。<strong>使い切ってよいかは要相談。</strong>下の費用表は45,000円のほうで計算しています。</p>
+    <!-- 2 -->
+    <div class="hotel">
+      <div class="htop">
+        <span class="htag">冬に強い</span>
+        <h3>松島温泉 小松館 好風亭</h3>
+        <span class="hlinks">
+          <a href="https://komatsukan-kofutei.co.jp/oheya/with_roten/" target="_blank" rel="noopener">公式</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E6%B8%A9%E6%B3%89%20%E5%B0%8F%E6%9D%BE%E9%A4%A8%E5%A5%BD%E9%A2%A8%E4%BA%AD" target="_blank" rel="noopener">地図</a>
+        </span>
+      </div>
+      <div class="spec">
+        <div><dt>客室風呂</dt><dd>展望温泉付客室<br>ガラスシャッター付<span class="c ok">確認済 08-16</span></dd></div>
+        <div><dt>1泊2名</dt><dd><span class="yen">23,100円〜</span><br>客室風呂付は上振れ<span class="c chk">要確認</span></dd></div>
+        <div><dt>駐車場</dt><dd>要確認<span class="c chk">要確認</span></dd></div>
+        <div><dt>位置</dt><dd>松島湾の目の前<span class="c ok">確認済 08-16</span></dd></div>
+      </div>
+      <div class="hbody">
+        <strong>12月末に泊まるなら、この一点で有利です。</strong>客室風呂にガラスシャッターが付いており、寒い日は閉めて内風呂として使えます。冬の客室露天は「寒すぎて結局使わなかった」が起こりがちで、そうなると最優先条件そのものが無駄になる——好風亭にはその取りこぼしがありません。松島湾の目の前という立地で、風呂は全てオーシャンビュー。夕食は「和のフルコース」「炭火焼きコース」「お部屋食」から選べるので、<strong>部屋食にすれば移動ゼロで食べられます</strong>。チェックイン15:00／アウト10:00。
+        <div class="against"><b>弱いところ：</b>駐車場の条件と、客室風呂付きプランの実勢価格が未確認。最安23,100円は客室風呂なしのプランです。</div>
+      </div>
     </div>
+
+    <!-- 3 -->
+    <div class="hotel">
+      <div class="htop">
+        <span class="htag">価格を抑える</span>
+        <h3>松島センチュリーホテル</h3>
+        <span class="hlinks">
+          <a href="https://ssl.centuryhotel.co.jp/" target="_blank" rel="noopener">公式</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E3%82%BB%E3%83%B3%E3%83%81%E3%83%A5%E3%83%AA%E3%83%BC%E3%83%9B%E3%83%86%E3%83%AB" target="_blank" rel="noopener">地図</a>
+        </span>
+      </div>
+      <div class="spec">
+        <div><dt>客室風呂</dt><dd>天然温泉露天風呂付<br>55㎡・65㎡<span class="c ok">確認済 08-16</span></dd></div>
+        <div><dt>1泊2名</dt><dd><span class="yen">26,400〜127,600円</span><span class="c ok">確認済 08-16</span></dd></div>
+        <div><dt>駐車場</dt><dd>無料<span class="c ok">確認済 08-16</span></dd></div>
+        <div><dt>位置</dt><dd>松島海岸・平地<br>瑞巌寺まで徒歩圏</dd></div>
+      </div>
+      <div class="hbody">
+        <strong>唯一、平地にあります。</strong>他の四軒が高台か岬にあるのに対し、ここは松島海岸の平地で瑞巌寺まで歩ける距離。中日に車を出さずに済む可能性があるのはこの宿だけです。客室露天付きの部屋は55㎡・65㎡と広く、価格幅が26,400〜127,600円と大きいので、<strong>予算に合わせて調整できる余地が最も大きい</strong>。駐車場無料。
+        <div class="against"><b>弱いところ：</b>価格幅が広いぶん、安いプランは客室風呂なし。この旅の条件を満たす部屋がいくらになるかは個別に見る必要があります。旅館というよりホテルなので、和の設えを期待すると外れます。</div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="hotel">
+      <div class="htop">
+        <span class="htag">全部込み</span>
+        <h3>松島一の坊</h3>
+        <span class="hlinks">
+          <a href="https://www.ichinobo.com/matsushima/" target="_blank" rel="noopener">公式</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E4%B8%80%E3%81%AE%E5%9D%8A" target="_blank" rel="noopener">地図</a>
+        </span>
+      </div>
+      <div class="spec">
+        <div><dt>客室風呂</dt><dd>露天風呂付き客室あり<span class="c chk">要確認</span></dd></div>
+        <div><dt>1泊2名</dt><dd><span class="yen">72,600〜151,410円</span><span class="c ok">確認済 08-16</span></dd></div>
+        <div><dt>駐車場</dt><dd>無料<span class="c ok">確認済 08-16</span></dd></div>
+        <div><dt>位置</dt><dd>高台・七千坪の庭園<br>松島駅から徒歩15分</dd></div>
+      </div>
+      <div class="hbody">
+        <strong>こもる旅との相性だけを見れば、五軒で最も良い宿です。</strong>オールインクルーシブで、ラウンジのドリンク・スイーツ、館内アクティビティ、ガラス美術館が宿泊料に含まれます。中日の5時間を持て余さない仕掛けが館内に揃っていて、酒を飲まない妊娠中でもソフトドリンクと甘味で元が取れる。七千坪の庭園も、寒くない日なら散歩になります。連泊割引あり<span class="c chk">要確認</span>。
+        <div class="against"><b>弱いところ：</b>2泊145,200〜302,820円。<b>安いプランでも予算の大半を、高いプランでは予算を超えます。</b>総額は約186,300円（1泊75,000円想定）で、20万円には収まるものの使い切る計算です。</div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="hotel">
+      <div class="htop">
+        <span class="htag">静けさ</span>
+        <h3>松島佐勘 松庵</h3>
+        <span class="hlinks">
+          <a href="https://www.jalan.net/yad374328/" target="_blank" rel="noopener">詳細</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E4%BD%90%E5%8B%98%20%E6%9D%BE%E5%BA%B5" target="_blank" rel="noopener">地図</a>
+        </span>
+      </div>
+      <div class="spec">
+        <div><dt>客室風呂</dt><dd>要確認<br>大浴場に露天あり<span class="c ok">確認済 08-16</span></dd></div>
+        <div><dt>1泊2名・2食付</dt><dd><span class="yen">85,800円〜</span><span class="c ok">確認済 08-16</span></dd></div>
+        <div><dt>駐車場</dt><dd>無料・25台<br>24時間・予約不要<span class="c ok">確認済 08-16</span></dd></div>
+        <div><dt>位置</dt><dd>静かな岬・約3000坪<br>全11室</dd></div>
+      </div>
+      <div class="hbody">
+        <strong>全11室。五軒でいちばん静かに過ごせます。</strong>約3000坪の敷地に11室だけという密度で、松島湾を一望する岬に建っています。大浴場は男女で設えが異なり、岩風呂と潮風の露天。人の少なさを重視するならここです。駐車場は無料・24時間・予約不要と条件が明確。
+        <div class="against"><b>弱いところ：</b>2泊171,600円〜で、<b>下限ですでに予算上限を超えます。</b>加えて<b>客室に風呂があるかを確認できていません</b>——最優先条件が未確認のまま残っており、無ければこの旅の前提から外れます。予約前にここを最初に確かめてください。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dropped">
+    <h4>候補から外した宿</h4>
+    <ul>
+      <li><strong>松島温泉元湯 ホテル海風土（うぶど）</strong>——客室露天風呂があり条件に合っていましたが、<strong>2025年1月31日で閉館</strong>していました<span class="c ok">確認済 08-16</span>。古い記事や比較サイトにはまだ載っているので注意。</li>
+      <li><strong>大江戸温泉物語Premium ホテル壮観</strong>——高台の立地・駐車場無料・バイキングと条件は良いのですが、<strong>客室風呂が確認できず</strong>、最優先条件を満たさないため外しました<span class="c chk">要確認</span>。バイキングは生ものを自分で避けて選べるので、その点はむしろ妊娠中向きです。</li>
+    </ul>
   </div>
 </section>
 
@@ -538,7 +629,7 @@ a:focus-visible,.map:focus-visible{outline:2px solid var(--ember);outline-offset
             <td class="t" data-l="時刻">9:00</td>
             <td class="place" data-l="行き先">水戸駅 出発<a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B0%B4%E6%88%B8%E9%A7%85" target="_blank" rel="noopener">地図</a></td>
             <td data-l="滞在"></td><td data-l="移動"></td><td data-l="駐車場"></td><td data-l="営業"></td>
-            <td data-l="メモ">朝食は自宅で。<strong>前案より30分遅い</strong>——初日に観光を入れないので急ぐ必要がない</td>
+            <td data-l="メモ">朝食は自宅で。初日に観光を入れないので急ぐ必要がない</td>
           </tr>
           <tr class="go">
             <td class="t" data-l="時刻">9:00–10:40</td>
@@ -620,14 +711,14 @@ a:focus-visible,.map:focus-visible{outline:2px solid var(--ember);outline-offset
             <td class="t" data-l="時刻">10:00–10:10</td>
             <td data-l="経路">宿 → 瑞巌寺</td>
             <td data-l="滞在"></td><td data-l="移動">車 10分</td><td data-l="駐車場"></td><td data-l="営業"></td>
-            <td data-l="メモ"><strong>この日に車を動かすのはここだけ。</strong>宿は高台で瑞巌寺まで徒歩15〜20分・帰りは上り坂になるため、歩かず車で行く<span class="c ok">確認済 08-16</span></td>
+            <td data-l="メモ"><strong>この日に車を動かすのはここだけ。</strong>高台の宿からは徒歩15〜20分・帰りが上り坂になるため車で行く。<strong>センチュリーホテルを選んだ場合は徒歩圏なので車ごと不要</strong></td>
           </tr>
           <tr>
             <td class="t" data-l="時刻">10:10</td>
             <td class="place" data-l="行き先"><a href="https://www.zuiganji.or.jp/" target="_blank" rel="noopener">瑞巌寺</a><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%91%9E%E5%B7%8C%E5%AF%BA" target="_blank" rel="noopener">地図</a></td>
             <td data-l="滞在">60分</td><td data-l="移動">徒歩</td><td data-l="駐車場">町営<br>約600円</td>
             <td data-l="営業">冬季 8:00–15:30<br>最終受付 15:00<span class="c ok">確認済 08-16</span></td>
-            <td data-l="メモ">拝観 大人700円。<strong>午前に来れば締切に一切追われない</strong>（前案では初日15:00の最終受付が綱渡りだった）。伽藍は屋内で平坦</td>
+            <td data-l="メモ">拝観 大人700円。<strong>午前に来れば締切に一切追われない。</strong>伽藍は屋内で平坦</td>
           </tr>
           <tr>
             <td class="t" data-l="時刻">11:10</td>
@@ -735,37 +826,37 @@ a:focus-visible,.map:focus-visible{outline:2px solid var(--ember);outline-offset
       <h4>残っている負担</h4>
       <ul>
         <li><strong>初日4時間・最終日3時間30分の運転</strong>は実質1人にかかったままです。松島まで行く以上、ここは削れません。上の休憩は省略不可。</li>
-        <li><strong>宿代が「1室20,000円」の前提を大きく超えます。</strong>45,000円想定で総額126,300円。予算内ではありますが、意図的な超過です。</li>
-        <li><strong>中日に何もしない時間が5時間あります。</strong>これは設計であって余りではありませんが、人によっては手持ち無沙汰になります。ラウンジや館内施設のある宿を勧めているのはそのためです。</li>
+        <li><strong>宿代が「1室20,000円」の前提を大きく超えます。</strong>意図的な超過です。</li>
+        <li><strong>中日に何もしない時間が5時間あります。</strong>設計であって余りではありませんが、人によっては手持ち無沙汰になります。館内施設のある宿を勧めているのはそのためです。</li>
         <li><strong>宿の食事が2晩続きます。</strong>同じ会席が2回出る宿があるので、予約時に確認を。</li>
-        <li>客室露天は<strong>冬に寒くて使わない</strong>ことがあります。ガラスシャッター付き（好風亭など）だとこの取りこぼしがありません。</li>
+        <li>客室露天は<strong>冬に寒くて使わない</strong>ことがあります。好風亭のガラスシャッター付きだとこの取りこぼしがありません。</li>
       </ul>
     </div>
   </div>
 
   <div class="day">
-    <div class="dayhead"><span class="n">費用</span><h4>内訳</h4><span class="m">2名・2泊3日</span></div>
+    <div class="dayhead"><span class="n">費用</span><h4>内訳</h4><span class="m">2名・2泊3日／大観荘の場合</span></div>
     <div class="scroll">
       <table style="min-width:480px;margin-top:2px">
         <thead><tr><th>項目</th><th>内容</th><th style="text-align:right">概算</th></tr></thead>
         <tbody>
-          <tr><td>宿泊</td><td>松島に連泊 2泊 × 45,000円<br>（露天風呂付き客室・2食付・駐車場無料）<span class="c chk">要確認</span></td><td class="num">90,000</td></tr>
+          <tr><td>宿泊</td><td>大観荘 露天風呂付和室・2食付<br>2泊 × 44,000円<span class="c ok">確認済 08-16</span></td><td class="num">88,000</td></tr>
           <tr><td>高速代</td><td>水戸IC〜仙台方面 往復（普通車・ETC）<span class="c">推定</span></td><td class="num">12,600</td></tr>
           <tr><td>ガソリン</td><td>往復約540km＋現地20分 ／ 12km/L ／ 175円/L<span class="c">推定</span></td><td class="num">7,900</td></tr>
           <tr><td>食事</td><td>昼3回のみ（朝2・夕2は宿食）<span class="c">推定</span></td><td class="num">13,000</td></tr>
           <tr><td>入場料</td><td>瑞巌寺 700円 × 2名</td><td class="num">1,400</td></tr>
           <tr><td>駐車場</td><td>仙台の昼食コインP 800＋瑞巌寺 町営P 600<span class="c">推定</span></td><td class="num">1,400</td></tr>
         </tbody>
-        <tfoot><tr><td>合計</td><td>予算に約73,700円の余裕。<br><strong>一の坊（1泊75,000円想定）にすると約186,300円</strong></td><td class="num">126,300</td></tr></tfoot>
+        <tfoot><tr><td>合計</td><td>予算に約75,700円の余裕。<br>宿を替えると総額は<strong>好風亭 約82,500円〜／センチュリー 約89,100円〜／一の坊 約181,500円〜／松庵 約207,900円〜（予算超過）</strong></td><td class="num">124,300</td></tr></tfoot>
       </table>
     </div>
   </div>
 
   <div class="rate">
-    <div class="rrow"><span class="l">実行可能性</span><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="c2">★5 — 時間に追われる箇所が一つもない。瑞巌寺の締切問題が消えた</span></div>
+    <div class="rrow"><span class="l">実行可能性</span><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="c2">★5 — 時間に追われる箇所が一つもない</span></div>
     <div class="rrow"><span class="l">移動効率</span><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="c2">★5 — 連泊で荷物移動2回、牛たんは通り道、中日の運転20分</span></div>
-    <div class="rrow"><span class="l">余裕</span><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="c2">★5 — 中日は全部中止しても成立する。往復の運転だけが固定</span></div>
-    <div class="rrow"><span class="l">コスパ</span><span class="pips"><i class="mid"></i><i class="mid"></i><i class="mid"></i><i></i><i></i></span><span class="c2">★3 — 宿代が前案の1.8倍。<strong>ただし「宿で過ごす」ことが目的なので、ここを削ると旅の中身が消える。</strong>下げるなら露天風呂付き客室を諦めて2泊60,000円に</span></div>
+    <div class="rrow"><span class="l">余裕</span><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="c2">★5 — 中日は全部中止しても成立する</span></div>
+    <div class="rrow"><span class="l">コスパ</span><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="c2">★4 — 大観荘なら予算の6割。<strong>一の坊・松庵を選ぶと★2まで落ちます</strong></span></div>
   </div>
 </section>
 
@@ -775,29 +866,30 @@ a:focus-visible,.map:focus-visible{outline:2px solid var(--ember);outline-offset
   <div class="card stack">
     <div class="notes" style="margin-top:0">
       <div class="note warn">
-        <h4>宿に伝えること・確認すること</h4>
+        <h4>どの宿でも必ず確認すること</h4>
         <ul>
+          <li><strong>客室風呂の仕様。</strong>源泉か沸かし湯か、冬に使えるか（シャッターや囲いの有無）、湯温を自分で調整できるか。<strong>松庵は客室風呂の有無そのものが未確認</strong>です。</li>
           <li><strong>妊娠中である旨。</strong>刺身・生ものを加熱料理へ変更できるか。多くの旅館は事前連絡で対応します。</li>
           <li><strong>貝・海老・甲殻類が食べられない人がいる旨。</strong>会席の献立には高確率で入っています。</li>
           <li><strong>二泊で献立が変わるか。</strong>同じ会席が2回出る宿があります。</li>
           <li><strong>駐車場から客室までの動線。</strong>「駐車場無料」でも階段しかない宿があります。松島は高台の宿が多いので特に。</li>
-          <li><strong>客室風呂の仕様。</strong>源泉か沸かし湯か、冬に使えるか（シャッターや囲いの有無）、湯温を自分で調整できるか。</li>
           <li><strong>レイトチェックアウトの可否</strong>と、年末年始のチェックイン最終時刻・夕食開始時刻。</li>
         </ul>
       </div>
       <div class="note warm">
-        <h4>予算の使い道</h4>
+        <h4>五軒をどう絞るか</h4>
         <ul>
-          <li>宿以外（移動・食事・入場料）で使うのは<strong>約36,000円だけ</strong>です。残りは全部宿に充てられます。</li>
-          <li>45,000円／泊で総額126,300円、<strong>予算に73,700円の余裕</strong>。</li>
-          <li>さらに宿へ寄せるなら、一の坊のオールインクルーシブ（75,000円／泊想定）で総額約186,300円。<strong>予算内だがほぼ使い切るので要相談</strong>です。</li>
-          <li>逆に締めるなら、露天風呂付き客室をやめて通常客室（30,000円／泊前後）にすると総額96,000円台。ただし<strong>この旅程の主目的が薄まります</strong>。</li>
+          <li><strong>迷ったら大観荘。</strong>条件を全部満たし、価格が明示されていて、予算に無理なく収まります。</li>
+          <li><strong>寒がりなら好風亭。</strong>ガラスシャッター付きの客室風呂は12月末に効きます。ただし駐車場と実勢価格の確認が先。</li>
+          <li><strong>中日も歩きたいならセンチュリー。</strong>唯一の平地で、瑞巌寺まで歩けます。</li>
+          <li><strong>予算を使い切ってよいなら一の坊。</strong>館内で過ごす仕掛けが最も充実しています。<strong>ここは要相談。</strong></li>
+          <li><strong>静けさが最優先なら松庵。</strong>ただし予算超過が確定的で、客室風呂も未確認です。</li>
         </ul>
       </div>
     </div>
     <div class="callout risk">
       <h4>情報の鮮度について</h4>
-      <p>調査日は<strong>2026年8月16日</strong>、対象は<strong>2026年12月末</strong>です。約4か月先のため、年末年始の営業日程・宿の料金設定・空室は<strong>まだ公表されていないものが大半</strong>です。<span class="c ok">確認済</span>は調査日時点で確認が取れた項目、<span class="c">推定</span>は例年の傾向からの見込み、<span class="c chk">要確認</span>は<strong>予約前に必ず個別確認が必要な項目</strong>です。特に「年末年始の営業日」「宿の年末料金」「高速の渋滞予測」は、11月以降に再確認してください。</p>
+      <p>調査日は<strong>2026年8月16日</strong>、対象は<strong>2026年12月末</strong>です。約4か月先のため、年末年始の営業日程・宿の料金設定・空室は<strong>まだ公表されていないものが大半</strong>です。掲載の料金は調査日時点で公開されていた通常期の範囲で、<strong>年末年始料金は上振れします</strong>。<span class="c ok">確認済</span>は調査日時点で確認が取れた項目、<span class="c">推定</span>は例年の傾向からの見込み、<span class="c chk">要確認</span>は<strong>予約前に必ず個別確認が必要な項目</strong>です。</p>
     </div>
   </div>
 </section>
@@ -807,21 +899,24 @@ a:focus-visible,.map:focus-visible{outline:2px solid var(--ember);outline-offset
   <h2>出典</h2>
   <div class="card">
     <ul>
-      <li><b>松島</b><a href="https://www.matsushima-kanko.com/" target="_blank" rel="noopener">日本三景 松島 観光協会</a></li>
-      <li><b>松島</b><a href="https://www.zuiganji.or.jp/" target="_blank" rel="noopener">国宝 瑞巌寺 公式</a></li>
-      <li><b>宿</b><a href="https://www.ichinobo.com/matsushima/" target="_blank" rel="noopener">松島一の坊 公式</a></li>
       <li><b>宿</b><a href="https://www.taikanso.co.jp/" target="_blank" rel="noopener">ホテル松島大観荘 公式</a></li>
       <li><b>宿</b><a href="https://komatsukan-kofutei.co.jp/oheya/with_roten/" target="_blank" rel="noopener">小松館 好風亭 展望温泉付客室</a></li>
+      <li><b>宿</b><a href="https://ssl.centuryhotel.co.jp/" target="_blank" rel="noopener">松島センチュリーホテル 公式</a></li>
+      <li><b>宿</b><a href="https://www.ichinobo.com/matsushima/" target="_blank" rel="noopener">松島一の坊 公式</a></li>
+      <li><b>宿</b><a href="https://www.jalan.net/yad374328/" target="_blank" rel="noopener">松島佐勘 松庵（じゃらん）</a></li>
+      <li><b>宿の比較</b><a href="https://www.jtb.co.jp/kokunai-hotel/list/040302/feature/rotenroom/" target="_blank" rel="noopener">露天風呂付き客室のある宿・松島（JTB）</a></li>
+      <li><b>閉館情報</b><a href="https://www.ubudo.jp/" target="_blank" rel="noopener">ホテル海風土 閉館のおしらせ</a></li>
+      <li><b>松島</b><a href="https://www.matsushima-kanko.com/" target="_blank" rel="noopener">日本三景 松島 観光協会</a></li>
+      <li><b>松島</b><a href="https://www.zuiganji.or.jp/" target="_blank" rel="noopener">国宝 瑞巌寺 公式</a></li>
       <li><b>仙台</b><a href="https://www.rikyu-gyutan.co.jp/" target="_blank" rel="noopener">牛たん炭焼 利久 公式</a></li>
       <li><b>温泉と妊娠</b><a href="https://www.env.go.jp/council/12nature/y123-14/900434128.pdf" target="_blank" rel="noopener">環境省 温泉法 禁忌症等の掲示について</a></li>
       <li><b>高速料金</b><a href="https://www.driveplaza.com/search/e_tolls/" target="_blank" rel="noopener">ドラぷら 料金検索（NEXCO東日本）</a></li>
-      <li><b>道路</b><a href="https://www.e-nexco.co.jp/" target="_blank" rel="noopener">NEXCO東日本 渋滞予測・冬季道路情報</a></li>
     </ul>
   </div>
 </section>
 
 <footer>
-  <p>松島にこもる二泊 ／ 水戸発・2泊3日・年末休み ／ 調査日 2026年8月16日</p>
+  <p>松島の宿 五案 ／ 水戸発・2泊3日・年末休み ／ 調査日 2026年8月16日</p>
   <p>営業時間・料金・空室・所要時間は変動します。予約前に各公式情報で再確認してください。</p>
 </footer>
 
