@@ -1,0 +1,88 @@
+name: verify
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 構造検証（タグ・配信先2経路の必須行・トークン・タイムライン）
+        run: python3 scripts/check.py
+      - name: インラインJSの構文チェック
+        run: |
+          python3 - <<'PY'
+          import re
+          s = open('docs/index.html', encoding='utf-8').read()
+          open('/tmp/inline.js', 'w').write(re.search(r'<script>(.*)</script>', s, re.S).group(1))
+          PY
+          node --check /tmp/inline.js
+
+  rendered:
+    # ソースを読むだけでは分からない失敗（コントラスト・互換モード・見出し順）を
+    # 実際にレンダリングして捕まえる。ここが無いと静かに壊れる。
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: 静的配信
+        run: |
+          (cd docs && python3 -m http.server 8801 &)
+          for i in $(seq 1 20); do
+            curl -sf -o /dev/null http://localhost:8801/index.html && break
+            sleep 0.5
+          done
+      - name: Lighthouse
+        run: |
+          npx -y lighthouse http://localhost:8801/index.html \
+            --only-categories=accessibility,best-practices \
+            --chrome-flags="--headless=new --no-sandbox --disable-dev-shm-usage" \
+            --output=json --output-path=lh.json --quiet
+      - name: しきい値の判定
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          d = json.load(open('lh.json'))
+          # 落ちてはいけない監査項目。いずれも過去に実際に起きたもの。
+          MUST_PASS = [
+              'color-contrast',   # トークン1つの選び損ねで 247 箇所落ちたことがある
+              'doctype',          # 無いと GitHub Pages 側だけ互換モードになる
+              'html-has-lang',
+              'dlitem',
+              'heading-order',
+              'image-alt',
+              'link-name',
+              'meta-viewport',
+          ]
+          bad = []
+          for k in MUST_PASS:
+              a = d['audits'].get(k)
+              if a is None:
+                  continue
+              if a.get('score') is not None and a['score'] < 1:
+                  n = len(a.get('details', {}).get('items', []))
+                  bad.append(f"{k}: {a['title']} (該当 {n} 件)")
+          score = round((d['categories']['accessibility']['score'] or 0) * 100)
+          print(f"accessibility = {score}")
+          if score < 100:
+              bad.append(f"accessibility スコアが {score}（100 を維持すること）")
+          if bad:
+              print("NG")
+              for b in bad:
+                  print("  -", b)
+              sys.exit(1)
+          print("OK")
+          PY
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-report
+          path: lh.json
