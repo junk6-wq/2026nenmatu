@@ -101,6 +101,9 @@ section h2{font-size:clamp(26px,4.4vw,44px);font-weight:500;margin:8px 0 10px}
 /* ---------------- 5案タイル ---------------- */
 .tiles{display:grid;gap:10px;grid-template-columns:1fr;margin-top:26px}
 @media(min-width:900px){.tiles{grid-template-columns:repeat(5,1fr);gap:12px}}
+.dart{margin:0 0 14px;position:relative;border-radius:14px;overflow:hidden;background:var(--p)}
+.dart img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;max-height:360px}
+.dart figcaption{position:absolute;right:8px;bottom:8px;font-size:11px;padding:3px 8px;border-radius:99px;background:rgba(0,0,0,.72);color:#fff}
 .tile{position:relative;text-align:left;cursor:pointer;background:var(--surface);border:1px solid var(--hair);
   border-top:5px solid var(--p);padding:14px 16px 16px;display:grid;gap:2px 14px;
   grid-template-columns:auto 1fr;grid-template-areas:"let name" "let tag" "sum sum" "bar bar" "why why";
@@ -428,6 +431,7 @@ footer{margin-top:60px;padding:26px 0 40px;border-top:1px solid var(--line);font
   </div>
 
   <article class="detail" data-p="a" id="detail-a" role="tabpanel" aria-labelledby="tab-a">
+    <figure class="dart"><img src="img/plan-a-768.webp" srcset="img/plan-a-768.webp 768w, img/plan-a-1280.webp 1280w" sizes="(min-width:1100px) 1040px, 100vw" width="768" height="512" loading="lazy" decoding="async" alt="高台の和室と露天風呂から松島湾を望むイメージ"><figcaption>イメージ（Canvaで生成・実際の宿ではありません）</figcaption></figure>
     <div class="dhead"><span class="let">A</span><div><span class="tag">本命・条件を全部満たす</span><h3>ホテル松島大観荘</h3></div>
       <span class="links"><a href="https://www.taikanso.co.jp/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%BE%E5%B3%B6%E5%A4%A7%E8%A6%B3%E8%8D%98" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
@@ -447,6 +451,7 @@ footer{margin-top:60px;padding:26px 0 40px;border-top:1px solid var(--line);font
   </article>
 
   <article class="detail" data-p="b" id="detail-b" role="tabpanel" aria-labelledby="tab-b">
+    <figure class="dart"><img src="img/plan-b-768.webp" srcset="img/plan-b-768.webp 768w, img/plan-b-1280.webp 1280w" sizes="(min-width:1100px) 1040px, 100vw" width="768" height="512" loading="lazy" decoding="async" alt="ガラス張りの客室から海を眺めるイメージ"><figcaption>イメージ（Canvaで生成・実際の宿ではありません）</figcaption></figure>
     <div class="dhead"><span class="let">B</span><div><span class="tag">冬に強い</span><h3>松島温泉 小松館 好風亭</h3></div>
       <span class="links"><a href="https://komatsukan-kofutei.co.jp/oheya/with_roten/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E6%B8%A9%E6%B3%89%20%E5%B0%8F%E6%9D%BE%E9%A4%A8%E5%A5%BD%E9%A2%A8%E4%BA%AD" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
@@ -466,6 +471,7 @@ footer{margin-top:60px;padding:26px 0 40px;border-top:1px solid var(--line);font
   </article>
 
   <article class="detail" data-p="c" id="detail-c" role="tabpanel" aria-labelledby="tab-c">
+    <figure class="dart"><img src="img/plan-c-768.webp" srcset="img/plan-c-768.webp 768w, img/plan-c-1280.webp 1280w" sizes="(min-width:1100px) 1040px, 100vw" width="768" height="512" loading="lazy" decoding="async" alt="平地のホテルと湾の島々のイメージ"><figcaption>イメージ（Canvaで生成・実際の宿ではありません）</figcaption></figure>
     <div class="dhead"><span class="let">C</span><div><span class="tag">身軽さと価格の幅</span><h3>松島センチュリーホテル</h3></div>
       <span class="links"><a href="https://ssl.centuryhotel.co.jp/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E3%82%BB%E3%83%B3%E3%83%81%E3%83%A5%E3%83%AA%E3%83%BC%E3%83%9B%E3%83%86%E3%83%AB" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
@@ -485,6 +491,7 @@ footer{margin-top:60px;padding:26px 0 40px;border-top:1px solid var(--line);font
   </article>
 
   <article class="detail" data-p="d" id="detail-d" role="tabpanel" aria-labelledby="tab-d">
+    <figure class="dart"><img src="img/plan-d-768.webp" srcset="img/plan-d-768.webp 768w, img/plan-d-1280.webp 1280w" sizes="(min-width:1100px) 1040px, 100vw" width="768" height="512" loading="lazy" decoding="async" alt="海に面した上質な宿のイメージ"><figcaption>イメージ（Canvaで生成・実際の宿ではありません）</figcaption></figure>
     <div class="dhead"><span class="let">D</span><div><span class="tag">全部込み</span><h3>松島一の坊</h3></div>
       <span class="links"><a href="https://www.ichinobo.com/matsushima/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E4%B8%80%E3%81%AE%E5%9D%8A" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
@@ -504,6 +511,7 @@ footer{margin-top:60px;padding:26px 0 40px;border-top:1px solid var(--line);font
   </article>
 
   <article class="detail" data-p="e" id="detail-e" role="tabpanel" aria-labelledby="tab-e">
+    <figure class="dart"><img src="img/plan-e-768.webp" srcset="img/plan-e-768.webp 768w, img/plan-e-1280.webp 1280w" sizes="(min-width:1100px) 1040px, 100vw" width="768" height="512" loading="lazy" decoding="async" alt="静かな離れの宿のイメージ"><figcaption>イメージ（Canvaで生成・実際の宿ではありません）</figcaption></figure>
     <div class="dhead"><span class="let">E</span><div><span class="tag">静けさ</span><h3>松島佐勘 松庵</h3></div>
       <span class="links"><a href="https://www.jalan.net/yad374328/" target="_blank" rel="noopener">詳細</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E4%BD%90%E5%8B%98%20%E6%9D%BE%E5%BA%B5" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
