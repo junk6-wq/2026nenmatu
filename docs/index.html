@@ -18,8 +18,8 @@
      タイル・比較表・料金図・詳細で同じ色を通す（色＝案）。
    ・「五つの案」の帯（.band）だけ地が濃い。帯に直接載る文字は
      --on-band / --on-band-2 を使い、テーマ依存の文字色を載せない。
-   ・写真は実写を優先（Wikimedia Commons）。宿そのものでない写真は
-     必ず「周辺の景色」と明記する。
+   ・宿の写真は各宿の公式サイトの画像を直接表示する（リポジトリに複製しない）。
+     景色の写真は Wikimedia Commons の実写を docs/img に同梱し、作者・ライセンスを記す。
    ========================================================== */
 :root{
   --paper:#FFF6E6; --surface:#FFFFFF; --sunken:#F6EFE2; --line:#D8CFBE; --hair:#ECE4D4;
@@ -404,7 +404,7 @@ footer .bye{font:400 clamp(18px,3vw,24px)/1.4 var(--f-disp);color:var(--on-band)
 
   <div class="tiles" id="tiles" style="--budget:57.14%">
     <button class="tile" data-p="a" data-pick="a" aria-pressed="true" aria-controls="detail-a" type="button">
-      <span class="tpic"><img src="img/photo-a-480.webp" width="480" height="320" alt="" loading="lazy" decoding="async"><span class="pk">周辺の景色</span></span>
+      <span class="tpic"><img src="https://www.taikanso.co.jp/rooms/renewal/images/img_rooms1-1-2.webp" width="1090" height="750" alt="" loading="lazy" decoding="async"><span class="pk">公式写真</span></span>
       <span class="badge">本命</span>
       <span class="let">A</span><span class="name">ホテル松島大観荘</span><span class="tag">条件を全部満たす</span>
       <span class="sum"><b class="num">10.8〜12.4</b><small>万円</small></span>
@@ -412,28 +412,28 @@ footer .bye{font:400 clamp(18px,3vw,24px)/1.4 var(--f-disp);color:var(--on-band)
       <span class="why">露天風呂付和室の2食付が<strong>確認済みで予算の6割</strong>。</span>
     </button>
     <button class="tile" data-p="b" data-pick="b" aria-pressed="false" aria-controls="detail-b" type="button">
-      <span class="tpic"><img src="img/photo-b-480.webp" width="480" height="320" alt="" loading="lazy" decoding="async"><span class="pk">周辺の景色</span></span>
+      <span class="tpic"><img src="https://komatsukan-kofutei.co.jp/wp-content/themes/komatsukan/img/oheya/with_roten/shiosai2.jpg" width="1034" height="672" alt="" loading="lazy" decoding="async"><span class="pk">公式写真</span></span>
       <span class="let">B</span><span class="name">小松館 好風亭</span><span class="tag">冬に強い</span>
       <span class="sum"><b class="num">8.3〜</b><small>万円（上限 要確認）</small></span>
       <span class="meter" aria-hidden="true"><i class="open" style="left:23.57%;width:22%"></i></span>
       <span class="why">客室風呂に<strong>ガラスシャッター</strong>。寒い日も使える。</span>
     </button>
     <button class="tile" data-p="c" data-pick="c" aria-pressed="false" aria-controls="detail-c" type="button">
-      <span class="tpic"><img src="img/photo-c-480.webp" width="480" height="320" alt="" loading="lazy" decoding="async"><span class="pk">実際の宿</span></span>
+      <span class="tpic"><img src="https://ssl.centuryhotel.co.jp/room/pcw/img/img03.jpg" width="1500" height="872" alt="" loading="lazy" decoding="async"><span class="pk">公式写真</span></span>
       <span class="let">C</span><span class="name">松島センチュリーホテル</span><span class="tag">身軽さと価格の幅</span>
       <span class="sum"><b class="num">8.9〜29.2</b><small>万円</small></span>
       <span class="meter" aria-hidden="true"><i style="left:25.46%;width:57.83%"></i></span>
       <span class="why">唯一の<strong>平地</strong>。中日は車が要らない。</span>
     </button>
     <button class="tile" data-p="d" data-pick="d" aria-pressed="false" aria-controls="detail-d" type="button">
-      <span class="tpic"><img src="img/photo-d-480.webp" width="480" height="320" alt="" loading="lazy" decoding="async"><span class="pk">実際の宿</span></span>
+      <span class="tpic"><img src="https://ichinobo.com/wp-content/themes/ichinobo/assets/images/matsushima/home/onsen_slider_img01.jpg" width="2880" height="1920" alt="" loading="lazy" decoding="async"><span class="pk">公式写真</span></span>
       <span class="let">D</span><span class="name">松島一の坊</span><span class="tag">全部込み</span>
       <span class="sum"><b class="num">18.2〜33.9</b><small>万円</small></span>
       <span class="meter" aria-hidden="true"><i style="left:51.86%;width:45.03%"></i></span>
       <span class="why">オールインクルーシブ。<strong>こもる旅に最も向く</strong>が高い。</span>
     </button>
     <button class="tile" data-p="e" data-pick="e" aria-pressed="false" aria-controls="detail-e" type="button">
-      <span class="tpic"><img src="img/photo-e-480.webp" width="480" height="320" alt="" loading="lazy" decoding="async"><span class="pk">周辺の景色</span></span>
+      <span class="tpic"><img src="https://cdn.jalan.jp/jalan/images/pict4L/Y8/Y374328/Y374328306.jpg" width="1200" height="900" alt="" loading="lazy" decoding="async"><span class="pk">公式写真</span></span>
       <span class="let">E</span><span class="name">松島佐勘 松庵</span><span class="tag">静けさ</span>
       <span class="sum"><b class="num">20.8〜</b><small>万円（予算超過）</small></span>
       <span class="meter" aria-hidden="true"><i class="open" style="left:59.40%;width:22%"></i></span>
@@ -499,7 +499,7 @@ footer .bye{font:400 clamp(18px,3vw,24px)/1.4 var(--f-disp);color:var(--on-band)
   </div>
 
   <article class="detail" data-p="a" id="detail-a" role="tabpanel" aria-labelledby="tab-a">
-    <figure class="dpic"><img src="img/photo-a-800.webp" srcset="img/photo-a-480.webp 480w, img/photo-a-800.webp 800w, img/photo-a-1280.webp 1280w" sizes="(min-width:1100px) 1100px, 100vw" width="800" height="533" loading="lazy" decoding="async" alt="高台から見下ろす松島湾。松の島々が重なって続く"><span class="pk">周辺の景色</span><figcaption>周辺の景色（宿の写真ではありません）。西行戻しの松公園から見た松島湾・2021年10月。<a href="https://commons.wikimedia.org/wiki/File:211030_Saigyo_Modoshi_no_Matsu_Park_Matsushima_Miyagi_pref_Japan01n.jpg" target="_blank" rel="noopener">663highland</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></figcaption></figure>
+    <figure class="dpic"><img src="https://www.taikanso.co.jp/rooms/renewal/images/img_rooms1-1-2.webp" width="1090" height="750" loading="lazy" decoding="async" alt="大観荘の客室。大きな窓の向こうに松島湾の島々"><span class="pk">公式写真</span><figcaption>ホテル松島大観荘の客室（リニューアル客室）。写真：<a href="https://www.taikanso.co.jp/rooms/renewal/" target="_blank" rel="noopener">ホテル松島大観荘 公式サイト</a>より</figcaption></figure>
     <div class="dhead"><span class="let">A</span><div><span class="tag">本命・条件を全部満たす</span><h3>ホテル松島大観荘</h3></div>
       <span class="links"><a href="https://www.taikanso.co.jp/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%BE%E5%B3%B6%E5%A4%A7%E8%A6%B3%E8%8D%98" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
@@ -519,7 +519,7 @@ footer .bye{font:400 clamp(18px,3vw,24px)/1.4 var(--f-disp);color:var(--on-band)
   </article>
 
   <article class="detail" data-p="b" id="detail-b" role="tabpanel" aria-labelledby="tab-b">
-    <figure class="dpic"><img src="img/photo-b-800.webp" srcset="img/photo-b-480.webp 480w, img/photo-b-800.webp 800w, img/photo-b-1280.webp 1280w" sizes="(min-width:1100px) 1100px, 100vw" width="800" height="533" loading="lazy" decoding="async" alt="海岸から見た冬の松島湾。凪いだ海と松の島"><span class="pk">周辺の景色</span><figcaption>周辺の景色（宿の写真ではありません）。宿の目の前に広がる松島湾・2020年12月27日。<a href="https://commons.wikimedia.org/wiki/File:Matsushima_20201227.jpg" target="_blank" rel="noopener">Suicasmo</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></figcaption></figure>
+    <figure class="dpic"><img src="https://komatsukan-kofutei.co.jp/wp-content/themes/komatsukan/img/oheya/with_roten/shiosai2.jpg" width="1034" height="672" loading="lazy" decoding="async" alt="好風亭の展望温泉付客室。窓辺の湯船から松島湾を望む"><span class="pk">公式写真</span><figcaption>小松館 好風亭の展望温泉付客室。写真：<a href="https://komatsukan-kofutei.co.jp/oheya/with_roten/" target="_blank" rel="noopener">小松館 好風亭 公式サイト</a>より</figcaption></figure>
     <div class="dhead"><span class="let">B</span><div><span class="tag">冬に強い</span><h3>松島温泉 小松館 好風亭</h3></div>
       <span class="links"><a href="https://komatsukan-kofutei.co.jp/oheya/with_roten/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E6%B8%A9%E6%B3%89%20%E5%B0%8F%E6%9D%BE%E9%A4%A8%E5%A5%BD%E9%A2%A8%E4%BA%AD" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
@@ -539,7 +539,7 @@ footer .bye{font:400 clamp(18px,3vw,24px)/1.4 var(--f-disp);color:var(--on-band)
   </article>
 
   <article class="detail" data-p="c" id="detail-c" role="tabpanel" aria-labelledby="tab-c">
-    <figure class="dpic"><img src="img/photo-c-800.webp" srcset="img/photo-c-480.webp 480w, img/photo-c-800.webp 800w" sizes="(min-width:1100px) 1100px, 100vw" width="800" height="533" loading="lazy" decoding="async" alt="松島センチュリーホテルの中庭と客室棟"><span class="pk">実際の宿</span><figcaption>松島センチュリーホテルの中庭と客室棟・2012年7月。<a href="https://commons.wikimedia.org/wiki/File:%E6%9D%BE%E5%B3%B6%E3%82%BB%E3%83%B3%E3%83%81%E3%83%A5%E3%83%AA%E3%83%BC%E3%83%9B%E3%83%86%E3%83%AB_-_panoramio.jpg" target="_blank" rel="noopener">alonfloc</a> / <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></figcaption></figure>
+    <figure class="dpic"><img src="https://ssl.centuryhotel.co.jp/room/pcw/img/img03.jpg" width="1500" height="872" loading="lazy" decoding="async" alt="センチュリーホテルの客室露天風呂。湯船の先に松島湾"><span class="pk">公式写真</span><figcaption>松島センチュリーホテルの天然温泉露天風呂付客室。写真：<a href="https://ssl.centuryhotel.co.jp/room/pcw/index.html" target="_blank" rel="noopener">松島センチュリーホテル 公式サイト</a>より</figcaption></figure>
     <div class="dhead"><span class="let">C</span><div><span class="tag">身軽さと価格の幅</span><h3>松島センチュリーホテル</h3></div>
       <span class="links"><a href="https://ssl.centuryhotel.co.jp/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E3%82%BB%E3%83%B3%E3%83%81%E3%83%A5%E3%83%AA%E3%83%BC%E3%83%9B%E3%83%86%E3%83%AB" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
@@ -559,7 +559,7 @@ footer .bye{font:400 clamp(18px,3vw,24px)/1.4 var(--f-disp);color:var(--on-band)
   </article>
 
   <article class="detail" data-p="d" id="detail-d" role="tabpanel" aria-labelledby="tab-d">
-    <figure class="dpic"><img src="img/photo-d-800.webp" srcset="img/photo-d-480.webp 480w, img/photo-d-800.webp 800w" sizes="(min-width:1100px) 1100px, 100vw" width="800" height="533" loading="lazy" decoding="async" alt="松島一の坊の大浴場の露天風呂。湯船の向こうに松島湾"><span class="pk">実際の宿</span><figcaption>松島一の坊の大浴場・露天風呂（客室風呂ではありません）・2009年10月。<a href="https://commons.wikimedia.org/wiki/File:Matsushima_Onsen_%22ICHINOB%C5%8C%22_Outdoor-bath.JPG" target="_blank" rel="noopener">妖精書士</a> / パブリックドメイン</figcaption></figure>
+    <figure class="dpic"><img src="https://ichinobo.com/wp-content/themes/ichinobo/assets/images/matsushima/home/onsen_slider_img01.jpg" width="2880" height="1920" loading="lazy" decoding="async" alt="一の坊の露天風呂。水面が松島湾へ続いて見える"><span class="pk">公式写真</span><figcaption>松島一の坊の大浴場・露天風呂（客室風呂ではありません）。写真：<a href="https://ichinobo.com/matsushima/onsen" target="_blank" rel="noopener">松島一の坊 公式サイト</a>より</figcaption></figure>
     <div class="dhead"><span class="let">D</span><div><span class="tag">全部込み</span><h3>松島一の坊</h3></div>
       <span class="links"><a href="https://www.ichinobo.com/matsushima/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E4%B8%80%E3%81%AE%E5%9D%8A" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
@@ -579,7 +579,7 @@ footer .bye{font:400 clamp(18px,3vw,24px)/1.4 var(--f-disp);color:var(--on-band)
   </article>
 
   <article class="detail" data-p="e" id="detail-e" role="tabpanel" aria-labelledby="tab-e">
-    <figure class="dpic"><img src="img/photo-e-800.webp" srcset="img/photo-e-480.webp 480w, img/photo-e-800.webp 800w, img/photo-e-1280.webp 1280w" sizes="(min-width:1100px) 1100px, 100vw" width="800" height="533" loading="lazy" decoding="async" alt="松の木が茂る切り立った白い岩の島と松島湾"><span class="pk">周辺の景色</span><figcaption>周辺の景色（宿の写真ではありません）。松島湾の島・2025年10月。<a href="https://commons.wikimedia.org/wiki/File:Matsushima_Bay_-_Matsushima6238.jpg" target="_blank" rel="noopener">lumoplank</a> / <a href="https://creativecommons.org/licenses/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a></figcaption></figure>
+    <figure class="dpic"><img src="https://cdn.jalan.jp/jalan/images/pict4L/Y8/Y374328/Y374328306.jpg" width="1200" height="900" loading="lazy" decoding="async" alt="松庵の露天風呂。木々に囲まれた丸い湯船"><span class="pk">公式写真</span><figcaption>松島佐勘 松庵の露天風呂（客室付きかは未確認）。写真：<a href="https://www.jalan.net/yad374328/" target="_blank" rel="noopener">じゃらん 松島佐勘 松庵</a>より</figcaption></figure>
     <div class="dhead"><span class="let">E</span><div><span class="tag">静けさ</span><h3>松島佐勘 松庵</h3></div>
       <span class="links"><a href="https://www.jalan.net/yad374328/" target="_blank" rel="noopener">詳細</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E4%BD%90%E5%8B%98%20%E6%9D%BE%E5%BA%B5" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
@@ -909,7 +909,7 @@ footer .bye{font:400 clamp(18px,3vw,24px)/1.4 var(--f-disp);color:var(--on-band)
 <footer>
   <p class="bye">いってらっしゃい、冬の松島 ♨</p>
   <p>松島の宿 五案くらべ ／ 水戸発・2泊3日・年末休み ／ 調査日 2026年8月16日</p>
-  <p>写真は Wikimedia Commons の各作者による実写（ライセンスは各写真に記載）。「周辺の景色」とある写真は宿そのものではありません。営業時間・料金・空室は変動します。予約前に公式情報で再確認してください。</p>
+  <p>宿の写真は各宿の公式サイト（E はじゃらん）から表示しています（個人の旅行計画用）。景色の写真は Wikimedia Commons の各作者による（ライセンスは各写真に記載）。営業時間・料金・空室は変動します。予約前に公式情報で再確認してください。</p>
 </footer>
 
 </main>
