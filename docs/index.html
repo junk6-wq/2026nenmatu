@@ -2,165 +2,202 @@
 <html lang="ja">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0E252B">
+<meta name="theme-color" content="#FFF6E6">
 <meta name="description" content="水戸から松島へ、同じ宿に二泊する冬の旅。5つの宿を、客室風呂・予算・冬の使いやすさ・静けさで見比べる。">
 <title>松島の宿 五案くらべ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Noto+Serif+JP:wght@500;700&display=swap">
-<link rel="preload" as="image" fetchpriority="high" href="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Matsushima_miyagi_z.JPG/1280px-Matsushima_miyagi_z.JPG" imagesrcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Matsushima_miyagi_z.JPG/1280px-Matsushima_miyagi_z.JPG 1280w, https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Matsushima_miyagi_z.JPG/1920px-Matsushima_miyagi_z.JPG 1920w" imagesizes="100vw">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@700;800&family=Zen+Maru+Gothic:wght@500;700;900&display=swap">
+<link rel="preload" as="image" fetchpriority="high" href="img/hero-800.webp" imagesrcset="img/hero-800.webp 800w, img/hero-1280.webp 1280w" imagesizes="(min-width:900px) 520px, 100vw">
 
 <style>
 /* ==========================================================
-   松島の宿 五案くらべ
-   ・地は紙（paper）、主役は5つの案。案ごとに1色を割り当て、
+   松島の宿 五案くらべ（ポップ版）
+   ・地はクリーム（paper）。太い縁（--edge）とずらした影で“シール”感を出す。
+   ・主役は5つの案。案ごとに1色（--pa〜--pe）を割り当て、
      タイル・比較表・料金図・詳細で同じ色を通す（色＝案）。
-   ・カバーだけはテーマに依らず夜の地（--night）。ここに載る文字は
-     テーマ依存トークンを使わない（shiori スキル参照）。
+   ・「五つの案」の帯（.band）だけ地が濃い。帯に直接載る文字は
+     --on-band / --on-band-2 を使い、テーマ依存の文字色を載せない。
+   ・写真は実写を優先（Wikimedia Commons）。宿そのものでない写真は
+     必ず「周辺の景色」と明記する。
    ========================================================== */
 :root{
-  --paper:#F7F6F2; --surface:#FFFFFF; --sunken:#EDF1EE; --line:#CDD5D2; --hair:#E1E6E2;
-  --ink:#17262B; --ink-2:#394D50; --muted:#56676A;
-  --sea:#1B5964; --sea-tint:#E6F0EE; --accent:#A4522F; --accent-tint:#F5E8DF; --gold:#DBAF70;
-  --ok:#236454; --warn:#A4432A; --hatch:#80979B;
-  --pa:#1B5964; --pb:#39688A; --pc:#56692C; --pd:#A4522F; --pe:#6A4B7C;
-  --dot-off:#D6DDDA;
-  --night:#0E252B; --on-night:#F1C68C;
-  --f-disp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",YuMincho,serif;
-  --f-body:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",YuGothic,"Noto Sans JP",Meiryo,system-ui,sans-serif;
-  --f-num:"DM Sans","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
-  --w:min(1120px,calc(100% - 40px));
+  --paper:#FFF6E6; --surface:#FFFFFF; --sunken:#F6EFE2; --line:#D8CFBE; --hair:#ECE4D4;
+  --ink:#1E1B3A; --ink-2:#3B3760; --muted:#5B5673;
+  --edge:#1E1B3A;
+  --sea:#0B6F75; --sea-tint:#DDF3EF; --accent:#B8285A; --accent-tint:#FFE3EC; --gold:#FFC93C;
+  --yellow:#FFD23F; --pink:#FF5C8A; --sky:#5CC8FF;
+  --ok:#1C6E47; --warn:#B3261E; --hatch:#8A84A8;
+  --pa:#0A7268; --pb:#2459C9; --pc:#42700A; --pd:#B23A0B; --pe:#8138C7;
+  --on-p:#FFFFFF;
+  --dot-off:#E4DCCB;
+  --band:#1E1B3A; --on-band:#FFFFFF; --on-band-2:#D4CFF2;
+  --f-disp:"Mochiy Pop One","Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;
+  --f-body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Yu Gothic",YuGothic,Meiryo,system-ui,sans-serif;
+  --f-num:"Poppins","Zen Maru Gothic","Hiragino Sans",system-ui,sans-serif;
+  --w:min(1120px,calc(100% - 32px));
+  --r:22px;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --paper:#0F1B1E; --surface:#152428; --sunken:#1B2E33; --line:#2E4449; --hair:#22363B;
-    --ink:#E6EEEC; --ink-2:#B9C9C6; --muted:#93A6A4;
-    --sea:#6FB3BE; --sea-tint:#1C3A40; --accent:#E39A78; --accent-tint:#3A2A22; --gold:#D9AE6E;
-    --ok:#7CC4A8; --warn:#EE9A80; --hatch:#5F777B;
-    --pa:#6FB3BE; --pb:#8DB6D6; --pc:#AFC47A; --pd:#E39A78; --pe:#C3A5D6;
-    --dot-off:#2E4449;
+    --paper:#15132A; --surface:#211E3D; --sunken:#2A2750; --line:#4A4672; --hair:#34305B;
+    --ink:#F4F1FF; --ink-2:#D6D1F2; --muted:#B0AAD3;
+    --edge:#8C86C9;
+    --sea:#5FD3C8; --sea-tint:#1D3B45; --accent:#FF8FB1; --accent-tint:#48223A; --gold:#D9A92E;
+    --yellow:#FFD23F; --pink:#FF5C8A; --sky:#5CC8FF;
+    --ok:#6FD6A0; --warn:#FF9C85; --hatch:#7C77A6;
+    --pa:#4FD1C0; --pb:#86ABFF; --pc:#A9D65E; --pd:#FF9A63; --pe:#CBA0FF;
+    --on-p:#15132A;
+    --dot-off:#3A3663;
+    --band:#0C0B1C; --on-band:#FFFFFF; --on-band-2:#D4CFF2;
   }
 }
 :root[data-theme="dark"]{
-  --paper:#0F1B1E; --surface:#152428; --sunken:#1B2E33; --line:#2E4449; --hair:#22363B;
-  --ink:#E6EEEC; --ink-2:#B9C9C6; --muted:#93A6A4;
-  --sea:#6FB3BE; --sea-tint:#1C3A40; --accent:#E39A78; --accent-tint:#3A2A22; --gold:#D9AE6E;
-  --ok:#7CC4A8; --warn:#EE9A80; --hatch:#5F777B;
-  --pa:#6FB3BE; --pb:#8DB6D6; --pc:#AFC47A; --pd:#E39A78; --pe:#C3A5D6;
-  --dot-off:#2E4449;
+  --paper:#15132A; --surface:#211E3D; --sunken:#2A2750; --line:#4A4672; --hair:#34305B;
+  --ink:#F4F1FF; --ink-2:#D6D1F2; --muted:#B0AAD3;
+  --edge:#8C86C9;
+  --sea:#5FD3C8; --sea-tint:#1D3B45; --accent:#FF8FB1; --accent-tint:#48223A; --gold:#D9A92E;
+  --yellow:#FFD23F; --pink:#FF5C8A; --sky:#5CC8FF;
+  --ok:#6FD6A0; --warn:#FF9C85; --hatch:#7C77A6;
+  --pa:#4FD1C0; --pb:#86ABFF; --pc:#A9D65E; --pd:#FF9A63; --pe:#CBA0FF;
+  --on-p:#15132A;
+  --dot-off:#3A3663;
+  --band:#0C0B1C; --on-band:#FFFFFF; --on-band-2:#D4CFF2;
 }
 
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.9 var(--f-body);-webkit-text-size-adjust:100%;overflow-x:hidden}
-h1,h2,h3{font-family:var(--f-disp);font-weight:700;line-height:1.45;letter-spacing:.03em;margin:0;text-wrap:balance}
+body{margin:0;background:var(--paper);color:var(--ink);font:500 16px/1.9 var(--f-body);-webkit-text-size-adjust:100%;overflow-x:hidden}
+h1,h2,h3{font-family:var(--f-disp);font-weight:400;line-height:1.4;letter-spacing:.02em;margin:0;text-wrap:balance}
 p{margin:0} a{color:inherit} button{font:inherit;color:inherit}
-img{display:block;max-width:100%} figure{margin:0}
-strong{font-weight:700}
+img{display:block;max-width:100%;height:auto} figure{margin:0}
+strong{font-weight:900}
 .num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .wrap{width:var(--w);margin:0 auto}
 .skip{position:absolute;left:12px;top:-80px;background:var(--surface);color:var(--ink);padding:10px;z-index:9}
 .skip:focus{top:12px}
+.nb{white-space:nowrap;display:inline-block}
 
 /* 案の色：data-p で切り替える */
 [data-p="a"]{--p:var(--pa)} [data-p="b"]{--p:var(--pb)} [data-p="c"]{--p:var(--pc)}
 [data-p="d"]{--p:var(--pd)} [data-p="e"]{--p:var(--pe)}
 
-/* ---------------- カバー ---------------- */
-.cover{position:relative;background:var(--night);color:#FFFFFF;overflow:hidden;
-  min-height:min(720px,92svh);display:flex;align-items:flex-end}
-.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%;
-  filter:saturate(.7)}
-.cover::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(0deg,rgba(9,28,34,.92) 0%,rgba(9,28,34,.55) 45%,rgba(9,28,34,.15) 100%)}
-.cover-in{position:relative;z-index:1;width:var(--w);margin:0 auto;padding:120px 0 34px}
-.kicker{font:700 12px var(--f-num);letter-spacing:.22em;color:var(--on-night)}
-.cover h1{font-size:clamp(38px,7vw,84px);font-weight:500;line-height:1.3;margin:16px 0 14px}
-.cover h1 em{font-style:normal;color:var(--on-night)}
-.nb{white-space:nowrap;display:inline-block}
-.cover .lede{font-family:var(--f-disp);font-size:clamp(15px,1.9vw,20px);line-height:1.9;max-width:34em;color:#E6EEF0}
-.cover-foot{margin-top:26px;padding-top:14px;border-top:1px solid rgba(255,255,255,.4);
-  display:flex;flex-wrap:wrap;gap:6px 22px;font:700 12px/1.7 var(--f-num);letter-spacing:.06em;color:#E6EEF0}
-.credit{position:absolute;right:14px;bottom:8px;z-index:1;font-size:10.5px;color:rgba(255,255,255,.78)}
-.credit a{color:inherit}
+/* ---------------- ヒーロー ---------------- */
+.hero{position:relative;overflow-x:clip}
+.hero-in{display:grid;gap:34px;align-items:center;padding:34px 0 56px}
+@media(min-width:900px){.hero-in{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;padding:56px 0 84px}}
+.kicker{display:inline-block;font:700 12px/1 var(--f-num);letter-spacing:.14em;background:var(--ink);color:var(--paper);padding:8px 14px;border-radius:99px}
+.hero h1{font-size:clamp(40px,7.4vw,80px);line-height:1.22;margin:20px 0 18px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lede{font-size:clamp(15px,1.8vw,18px);line-height:1.95;font-weight:700;max-width:32em;color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0;padding:0;list-style:none}
+.chips li{font:700 13.5px/1 var(--f-body);background:var(--surface);border:2.5px solid var(--edge);border-radius:99px;padding:9px 14px;box-shadow:3px 3px 0 var(--edge)}
+.chips li.hot{background:var(--yellow);color:#1E1B3A}
+.chips .num{font-weight:700}
+.hero-pic{position:relative;margin:10px 8px 0}
+.hero-pic::before,.hero-pic::after{content:"";position:absolute;border-radius:50%;z-index:0}
+.hero-pic::before{width:78%;aspect-ratio:1;right:-14%;top:-16%;background:var(--yellow)}
+.hero-pic::after{width:34%;aspect-ratio:1;right:-8%;bottom:-12%;background:var(--pink)}
+.hero-pic .frame{position:relative;z-index:1;border:3px solid var(--edge);border-radius:28px;overflow:hidden;
+  box-shadow:10px 10px 0 var(--edge);transform:rotate(-3deg);background:var(--sea)}
+.hero-pic img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.sticker{position:absolute;z-index:2;font:400 clamp(13px,1.6vw,16px)/1 var(--f-disp);padding:10px 16px;border-radius:99px;
+  border:2.5px solid #1E1B3A;box-shadow:4px 4px 0 #1E1B3A;white-space:nowrap}
+.sticker.s1{left:-6px;top:-18px;background:#FFFFFF;color:#1E1B3A;transform:rotate(-6deg)}
+.sticker.s2{right:-10px;bottom:56px;background:#1E1B3A;color:#FFD23F;transform:rotate(5deg)}
+@media(max-width:899px){.hero-pic::after{right:auto;left:-6%;bottom:auto;top:62%;width:26%}}
+.hero-pic figcaption{position:relative;z-index:2;margin-top:26px;font-size:11.5px;line-height:1.6;color:var(--muted);text-align:right}
+.hero-pic figcaption a{color:inherit}
+.wave{display:block;position:relative;z-index:1;width:100%;height:clamp(28px,5vw,60px);color:var(--band);margin-bottom:-2px}
 
 /* ---------------- セクション共通 ---------------- */
-section{padding-top:clamp(52px,8vw,96px)}
-.eyebrow{font:700 11.5px var(--f-num);letter-spacing:.2em;color:var(--accent)}
-section h2{font-size:clamp(26px,4.4vw,44px);font-weight:500;margin:8px 0 10px}
+section{padding-top:clamp(56px,8vw,100px)}
+.eyebrow{display:inline-block;font:700 12px/1 var(--f-num);letter-spacing:.12em;padding:7px 12px;border-radius:99px;background:var(--yellow);color:#1E1B3A;border:2px solid var(--edge)}
+section h2{font-size:clamp(27px,4.6vw,46px);margin:14px 0 10px}
 .sub{color:var(--ink-2);max-width:44em;font-size:15px}
-.panel{background:var(--surface);border:1px solid var(--hair);padding:clamp(18px,3vw,32px);margin-top:26px}
+.panel{background:var(--surface);border:3px solid var(--edge);border-radius:var(--r);padding:clamp(18px,3vw,32px);margin-top:28px;box-shadow:8px 8px 0 var(--yellow)}
+.panel h3{font-size:19px}
 .fig-note{font-size:12.5px;color:var(--muted);line-height:1.8;margin-top:14px;max-width:52em}
-.c{font:700 10px var(--f-num);letter-spacing:.03em;padding:1px 5px;border:1px solid var(--line);
-  color:var(--muted);white-space:nowrap;display:inline-block;vertical-align:1px;margin-left:3px}
+.c{font:700 10px var(--f-num);letter-spacing:.03em;padding:1px 7px;border:1.5px solid var(--line);border-radius:99px;
+  color:var(--muted);white-space:nowrap;display:inline-block;vertical-align:1px;margin-left:4px}
 .c.ok{border-color:var(--ok);color:var(--ok)}
 .c.chk{border-color:var(--warn);color:var(--warn)}
 
+/* 濃い帯（画面幅いっぱい） */
+.band{position:relative;background:var(--band);color:var(--on-band);box-shadow:0 0 0 100vmax var(--band);clip-path:inset(0 -100vmax);padding-bottom:clamp(56px,8vw,96px)}
+.band .sub{color:var(--on-band-2)}
+.band h2{color:var(--on-band)}
+.band .panel{color:var(--ink)}
+
 /* ---------------- 5案タイル ---------------- */
-.tiles{display:grid;gap:10px;grid-template-columns:1fr;margin-top:26px}
-@media(min-width:900px){.tiles{grid-template-columns:repeat(5,1fr);gap:12px}}
-.dart{margin:0 0 14px;position:relative;border-radius:14px;overflow:hidden;background:var(--p)}
-.dart img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;max-height:360px}
-.dart figcaption{position:absolute;right:8px;bottom:8px;font-size:11px;padding:3px 8px;border-radius:99px;background:rgba(0,0,0,.72);color:#fff}
-.tile{position:relative;text-align:left;cursor:pointer;background:var(--surface);border:1px solid var(--hair);
-  border-top:5px solid var(--p);padding:14px 16px 16px;display:grid;gap:2px 14px;
-  grid-template-columns:auto 1fr;grid-template-areas:"let name" "let tag" "sum sum" "bar bar" "why why";
-  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
-@media(min-width:900px){.tile{grid-template-columns:1fr;grid-template-areas:"let" "name" "tag" "sum" "bar" "why";padding:16px 16px 18px}}
-@media(hover:hover){.tile:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(20,40,45,.10)}}
-.tile[aria-pressed="true"]{border-color:var(--p);box-shadow:0 0 0 2px var(--p) inset,0 8px 22px rgba(20,40,45,.12)}
-.tile .let{grid-area:let;font:500 44px/1 var(--f-disp);color:var(--p);align-self:center}
-@media(min-width:900px){.tile .let{font-size:52px;margin-bottom:6px}}
-.tile .name{grid-area:name;font:700 16px/1.45 var(--f-disp)}
-.tile .tag{grid-area:tag;font-size:12px;color:var(--p);font-weight:700;letter-spacing:.06em}
-.tile .sum{grid-area:sum;margin-top:10px;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
-.tile .sum b{font:700 24px/1.1 var(--f-num);letter-spacing:.01em}
-.tile .sum small{font-size:11.5px;color:var(--muted)}
+.tiles{display:grid;gap:18px;grid-template-columns:1fr;margin-top:30px}
+@media(min-width:620px) and (max-width:899px){.tiles{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.tiles{grid-template-columns:repeat(5,1fr);gap:16px}}
+.tile{position:relative;text-align:left;cursor:pointer;background:var(--surface);color:var(--ink);border:3px solid var(--edge);border-radius:var(--r);
+  padding:0 0 16px;display:grid;gap:2px 12px;overflow:hidden;
+  grid-template-columns:auto 1fr;grid-template-areas:"pic pic" "let name" "let tag" "sum sum" "bar bar" "why why";
+  box-shadow:6px 6px 0 var(--p);transition:transform .18s ease,box-shadow .18s ease}
+.tile>*:not(.tpic){margin-left:16px;margin-right:16px}
+.tile>.let{margin-right:0}
+.tile>.name,.tile>.tag{margin-left:0}
+@media(hover:hover){.tile:hover{transform:translate(-2px,-3px);box-shadow:9px 10px 0 var(--p)}}
+.tile[aria-pressed="true"]{outline:4px solid var(--yellow);outline-offset:3px;transform:translate(-2px,-3px);box-shadow:9px 10px 0 var(--p)}
+.tpic{grid-area:pic;position:relative;display:block;margin-bottom:12px;border-bottom:3px solid var(--edge);background:var(--p)}
+.tpic img{width:100%;aspect-ratio:16/9;object-fit:cover}
+@media(max-width:619px){.tpic img{aspect-ratio:2/1}}
+@media(min-width:900px){.tpic img{aspect-ratio:4/3}}
+.pk{position:absolute;left:8px;bottom:8px;font:700 10.5px/1 var(--f-body);background:rgba(20,18,40,.82);color:#FFFFFF;padding:5px 8px;border-radius:99px}
+.tile .let{grid-area:let;width:44px;height:44px;border-radius:50%;background:var(--p);color:var(--on-p);border:2.5px solid var(--edge);
+  display:grid;place-items:center;font:800 21px/1 var(--f-num);align-self:center}
+.tile .name{grid-area:name;font:400 15px/1.45 var(--f-disp);align-self:end}
+.tile .tag{grid-area:tag;font-size:12px;color:var(--p);font-weight:900;letter-spacing:.04em;align-self:start}
+.tile .sum{grid-area:sum;margin-top:10px;display:flex;align-items:baseline;gap:4px;flex-wrap:wrap}
+.tile .sum b{font:800 26px/1.1 var(--f-num);letter-spacing:-.01em;color:var(--p)}
+.tile .sum small{font-size:11.5px;color:var(--muted);font-weight:700}
 .tile .why{grid-area:why;font-size:12.5px;line-height:1.7;color:var(--ink-2);margin-top:8px}
-.tile .badge{position:absolute;top:10px;right:10px;font:700 10.5px var(--f-num);letter-spacing:.08em;
-  background:var(--p);color:var(--surface);padding:2px 7px}
+.tile .badge{position:absolute;top:10px;right:10px;z-index:1;font:400 13px/1 var(--f-disp);
+  background:var(--yellow);color:#1E1B3A;border:2.5px solid #1E1B3A;padding:7px 11px;border-radius:99px;transform:rotate(6deg);box-shadow:3px 3px 0 #1E1B3A}
 /* 予算メーター：20万円に対して総額がどこまで届くか */
-.meter{grid-area:bar;position:relative;height:10px;background:var(--sunken);margin-top:8px}
+.meter{grid-area:bar;position:relative;height:12px;background:var(--sunken);margin-top:8px;border:2px solid var(--edge);border-radius:99px;overflow:hidden}
 .meter i{position:absolute;top:0;bottom:0;background:var(--p)}
 .meter i.open{background:linear-gradient(90deg,var(--p),transparent)}
-.meter::after{content:"";position:absolute;top:-4px;bottom:-4px;left:var(--budget);border-left:2px solid var(--ink)}
-.hint{font-size:12px;color:var(--muted);margin-top:10px}
+.meter::after{content:"";position:absolute;top:0;bottom:0;left:var(--budget);border-left:3px solid var(--ink)}
+.hint{font-size:12.5px;color:var(--on-band-2);margin-top:16px}
 
 /* ---------------- 比較マトリクス ---------------- */
 .matrix-wrap{overflow-x:auto}
 .matrix{width:100%;border-collapse:collapse;min-width:340px}
-.matrix th,.matrix td{padding:10px 6px;border-bottom:1px solid var(--hair);vertical-align:middle}
-.matrix thead th{font:700 12px var(--f-num);text-align:center;color:var(--p);border-bottom:2px solid var(--p)}
-.matrix thead th span{display:block;font:500 11px var(--f-body);color:var(--muted);white-space:nowrap}
+.matrix th,.matrix td{padding:10px 6px;border-bottom:1.5px solid var(--hair);vertical-align:middle}
+.matrix thead th{font:800 14px var(--f-num);text-align:center;color:var(--p);border-bottom:3px solid var(--p)}
+.matrix thead th span{display:block;font:700 11px var(--f-body);color:var(--muted);white-space:nowrap}
 .matrix thead th:first-child{border-bottom-color:var(--line)}
-.matrix tbody th{text-align:left;font-size:13.5px;font-weight:700;width:34%}
-.matrix tbody th small{display:block;font-weight:400;font-size:11.5px;color:var(--muted);line-height:1.5;margin-top:2px}
+.matrix tbody th{text-align:left;font-size:13.5px;font-weight:900;width:34%}
+.matrix tbody th small{display:block;font-weight:500;font-size:11.5px;color:var(--muted);line-height:1.5;margin-top:2px}
 .matrix td{text-align:center}
-.matrix td.on{background:var(--sea-tint)}
-.matrix thead th.on{background:var(--sea-tint)}
+.matrix td.on,.matrix thead th.on{background:var(--sea-tint)}
+.matrix tfoot td.on{background:var(--sea-tint);border-radius:0 0 12px 12px}
 .dots{display:inline-flex;gap:3px}
-.dots i{width:7px;height:7px;border-radius:50%;background:var(--dot-off)}
+.dots i{width:8px;height:8px;border-radius:50%;background:var(--dot-off)}
 .dots i.f{background:var(--p)}
 .matrix tfoot td,.matrix tfoot th{padding-top:12px;border-bottom:none}
 .matrix tfoot th{text-align:left;font-size:13px}
-.matrix tfoot th .of{font-weight:400;color:var(--muted);font-size:11px;margin-left:2px}
-.matrix tfoot td b{font:700 18px var(--f-num);color:var(--p)}
+.matrix tfoot th .of{font-weight:500;color:var(--muted);font-size:11px;margin-left:2px}
+.matrix tfoot td b{font:800 19px var(--f-num);color:var(--p)}
 @media(max-width:600px){
   .matrix{min-width:0;table-layout:fixed}
   .matrix thead th span{display:none}
-  .matrix thead th{font-size:14px}
+  .matrix thead th{font-size:15px}
   .matrix thead th:first-child{width:31%}
   .matrix tbody th{font-size:12px;line-height:1.45;padding-right:6px}
   .matrix tfoot th{font-size:11.5px}
   .matrix tfoot td b{font-size:15px}
-  .panel{padding:18px 14px}
+  .panel{padding:18px 14px;box-shadow:6px 6px 0 var(--yellow)}
   .matrix tbody th small{display:none}
   .dots{gap:2px}.dots i{width:6px;height:6px}
   .matrix th,.matrix td{padding:9px 3px}
 }
-
 @media(max-width:360px){
   .dots{gap:1px}.dots i{width:5px;height:5px}
   .matrix th,.matrix td{padding:8px 1px}
@@ -170,15 +207,15 @@ section h2{font-size:clamp(26px,4.4vw,44px);font-weight:500;margin:8px 0 10px}
 }
 
 /* ---------------- 総額チャート（HTML製：どの幅でも収まる） ---------------- */
-.cost{display:grid;gap:14px;margin-top:6px}
+.cost{display:grid;gap:16px;margin-top:6px}
 .crow{display:grid;grid-template-columns:5.5em 1fr;gap:10px;align-items:center}
 @media(min-width:700px){.crow{grid-template-columns:9em 1fr}}
-.crow .lb{font:700 13px/1.4 var(--f-disp)}
-.crow .lb b{color:var(--p);font-family:var(--f-num);margin-right:4px}
-.track{position:relative;height:18px;background:var(--sunken)}
-.track .rng{position:absolute;top:0;bottom:0;background:var(--p)}
-.track .rng.open{background:var(--p);background:linear-gradient(90deg,var(--p) 0 12px,color-mix(in srgb,var(--p) 35%,transparent) 12px,transparent)}
-.track::after{content:"";position:absolute;top:-5px;bottom:-5px;left:var(--budget);border-left:2px dashed var(--ink)}
+.crow .lb{font:900 13.5px/1.4 var(--f-body)}
+.crow .lb b{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--p);color:var(--on-p);font:800 12px/1 var(--f-num);margin-right:6px;vertical-align:1px}
+.track{position:relative;height:22px;background:var(--sunken);border-radius:99px;overflow:hidden}
+.track .rng{position:absolute;top:0;bottom:0;background:var(--p);border-radius:99px}
+.track .rng.open{background:linear-gradient(90deg,var(--p) 0 12px,color-mix(in srgb,var(--p) 35%,transparent) 12px,transparent);border-radius:99px 0 0 99px}
+.track::after{content:"";position:absolute;top:0;bottom:0;left:var(--budget);border-left:3px solid var(--ink)}
 .crow .val{grid-column:2;font:700 12.5px var(--f-num);color:var(--ink-2);margin-top:-6px}
 @media(max-width:699px){
   .crow{grid-template-columns:1fr;gap:4px}
@@ -186,161 +223,188 @@ section h2{font-size:clamp(26px,4.4vw,44px);font-weight:500;margin:8px 0 10px}
   .axis{grid-template-columns:1fr}
   .axis>div:first-child{display:none}
 }
-.crow.on .track{outline:2px solid var(--p);outline-offset:2px}
+.crow.on .track{outline:3px solid var(--p);outline-offset:2px}
 .axis{display:grid;grid-template-columns:5.5em 1fr;gap:10px;margin-top:4px}
 @media(min-width:700px){.axis{grid-template-columns:9em 1fr}}
-.axis .ticks{position:relative;height:18px;font:500 11px var(--f-num);color:var(--muted)}
+@media(max-width:699px){.axis{grid-template-columns:1fr}}
+.axis .ticks{position:relative;height:18px;font:700 11px var(--f-num);color:var(--muted)}
 .axis .ticks span{position:absolute;transform:translateX(-50%);white-space:nowrap}
 .axis .ticks span:first-child{transform:none}
-.budget-key{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;margin-bottom:10px}
-.budget-key i{width:0;height:16px;border-left:2px dashed var(--ink)}
+.budget-key{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:900;margin-bottom:12px;background:var(--yellow);color:#1E1B3A;border-radius:99px;padding:4px 12px}
+.budget-key i{width:0;height:14px;border-left:3px solid #1E1B3A}
 
 /* ---------------- 詳細（タブ） ---------------- */
-.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:26px}
-.tabs button{cursor:pointer;background:var(--surface);border:1px solid var(--line);padding:7px 14px;
-  font:700 13px var(--f-body);display:flex;align-items:center;gap:7px}
-.tabs button b{font:700 15px var(--f-disp);color:var(--p)}
-.tabs button[aria-selected="true"]{background:var(--p);border-color:var(--p);color:var(--surface)}
-.tabs button[aria-selected="true"] b{color:var(--surface)}
-.detail{background:var(--surface);border:1px solid var(--hair);border-top:5px solid var(--p);margin-top:12px}
-.detail + .detail{margin-top:16px}
-.js .detail + .detail{margin-top:12px}
-.dhead{display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding:18px 20px 14px}
-.dhead .let{font:500 46px/1 var(--f-disp);color:var(--p)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.tabs button{cursor:pointer;background:var(--surface);border:2.5px solid var(--edge);border-radius:99px;padding:7px 16px 7px 8px;
+  font:700 13.5px var(--f-body);display:flex;align-items:center;gap:8px;box-shadow:3px 3px 0 var(--edge)}
+.tabs button b{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;font:800 13px/1 var(--f-num);background:var(--p);color:var(--on-p)}
+.tabs button[aria-selected="true"]{background:var(--p);color:var(--on-p);box-shadow:3px 3px 0 var(--edge)}
+.tabs button[aria-selected="true"] b{background:var(--on-p);color:var(--p)}
+.detail{background:var(--surface);border:3px solid var(--edge);border-radius:var(--r);margin-top:18px;overflow:hidden;box-shadow:8px 8px 0 var(--p)}
+.detail + .detail{margin-top:22px}
+.js .detail + .detail{margin-top:18px}
+.dpic{position:relative;border-bottom:3px solid var(--edge);background:var(--p)}
+.dpic img{width:100%;aspect-ratio:3/2;max-height:420px;object-fit:cover}
+.dpic figcaption{padding:8px 16px;font-size:11.5px;line-height:1.6;color:var(--muted);background:var(--sunken);border-top:3px solid var(--edge)}
+.dpic figcaption a{color:inherit}
+.dpic .pk{top:12px;left:12px;bottom:auto;font-size:12px;padding:6px 10px}
+.dhead{display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding:20px 22px 16px}
+.dhead .let{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--p);color:var(--on-p);border:3px solid var(--edge);font:800 26px/1 var(--f-num);flex:none}
 .dhead h3{font-size:clamp(19px,2.6vw,26px)}
-.dhead .tag{display:block;font-size:12.5px;color:var(--p);font-weight:700;letter-spacing:.06em}
-.links{margin-left:auto;display:flex;gap:6px}
-.links a{font:700 12px var(--f-body);text-decoration:none;border:1px solid var(--line);padding:5px 11px;white-space:nowrap}
-.links a:hover{border-color:var(--p);color:var(--p)}
-.dgrid{display:grid;grid-template-columns:1fr;border-top:1px solid var(--hair)}
+.dhead .tag{display:inline-block;font-size:12px;color:var(--p);font-weight:900;letter-spacing:.04em;border:2px solid var(--p);border-radius:99px;padding:1px 10px;margin-bottom:4px}
+.links{margin-left:auto;display:flex;gap:8px}
+.links a{font:700 12.5px var(--f-body);text-decoration:none;border:2.5px solid var(--edge);border-radius:99px;padding:5px 14px;white-space:nowrap;background:var(--surface);box-shadow:2px 2px 0 var(--edge)}
+.links a:hover{background:var(--yellow);color:#1E1B3A}
+.dgrid{display:grid;grid-template-columns:1fr;border-top:2px dashed var(--line)}
 @media(min-width:860px){.dgrid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}}
 .spec{display:grid;grid-template-columns:1fr 1fr;align-content:start;margin:0}
-.spec>dl{margin:0;padding:12px 20px;border-bottom:1px solid var(--hair);border-right:1px solid var(--hair);min-width:0}
+.spec>dl{margin:0;padding:12px 22px;border-bottom:1.5px solid var(--hair);border-right:1.5px solid var(--hair);min-width:0}
 .spec>dl:nth-child(2n){border-right:none}
-.spec dt{font:700 11px var(--f-num);letter-spacing:.06em;color:var(--muted)}
-.spec dd{margin:3px 0 0;font-size:14px;line-height:1.6}
-.spec dd.num{font-size:15px;font-weight:700}
-.dtext{padding:16px 20px 20px;font-size:14.5px;line-height:1.95;color:var(--ink-2)}
-@media(min-width:860px){.dtext{border-left:1px solid var(--hair)}}
-.dtext .lead{color:var(--ink);font-weight:700}
-.dtext .against{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--muted)}
+.spec dt{font:700 11px var(--f-body);letter-spacing:.04em;color:var(--muted)}
+.spec dd{margin:3px 0 0;font-size:14px;line-height:1.6;font-weight:700}
+.spec dd.num{font-size:15.5px;font-weight:800}
+.dtext{padding:18px 22px 22px;font-size:14.5px;line-height:1.95;color:var(--ink-2)}
+@media(min-width:860px){.dtext{border-left:1.5px solid var(--hair)}}
+.dtext .lead{color:var(--ink);font-weight:900}
+.dtext .against{margin-top:12px;padding-top:12px;border-top:2px dashed var(--line);font-size:13.5px;color:var(--muted)}
 .dtext .against b{color:var(--warn)}
-.dropped{margin-top:18px;padding:14px 18px;border:1px dashed var(--line);background:var(--sunken);font-size:13px;color:var(--ink-2)}
-.dropped h3{font-size:14.5px;margin-bottom:6px}
+.dropped{margin-top:24px;padding:16px 20px;border:2.5px dashed var(--line);border-radius:var(--r);background:var(--sunken);font-size:13px;color:var(--ink-2)}
+.dropped h3{font-size:15px;margin-bottom:6px}
 .dropped ul{margin:0;padding-left:1.1em}.dropped li{margin-bottom:4px}
 
 /* ---------------- 旅程 ---------------- */
-.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:24px}
-@media(min-width:760px){.stats{grid-template-columns:repeat(4,1fr)}}
-.stats div{background:var(--surface);padding:14px 16px}
-.stats b{display:block;font:700 26px/1.2 var(--f-num);color:var(--sea)}
-.stats span{font-size:12.5px;color:var(--muted)}
-details.day{background:var(--surface);border:1px solid var(--hair);margin-top:12px}
-details.day>summary{cursor:pointer;list-style:none;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:14px 18px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}
+@media(min-width:760px){.stats{grid-template-columns:repeat(4,1fr);gap:16px}}
+.stats div{background:var(--surface);padding:14px 16px;border:3px solid var(--edge);border-radius:18px;box-shadow:4px 4px 0 var(--edge)}
+.stats div:nth-child(1){box-shadow:4px 4px 0 var(--pink)}
+.stats div:nth-child(2){box-shadow:4px 4px 0 var(--sky)}
+.stats div:nth-child(3){box-shadow:4px 4px 0 var(--yellow)}
+.stats b{display:block;font:800 28px/1.2 var(--f-num);color:var(--sea)}
+.stats span{font-size:12.5px;color:var(--muted);font-weight:700}
+details.day{background:var(--surface);border:3px solid var(--edge);border-radius:var(--r);margin-top:16px;overflow:hidden}
+details.day>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 18px}
 details.day>summary::-webkit-details-marker{display:none}
-details.day>summary::before{content:"＋";font-weight:700;color:var(--sea);width:1em}
+details.day>summary::before{content:"＋";display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--yellow);color:#1E1B3A;font-weight:900;flex:none}
 details.day[open]>summary::before{content:"－"}
-details.day .n{font:700 12px var(--f-num);letter-spacing:.14em;color:var(--sea)}
+details.day[open]>summary{border-bottom:2px dashed var(--line)}
+details.day .n{font:800 12px var(--f-num);letter-spacing:.08em;color:var(--sea)}
 details.day h3{font-size:17px}
 details.day .m{margin-left:auto;font:700 12px var(--f-num);color:var(--muted)}
-.dbody{padding:0 18px 18px}
+.dbody{padding:14px 18px 18px}
 .tl{margin:4px 0 14px}
 .tlx{position:relative;height:15px;margin-left:64px;border-bottom:1px solid var(--hair)}
-.tlx span{position:absolute;top:0;transform:translateX(-50%);font:500 10px var(--f-num);color:var(--muted)}
+.tlx span{position:absolute;top:0;transform:translateX(-50%);font:700 10px var(--f-num);color:var(--muted)}
 .tlr{display:flex;align-items:center;margin-top:7px}
-.tll{width:64px;flex:none;font:500 10.5px/1.4 var(--f-num);color:var(--muted)}
+.tll{width:64px;flex:none;font:700 10.5px/1.4 var(--f-num);color:var(--muted)}
 .tll b{display:block;color:var(--ink);font-size:11px}
-.tlt{position:relative;height:22px;flex:1;background:var(--sunken);overflow:hidden}
+.tlt{position:relative;height:24px;flex:1;background:var(--sunken);overflow:hidden;border-radius:99px}
 .sg{position:absolute;top:0;bottom:0}
 .sg.drive{background:repeating-linear-gradient(135deg,var(--hatch) 0 3px,transparent 3px 6px)}
 .sg.rest{background:var(--hair)}.sg.sight{background:var(--sea)}.sg.meal{background:var(--sea-tint);box-shadow:inset 0 0 0 1px var(--line)}.sg.stay{background:var(--gold)}
-.tlk{display:flex;flex-wrap:wrap;gap:12px;margin:10px 0 0 64px;font:500 11px var(--f-num);color:var(--muted)}
-.tlk span{display:flex;align-items:center;gap:5px}.tlk i{width:13px;height:9px;display:inline-block}
+.tlk{display:flex;flex-wrap:wrap;gap:12px;margin:10px 0 0 64px;font:700 11px var(--f-num);color:var(--muted)}
+.tlk span{display:flex;align-items:center;gap:5px}.tlk i{width:13px;height:9px;display:inline-block;border-radius:3px}
 .tlk i.drive{background:repeating-linear-gradient(135deg,var(--hatch) 0 3px,transparent 3px 6px);box-shadow:inset 0 0 0 1px var(--hatch)}
 .tlk i.rest{background:var(--hair)}.tlk i.sight{background:var(--sea)}.tlk i.meal{background:var(--sea-tint);box-shadow:inset 0 0 0 1px var(--line)}.tlk i.stay{background:var(--gold)}
 .scroll{overflow-x:auto}
 table.itin{border-collapse:collapse;width:100%;font-size:13.5px;min-width:740px}
-.itin thead th{text-align:left;font:700 11px var(--f-num);letter-spacing:.06em;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
-.itin td{padding:10px;border-bottom:1px solid var(--hair);vertical-align:top;line-height:1.75}
+.itin thead th{text-align:left;font:700 11px var(--f-body);letter-spacing:.04em;color:var(--muted);padding:8px 10px;border-bottom:2px solid var(--line);white-space:nowrap}
+.itin td{padding:10px;border-bottom:1.5px solid var(--hair);vertical-align:top;line-height:1.75}
 .itin td:empty::after{content:"—";color:var(--muted)}
 .itin .t{font-family:var(--f-num);font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
-.itin .place{font-weight:700}
+.itin .place{font-weight:900}
 .itin tr.go td{color:var(--muted);font-size:12.5px}
 .itin tr.eat td{background:var(--sea-tint)}
 .itin tr.in td{background:var(--accent-tint)}
-.map{font:700 10.5px var(--f-num);color:var(--sea);text-decoration:none;border:1px solid var(--line);padding:1px 6px;margin-left:6px;white-space:nowrap;display:inline-block}
+.map{font:700 10.5px var(--f-num);color:var(--sea);text-decoration:none;border:1.5px solid var(--line);border-radius:99px;padding:1px 8px;margin-left:6px;white-space:nowrap;display:inline-block}
 @media(max-width:760px){
   table.itin{min-width:0;display:block}
   .itin thead{display:none}
   .itin tbody,.itin tr,.itin td{display:block;width:auto}
-  .itin tr{border:1px solid var(--hair);background:var(--surface);padding:10px 12px;margin-bottom:8px}
+  .itin tr{border:2px solid var(--hair);border-radius:14px;background:var(--surface);padding:10px 12px;margin-bottom:8px;overflow:hidden}
   .itin tr.go{background:var(--sunken);border-style:dashed}
   .itin td{border:none;padding:2px 0;display:grid;grid-template-columns:4.4em 1fr;gap:10px;align-items:baseline}
-  .itin td::before{content:attr(data-l);font:700 10.5px var(--f-num);color:var(--muted)}
+  .itin td::before{content:attr(data-l);font:700 10.5px var(--f-body);color:var(--muted)}
   .itin td:empty{display:none}
   .itin td.t{font-size:15px}
   .scroll:has(.itin){overflow-x:visible}
   .tlx,.tlk{margin-left:52px}.tll{width:52px}
 }
-.notes{display:grid;gap:12px;grid-template-columns:1fr;margin-top:16px}
+.notes{display:grid;gap:16px;grid-template-columns:1fr;margin-top:20px}
 @media(min-width:760px){.notes{grid-template-columns:1fr 1fr}}
-.note{background:var(--surface);border:1px solid var(--hair);padding:16px 18px}
-.note.warn{border-left:4px solid var(--warn)}
-.note.keep{border-left:4px solid var(--sea)}
-.note h3{font-size:15px;margin-bottom:8px}
+.note{background:var(--surface);border:3px solid var(--edge);border-radius:var(--r);padding:18px 20px}
+.note.warn{border-left:10px solid var(--warn)}
+.note.keep{border-left:10px solid var(--sea)}
+.note h3{font-size:16px;margin-bottom:8px}
 .note ul{margin:0;padding-left:1.1em}.note li{font-size:13.5px;color:var(--ink-2);margin-bottom:5px}
 
 /* ---------------- 日取り ---------------- */
-.cal{display:grid;grid-template-columns:repeat(9,1fr);gap:4px}
-.cal div{text-align:center;padding:8px 0;border:1px solid var(--hair);background:var(--surface)}
-.cal b{display:block;font:500 11px var(--f-num);color:var(--muted)}
-.cal i{display:block;font:700 17px var(--f-num);font-style:normal}
-.cal .go{background:var(--sea);border-color:var(--sea);color:var(--surface)}
+.cal{display:grid;grid-template-columns:repeat(9,1fr);gap:6px}
+.cal div{text-align:center;padding:8px 0;border:2px solid var(--hair);border-radius:14px;background:var(--surface)}
+.cal b{display:block;font:700 11px var(--f-body);color:var(--muted)}
+.cal i{display:block;font:800 18px var(--f-num);font-style:normal}
+.cal .go{background:var(--sea);border-color:var(--edge);color:var(--surface)}
 .cal .go b{color:var(--surface)}
 .cal .peak{background:var(--accent-tint)}
-.cal-key{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);margin-top:10px}
-.cal-key i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px}
+.cal-key{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);margin-top:12px;font-weight:700}
+.cal-key i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:6px;vertical-align:-1px}
 
 /* ---------------- 景色 ---------------- */
-.essay{display:grid;gap:14px;grid-template-columns:1fr;margin-top:24px}
-@media(min-width:860px){.essay{grid-template-columns:1.6fr 1fr}}
-.essay img{width:100%;height:clamp(200px,28vw,380px);object-fit:cover}
-.essay figcaption{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.6}
+.essay{display:grid;gap:22px;grid-template-columns:minmax(0,1fr);margin-top:28px}
+.essay figure{min-width:0}
+@media(min-width:860px){.essay{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}.essay figure:first-child{grid-column:1/-1}}
+.essay img{width:100%;height:clamp(200px,28vw,380px);object-fit:cover;border:3px solid var(--edge);border-radius:var(--r);box-shadow:6px 6px 0 var(--edge)}
+.essay figure:nth-child(2) img{box-shadow:6px 6px 0 var(--pink)}
+.essay figure:nth-child(3) img{box-shadow:6px 6px 0 var(--sky)}
+.essay figcaption{font-size:11.5px;color:var(--muted);margin-top:10px;line-height:1.6}
 
 /* ---------------- 出典 ---------------- */
 .src ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;grid-template-columns:1fr}
 @media(min-width:760px){.src ul{grid-template-columns:1fr 1fr}}
-.src li{font-size:13.5px;border-bottom:1px solid var(--hair);padding-bottom:8px}
-.src b{display:block;font:700 10.5px var(--f-num);letter-spacing:.12em;color:var(--muted)}
-footer{margin-top:60px;padding:26px 0 40px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+.src li{font-size:13.5px;border-bottom:1.5px solid var(--hair);padding-bottom:8px}
+.src b{display:block;font:700 10.5px var(--f-num);letter-spacing:.1em;color:var(--muted)}
+.src .panel{box-shadow:8px 8px 0 var(--sky)}
+footer{margin-top:70px;background:var(--band);color:var(--on-band-2);box-shadow:0 0 0 100vmax var(--band);clip-path:inset(0 -100vmax);padding:30px 0 44px;font-size:12.5px}
+footer .bye{font:400 clamp(18px,3vw,24px)/1.4 var(--f-disp);color:var(--on-band);margin-bottom:10px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 
 <a class="skip" href="#compare">比較へ移動</a>
 
-<div class="cover">
-  <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Matsushima_miyagi_z.JPG/1280px-Matsushima_miyagi_z.JPG"
-       srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Matsushima_miyagi_z.JPG/1280px-Matsushima_miyagi_z.JPG 1280w, https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Matsushima_miyagi_z.JPG/1920px-Matsushima_miyagi_z.JPG 1920w"
-       sizes="100vw" width="1280" height="722" alt="12月の夕暮れ、松の島々が浮かぶ松島湾" fetchpriority="high">
-  <div class="cover-in">
-    <div class="kicker">WINTER 2026 ／ 松島・二泊三日</div>
-    <h1><span class="nb">五つの宿で</span><br><span class="nb"><em>くらべる</em>、</span><span class="nb">冬の松島。</span></h1>
-    <p class="lede">出かけるのは二回だけ。あとは宿にいる旅なので、決めるのは実質ひとつ——<strong>どの宿に二泊するか</strong>。五つの案を、客室風呂・予算・冬の使いやすさ・静けさで並べました。</p>
-    <div class="cover-foot"><span class="num">2026.12.27 SUN — 12.29 TUE</span><span>水戸発・車</span><span>ふたり・妻 妊娠中</span><span>総額 20万円</span></div>
+<header class="hero">
+  <div class="hero-in wrap">
+    <div class="hero-copy">
+      <span class="kicker">WINTER 2026 ／ 松島・二泊三日</span>
+      <h1><span class="nb">冬の松島、</span><br><span class="nb">どの宿に<em>する？</em></span></h1>
+      <p class="lede">出かけるのは二回だけ。あとは宿でぬくぬくする旅なので、決めるのは実質ひとつ——<strong>どの宿に二泊するか</strong>。五つの案を、客室風呂・予算・冬の使いやすさ・静けさで並べました。</p>
+      <ul class="chips">
+        <li><span class="num">12.27 SUN → 12.29 TUE</span></li>
+        <li>水戸発・車</li>
+        <li>ふたり・妻 妊娠中</li>
+        <li class="hot">総額 20万円</li>
+      </ul>
+    </div>
+    <figure class="hero-pic">
+      <div class="frame"><img src="img/hero-800.webp" srcset="img/hero-800.webp 800w, img/hero-1280.webp 1280w" sizes="(min-width:900px) 520px, 100vw"
+        width="800" height="533" alt="12月の松島湾。穏やかな青い海に、松の茂る小島が浮かぶ" fetchpriority="high"></div>
+      <span class="sticker s1" aria-hidden="true">12月の松島湾</span>
+      <span class="sticker s2" aria-hidden="true">♨ 2泊3日</span>
+      <figcaption>2020年12月27日撮影。<a href="https://commons.wikimedia.org/wiki/File:Matsushima_20201227-2.jpg" target="_blank" rel="noopener">Suicasmo</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></figcaption>
+    </figure>
   </div>
-  <p class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Matsushima_miyagi_z.JPG" target="_blank" rel="noopener">Chensiyuan</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>・2008年12月</p>
-</div>
+  <svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 30 Q 25 0 50 30 T 100 30 T 150 30 T 200 30 T 250 30 T 300 30 T 350 30 T 400 30 T 450 30 T 500 30 T 550 30 T 600 30 T 650 30 T 700 30 T 750 30 T 800 30 T 850 30 T 900 30 T 950 30 T 1000 30 T 1050 30 T 1100 30 T 1150 30 T 1200 30 V 60 H 0 Z"/></svg>
+</header>
 
 <main class="wrap">
 
 <!-- ========== 5案をひと目で ========== -->
-<section id="compare">
+<section id="compare" class="band">
   <div class="eyebrow">01 / FIVE PLANS</div>
   <h2>五つの案をひと目で</h2>
   <p class="sub">数字は<strong>旅の総額</strong>（宿2泊＋移動・食事など36,300円）。バーは予算20万円（黒い線）に対してどこまで届くか。タップすると、下の比較表と詳細がその案に切り替わります。</p>
 
   <div class="tiles" id="tiles" style="--budget:57.14%">
     <button class="tile" data-p="a" data-pick="a" aria-pressed="true" aria-controls="detail-a" type="button">
+      <span class="tpic"><img src="img/photo-a-480.webp" width="480" height="320" alt="" loading="lazy" decoding="async"><span class="pk">周辺の景色</span></span>
       <span class="badge">本命</span>
       <span class="let">A</span><span class="name">ホテル松島大観荘</span><span class="tag">条件を全部満たす</span>
       <span class="sum"><b class="num">10.8〜12.4</b><small>万円</small></span>
@@ -348,24 +412,28 @@ footer{margin-top:60px;padding:26px 0 40px;border-top:1px solid var(--line);font
       <span class="why">露天風呂付和室の2食付が<strong>確認済みで予算の6割</strong>。</span>
     </button>
     <button class="tile" data-p="b" data-pick="b" aria-pressed="false" aria-controls="detail-b" type="button">
+      <span class="tpic"><img src="img/photo-b-480.webp" width="480" height="320" alt="" loading="lazy" decoding="async"><span class="pk">周辺の景色</span></span>
       <span class="let">B</span><span class="name">小松館 好風亭</span><span class="tag">冬に強い</span>
       <span class="sum"><b class="num">8.3〜</b><small>万円（上限 要確認）</small></span>
       <span class="meter" aria-hidden="true"><i class="open" style="left:23.57%;width:22%"></i></span>
       <span class="why">客室風呂に<strong>ガラスシャッター</strong>。寒い日も使える。</span>
     </button>
     <button class="tile" data-p="c" data-pick="c" aria-pressed="false" aria-controls="detail-c" type="button">
+      <span class="tpic"><img src="img/photo-c-480.webp" width="480" height="320" alt="" loading="lazy" decoding="async"><span class="pk">実際の宿</span></span>
       <span class="let">C</span><span class="name">松島センチュリーホテル</span><span class="tag">身軽さと価格の幅</span>
       <span class="sum"><b class="num">8.9〜29.2</b><small>万円</small></span>
       <span class="meter" aria-hidden="true"><i style="left:25.46%;width:57.83%"></i></span>
       <span class="why">唯一の<strong>平地</strong>。中日は車が要らない。</span>
     </button>
     <button class="tile" data-p="d" data-pick="d" aria-pressed="false" aria-controls="detail-d" type="button">
+      <span class="tpic"><img src="img/photo-d-480.webp" width="480" height="320" alt="" loading="lazy" decoding="async"><span class="pk">実際の宿</span></span>
       <span class="let">D</span><span class="name">松島一の坊</span><span class="tag">全部込み</span>
       <span class="sum"><b class="num">18.2〜33.9</b><small>万円</small></span>
       <span class="meter" aria-hidden="true"><i style="left:51.86%;width:45.03%"></i></span>
       <span class="why">オールインクルーシブ。<strong>こもる旅に最も向く</strong>が高い。</span>
     </button>
     <button class="tile" data-p="e" data-pick="e" aria-pressed="false" aria-controls="detail-e" type="button">
+      <span class="tpic"><img src="img/photo-e-480.webp" width="480" height="320" alt="" loading="lazy" decoding="async"><span class="pk">周辺の景色</span></span>
       <span class="let">E</span><span class="name">松島佐勘 松庵</span><span class="tag">静けさ</span>
       <span class="sum"><b class="num">20.8〜</b><small>万円（予算超過）</small></span>
       <span class="meter" aria-hidden="true"><i class="open" style="left:59.40%;width:22%"></i></span>
@@ -431,7 +499,7 @@ footer{margin-top:60px;padding:26px 0 40px;border-top:1px solid var(--line);font
   </div>
 
   <article class="detail" data-p="a" id="detail-a" role="tabpanel" aria-labelledby="tab-a">
-    <figure class="dart"><img src="img/plan-a-768.webp" srcset="img/plan-a-768.webp 768w, img/plan-a-1280.webp 1280w" sizes="(min-width:1100px) 1040px, 100vw" width="768" height="512" loading="lazy" decoding="async" alt="高台の和室と露天風呂から松島湾を望むイメージ"><figcaption>イメージ（Canvaで生成・実際の宿ではありません）</figcaption></figure>
+    <figure class="dpic"><img src="img/photo-a-800.webp" srcset="img/photo-a-480.webp 480w, img/photo-a-800.webp 800w, img/photo-a-1280.webp 1280w" sizes="(min-width:1100px) 1100px, 100vw" width="800" height="533" loading="lazy" decoding="async" alt="高台から見下ろす松島湾。松の島々が重なって続く"><span class="pk">周辺の景色</span><figcaption>周辺の景色（宿の写真ではありません）。西行戻しの松公園から見た松島湾・2021年10月。<a href="https://commons.wikimedia.org/wiki/File:211030_Saigyo_Modoshi_no_Matsu_Park_Matsushima_Miyagi_pref_Japan01n.jpg" target="_blank" rel="noopener">663highland</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></figcaption></figure>
     <div class="dhead"><span class="let">A</span><div><span class="tag">本命・条件を全部満たす</span><h3>ホテル松島大観荘</h3></div>
       <span class="links"><a href="https://www.taikanso.co.jp/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%BE%E5%B3%B6%E5%A4%A7%E8%A6%B3%E8%8D%98" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
@@ -451,7 +519,7 @@ footer{margin-top:60px;padding:26px 0 40px;border-top:1px solid var(--line);font
   </article>
 
   <article class="detail" data-p="b" id="detail-b" role="tabpanel" aria-labelledby="tab-b">
-    <figure class="dart"><img src="img/plan-b-768.webp" srcset="img/plan-b-768.webp 768w, img/plan-b-1280.webp 1280w" sizes="(min-width:1100px) 1040px, 100vw" width="768" height="512" loading="lazy" decoding="async" alt="ガラス張りの客室から海を眺めるイメージ"><figcaption>イメージ（Canvaで生成・実際の宿ではありません）</figcaption></figure>
+    <figure class="dpic"><img src="img/photo-b-800.webp" srcset="img/photo-b-480.webp 480w, img/photo-b-800.webp 800w, img/photo-b-1280.webp 1280w" sizes="(min-width:1100px) 1100px, 100vw" width="800" height="533" loading="lazy" decoding="async" alt="海岸から見た冬の松島湾。凪いだ海と松の島"><span class="pk">周辺の景色</span><figcaption>周辺の景色（宿の写真ではありません）。宿の目の前に広がる松島湾・2020年12月27日。<a href="https://commons.wikimedia.org/wiki/File:Matsushima_20201227.jpg" target="_blank" rel="noopener">Suicasmo</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></figcaption></figure>
     <div class="dhead"><span class="let">B</span><div><span class="tag">冬に強い</span><h3>松島温泉 小松館 好風亭</h3></div>
       <span class="links"><a href="https://komatsukan-kofutei.co.jp/oheya/with_roten/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E6%B8%A9%E6%B3%89%20%E5%B0%8F%E6%9D%BE%E9%A4%A8%E5%A5%BD%E9%A2%A8%E4%BA%AD" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
@@ -471,7 +539,7 @@ footer{margin-top:60px;padding:26px 0 40px;border-top:1px solid var(--line);font
   </article>
 
   <article class="detail" data-p="c" id="detail-c" role="tabpanel" aria-labelledby="tab-c">
-    <figure class="dart"><img src="img/plan-c-768.webp" srcset="img/plan-c-768.webp 768w, img/plan-c-1280.webp 1280w" sizes="(min-width:1100px) 1040px, 100vw" width="768" height="512" loading="lazy" decoding="async" alt="平地のホテルと湾の島々のイメージ"><figcaption>イメージ（Canvaで生成・実際の宿ではありません）</figcaption></figure>
+    <figure class="dpic"><img src="img/photo-c-800.webp" srcset="img/photo-c-480.webp 480w, img/photo-c-800.webp 800w" sizes="(min-width:1100px) 1100px, 100vw" width="800" height="533" loading="lazy" decoding="async" alt="松島センチュリーホテルの中庭と客室棟"><span class="pk">実際の宿</span><figcaption>松島センチュリーホテルの中庭と客室棟・2012年7月。<a href="https://commons.wikimedia.org/wiki/File:%E6%9D%BE%E5%B3%B6%E3%82%BB%E3%83%B3%E3%83%81%E3%83%A5%E3%83%AA%E3%83%BC%E3%83%9B%E3%83%86%E3%83%AB_-_panoramio.jpg" target="_blank" rel="noopener">alonfloc</a> / <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></figcaption></figure>
     <div class="dhead"><span class="let">C</span><div><span class="tag">身軽さと価格の幅</span><h3>松島センチュリーホテル</h3></div>
       <span class="links"><a href="https://ssl.centuryhotel.co.jp/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E3%82%BB%E3%83%B3%E3%83%81%E3%83%A5%E3%83%AA%E3%83%BC%E3%83%9B%E3%83%86%E3%83%AB" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
@@ -491,7 +559,7 @@ footer{margin-top:60px;padding:26px 0 40px;border-top:1px solid var(--line);font
   </article>
 
   <article class="detail" data-p="d" id="detail-d" role="tabpanel" aria-labelledby="tab-d">
-    <figure class="dart"><img src="img/plan-d-768.webp" srcset="img/plan-d-768.webp 768w, img/plan-d-1280.webp 1280w" sizes="(min-width:1100px) 1040px, 100vw" width="768" height="512" loading="lazy" decoding="async" alt="海に面した上質な宿のイメージ"><figcaption>イメージ（Canvaで生成・実際の宿ではありません）</figcaption></figure>
+    <figure class="dpic"><img src="img/photo-d-800.webp" srcset="img/photo-d-480.webp 480w, img/photo-d-800.webp 800w" sizes="(min-width:1100px) 1100px, 100vw" width="800" height="533" loading="lazy" decoding="async" alt="松島一の坊の大浴場の露天風呂。湯船の向こうに松島湾"><span class="pk">実際の宿</span><figcaption>松島一の坊の大浴場・露天風呂（客室風呂ではありません）・2009年10月。<a href="https://commons.wikimedia.org/wiki/File:Matsushima_Onsen_%22ICHINOB%C5%8C%22_Outdoor-bath.JPG" target="_blank" rel="noopener">妖精書士</a> / パブリックドメイン</figcaption></figure>
     <div class="dhead"><span class="let">D</span><div><span class="tag">全部込み</span><h3>松島一の坊</h3></div>
       <span class="links"><a href="https://www.ichinobo.com/matsushima/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E4%B8%80%E3%81%AE%E5%9D%8A" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
@@ -511,7 +579,7 @@ footer{margin-top:60px;padding:26px 0 40px;border-top:1px solid var(--line);font
   </article>
 
   <article class="detail" data-p="e" id="detail-e" role="tabpanel" aria-labelledby="tab-e">
-    <figure class="dart"><img src="img/plan-e-768.webp" srcset="img/plan-e-768.webp 768w, img/plan-e-1280.webp 1280w" sizes="(min-width:1100px) 1040px, 100vw" width="768" height="512" loading="lazy" decoding="async" alt="静かな離れの宿のイメージ"><figcaption>イメージ（Canvaで生成・実際の宿ではありません）</figcaption></figure>
+    <figure class="dpic"><img src="img/photo-e-800.webp" srcset="img/photo-e-480.webp 480w, img/photo-e-800.webp 800w, img/photo-e-1280.webp 1280w" sizes="(min-width:1100px) 1100px, 100vw" width="800" height="533" loading="lazy" decoding="async" alt="松の木が茂る切り立った白い岩の島と松島湾"><span class="pk">周辺の景色</span><figcaption>周辺の景色（宿の写真ではありません）。松島湾の島・2025年10月。<a href="https://commons.wikimedia.org/wiki/File:Matsushima_Bay_-_Matsushima6238.jpg" target="_blank" rel="noopener">lumoplank</a> / <a href="https://creativecommons.org/licenses/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a></figcaption></figure>
     <div class="dhead"><span class="let">E</span><div><span class="tag">静けさ</span><h3>松島佐勘 松庵</h3></div>
       <span class="links"><a href="https://www.jalan.net/yad374328/" target="_blank" rel="noopener">詳細</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E4%BD%90%E5%8B%98%20%E6%9D%BE%E5%BA%B5" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
@@ -783,6 +851,10 @@ footer{margin-top:60px;padding:26px 0 40px;border-top:1px solid var(--line);font
       <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Fukuura.bridge.jpg/1280px-Fukuura.bridge.jpg" width="1280" height="960" alt="松島湾に架かる朱色の福浦橋" loading="lazy" decoding="async">
       <figcaption>福浦橋。<a href="https://commons.wikimedia.org/wiki/File:Fukuura.bridge.jpg" target="_blank" rel="noopener">ブルーノ・プラス</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>・2021年2月</figcaption>
     </figure>
+    <figure>
+      <img src="img/photo-k-800.webp" srcset="img/photo-k-480.webp 480w, img/photo-k-800.webp 800w, img/photo-k-1280.webp 1280w" sizes="(min-width:860px) 400px, 100vw" width="800" height="533" alt="白い岩肌に洞門の開いた鐘島と冬の松島湾" loading="lazy" decoding="async">
+      <figcaption>鐘島 — 2020年12月27日、旅と同じ頃の松島湾。<a href="https://commons.wikimedia.org/wiki/File:Kanejima_20201227.jpg" target="_blank" rel="noopener">Suicasmo</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></figcaption>
+    </figure>
   </div>
 </section>
 
@@ -835,8 +907,9 @@ footer{margin-top:60px;padding:26px 0 40px;border-top:1px solid var(--line);font
 </section>
 
 <footer>
+  <p class="bye">いってらっしゃい、冬の松島 ♨</p>
   <p>松島の宿 五案くらべ ／ 水戸発・2泊3日・年末休み ／ 調査日 2026年8月16日</p>
-  <p>写真は Wikimedia Commons の各作者による（ライセンスは各写真に記載）。営業時間・料金・空室は変動します。予約前に公式情報で再確認してください。</p>
+  <p>写真は Wikimedia Commons の各作者による実写（ライセンスは各写真に記載）。「周辺の景色」とある写真は宿そのものではありません。営業時間・料金・空室は変動します。予約前に公式情報で再確認してください。</p>
 </footer>
 
 </main>
