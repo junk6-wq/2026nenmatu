@@ -57,11 +57,16 @@ def main():
     if not root:
         fail(":root のトークン定義が見つからない")
     else:
-        defined = set(re.findall(r"(--[a-z0-9-]+)\s*:", root.group(1)))
+        # 捕まえたいのは「ダークテーマのブロックの中にしか定義が無い」変数。
+        # 要素単位で与える変数（[data-p]{--p:..} や style="--budget:.."）は正当なので、
+        # テーマ用ブロックを取り除いた残り全体から定義を集める。
+        outside = re.sub(r'@media \(prefers-color-scheme:dark\)\{.*?\n\}\n', "", s, flags=re.S)
+        outside = re.sub(r':root\[data-theme="dark"\]\{.*?\}', "", outside, flags=re.S)
+        defined = set(re.findall(r"(--[a-z0-9-]+)\s*:", outside))
         used = set(re.findall(r"var\((--[a-z0-9-]+)", s))
         missing = used - defined
         if missing:
-            fail(f"素の :root に無いトークンを var() で参照: {sorted(missing)}")
+            fail(f"テーマ用ブロックの外に定義が無いトークンを var() で参照: {sorted(missing)}")
         mq = re.search(r'@media \(prefers-color-scheme:dark\)\{\s*'
                        r':root:not\(\[data-theme="light"\]\)\{(.*?)\}\s*\}', s, re.S)
         dk = re.search(r':root\[data-theme="dark"\]\{(.*?)\}', s, re.S)

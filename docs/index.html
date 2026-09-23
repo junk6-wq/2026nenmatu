@@ -1,449 +1,551 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0e252b"><meta name="description" content="水戸から松島へ、同じ宿に二泊する冬の旅。5軒の宿、日取り、3日間の旅程と予算を比較します。"><title>冬の松島に、泊まりに行く。｜年末旅行のしおり</title><style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0E252B">
+<meta name="description" content="水戸から松島へ、同じ宿に二泊する冬の旅。5つの宿を、客室風呂・予算・冬の使いやすさ・静けさで見比べる。">
+<title>松島の宿 五案くらべ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Noto+Serif+JP:wght@500;700&display=swap">
+<link rel="preload" as="image" fetchpriority="high" href="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Matsushima_miyagi_z.JPG/1280px-Matsushima_miyagi_z.JPG" imagesrcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Matsushima_miyagi_z.JPG/1280px-Matsushima_miyagi_z.JPG 1280w, https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Matsushima_miyagi_z.JPG/1920px-Matsushima_miyagi_z.JPG 1920w" imagesizes="100vw">
+
+<style>
+/* ==========================================================
+   松島の宿 五案くらべ
+   ・地は紙（paper）、主役は5つの案。案ごとに1色を割り当て、
+     タイル・比較表・料金図・詳細で同じ色を通す（色＝案）。
+   ・カバーだけはテーマに依らず夜の地（--night）。ここに載る文字は
+     テーマ依存トークンを使わない（shiori スキル参照）。
+   ========================================================== */
 :root{
- --paper:#f7f6f2;--white:#fff;--ink:#17262b;--ink-2:#394d50;--muted:#627377;--line:#cdd5d2;--hair:#e1e6e2;
- --sea:#1b5964;--sea-tint:#e9f2f0;--accent:#b9603d;--accent-tint:#f7ebe3;--gold:#dbaf70;--night:#0e252b;
- --f-disp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
- --f-body:"DM Sans","Hiragino Sans","Yu Gothic",sans-serif;
- --f-data:"DM Sans","SFMono-Regular",monospace;
- --w:min(1120px,calc(100% - 56px));--ground:var(--paper);--surface:var(--white);--sunken:var(--sea-tint);--cold:var(--sea);--cold-soft:var(--sea-tint);--ember:var(--accent);--ember-fill:var(--gold);--alert:var(--accent);--verify:#236454;--hatch:#80979b
+  --paper:#F7F6F2; --surface:#FFFFFF; --sunken:#EDF1EE; --line:#CDD5D2; --hair:#E1E6E2;
+  --ink:#17262B; --ink-2:#394D50; --muted:#56676A;
+  --sea:#1B5964; --sea-tint:#E6F0EE; --accent:#A4522F; --accent-tint:#F5E8DF; --gold:#DBAF70;
+  --ok:#236454; --warn:#A4432A; --hatch:#80979B;
+  --pa:#1B5964; --pb:#39688A; --pc:#56692C; --pd:#A4522F; --pe:#6A4B7C;
+  --dot-off:#D6DDDA;
+  --night:#0E252B; --on-night:#F1C68C;
+  --f-disp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",YuMincho,serif;
+  --f-body:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",YuGothic,"Noto Sans JP",Meiryo,system-ui,sans-serif;
+  --f-num:"DM Sans","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --w:min(1120px,calc(100% - 40px));
 }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F1B1E; --surface:#152428; --sunken:#1B2E33; --line:#2E4449; --hair:#22363B;
+    --ink:#E6EEEC; --ink-2:#B9C9C6; --muted:#93A6A4;
+    --sea:#6FB3BE; --sea-tint:#1C3A40; --accent:#E39A78; --accent-tint:#3A2A22; --gold:#D9AE6E;
+    --ok:#7CC4A8; --warn:#EE9A80; --hatch:#5F777B;
+    --pa:#6FB3BE; --pb:#8DB6D6; --pc:#AFC47A; --pd:#E39A78; --pe:#C3A5D6;
+    --dot-off:#2E4449;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F1B1E; --surface:#152428; --sunken:#1B2E33; --line:#2E4449; --hair:#22363B;
+  --ink:#E6EEEC; --ink-2:#B9C9C6; --muted:#93A6A4;
+  --sea:#6FB3BE; --sea-tint:#1C3A40; --accent:#E39A78; --accent-tint:#3A2A22; --gold:#D9AE6E;
+  --ok:#7CC4A8; --warn:#EE9A80; --hatch:#5F777B;
+  --pa:#6FB3BE; --pb:#8DB6D6; --pc:#AFC47A; --pd:#E39A78; --pe:#C3A5D6;
+  --dot-off:#2E4449;
+}
+
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.9 var(--f-body);-webkit-text-size-adjust:100%}
-h1,h2,h3,h4{font-family:var(--f-disp);line-height:1.45;letter-spacing:.035em;margin:0;text-wrap:balance}
-p{margin:0}a{color:inherit}button{font:inherit}strong{font-weight:700}
-svg{display:block;max-width:100%;height:auto}figure{margin:0}img{display:block;max-width:100%}
-a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.skip{position:absolute;left:12px;top:-80px;background:#fff;color:#17262b;padding:10px;z-index:99}.skip:focus{top:12px}
-/* Cover */
-.mast{position:absolute;top:0;left:0;right:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:22px clamp(24px,4vw,60px);border-bottom:1px solid rgba(255,255,255,.38);color:#fff;letter-spacing:.13em}
-.mast b{font-family:var(--f-disp);font-size:19px}.mast span{font:600 11px var(--f-data)}
-.cover{position:relative;min-height:min(860px,100svh);height:760px;max-height:940px;background:#17333b;color:white;overflow:hidden;display:flex;align-items:flex-end}
-.cover img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:center 55%;filter:saturate(.65) contrast(1.03)}
-.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,30,37,.88) 0%,rgba(8,30,37,.38) 56%,rgba(8,30,37,.06) 100%),linear-gradient(0deg,rgba(8,30,37,.78),transparent 60%)}
-.cover-content{position:relative;z-index:2;width:var(--w);margin:0 auto;padding:125px 0 80px}
-.cover .issue{font:700 12px var(--f-data);letter-spacing:.21em;color:#f1c68c;display:flex;align-items:center;gap:16px}
-.cover .issue::before{content:"";height:1px;width:46px;background:currentColor}
-.cover h1{font-size:clamp(46px,7.4vw,108px);font-weight:500;line-height:1.25;margin:25px 0 24px;text-shadow:0 4px 24px rgba(7,28,37,.32)}
-.cover h1 em{font-style:normal;color:#e6c397}
-.cover-lede{font-family:var(--f-disp);font-size:clamp(18px,2vw,26px);line-height:1.7;max-width:28em;margin-bottom:36px}
-.cover-foot{border-top:1px solid rgba(255,255,255,.55);padding-top:17px;display:flex;flex-wrap:wrap;gap:8px 24px;font:600 12px/1.6 var(--f-data);letter-spacing:.08em}
-.cover-credit{position:absolute;right:28px;bottom:22px;z-index:2;font-size:11px;color:#e1e6e2;text-align:right}
-.cover-credit a{color:#fff}
-/* Navigation and opening spread */
-.toc{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--line)}
-.toc-inner{width:var(--w);margin:auto;display:flex;align-items:center;gap:clamp(14px,3vw,36px);overflow-x:auto;scrollbar-width:thin}
-.toc-label{flex:none;margin-right:auto;font:700 11px var(--f-data);letter-spacing:.18em;color:var(--accent)}
-.toc a{flex:none;text-decoration:none;padding:15px 0;font:600 13px var(--f-body);color:var(--ink-2)}
-.toc a:hover{color:var(--accent)}
-main{width:var(--w);margin:auto;padding-bottom:70px}
-.opening{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:clamp(24px,5vw,75px);padding:clamp(68px,10vw,130px) 0 74px;border-bottom:1px solid var(--line)}
-.kicker{font:700 11px var(--f-data);letter-spacing:.2em;color:var(--accent);margin-bottom:23px}
-.opening h2{font-size:clamp(26px,3.5vw,44px);line-height:1.68;font-weight:500}
-.opening p{font-size:16px;color:var(--ink-2);max-width:40em;margin-top:25px}
-.facts{align-self:center;border-top:2px solid var(--ink)}
-.facts>div{display:grid;grid-template-columns:66px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
-.facts b{font:600 clamp(27px,3.5vw,39px) var(--f-data);color:var(--sea)}
-.facts span{font-size:14px;color:var(--ink-2)}
-.facts small{grid-column:2;font-size:12px;color:var(--muted);line-height:1.6}
-/* Section heads and continuous story */
-section{scroll-margin-top:72px;padding-top:clamp(76px,10vw,130px)}
-section>h2{font-size:clamp(32px,4.3vw,52px);font-weight:500;margin-bottom:18px}
-section>h2::before{display:block;font:700 11px var(--f-data);letter-spacing:.21em;color:var(--accent);margin-bottom:15px}
-#stay>h2::before{content:"CHAPTER 01 / THE STAY"}#dates>h2::before{content:"CHAPTER 02 / THE DATES"}#plan>h2::before{content:"CHAPTER 03 / THE ROUTE"}#before>h2::before{content:"CHAPTER 04 / BEFORE BOOKING"}#src>h2::before{content:"REFERENCE"}
-section>.sub{color:var(--ink-2);font-size:16px;max-width:54em;margin-bottom:36px}
-.card{background:var(--white);border:1px solid var(--hair);padding:clamp(20px,4vw,48px)}
-.stack{display:flex;flex-direction:column;gap:clamp(26px,4vw,48px)}
-.prose{color:var(--ink-2);font-size:15px;max-width:50em}
-figcaption{font-size:12px;color:var(--muted);line-height:1.7;margin-top:12px}
-.card figure:has(svg){overflow-x:auto;scrollbar-width:thin}.card figure svg{min-width:560px;max-width:100%}
-.notes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:23px}
-.note{background:var(--paper);border-top:2px solid var(--sea);padding:22px}.note.warn{border-color:var(--accent)}.note.warm{border-color:var(--gold);background:#fbf6ee}
-.note h4{font-size:17px;margin-bottom:12px}.note ul{padding-left:1.2em;margin:0}.note li{font-size:14px;color:var(--ink-2);line-height:1.8;margin-bottom:7px}
-.c{display:inline-block;font:600 10px var(--f-data);white-space:nowrap;padding:1px 5px;color:var(--muted);border:1px solid var(--line);margin-left:3px}
-.c.ok{color:#236454;border-color:#71a492}.c.chk{color:#a65035;border-color:#c78c76}
-/* Hotel index */
-.hotels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.hotel{background:#fff;border:1px solid var(--line);min-width:0}
-.hotel.pick{grid-column:1/-1;border:2px solid var(--sea);display:grid;grid-template-columns:1fr 1.2fr}
-.hotel.pick .htop{grid-column:1/-1;background:var(--night);color:#fff}
-.htop{display:flex;align-items:center;gap:11px 15px;flex-wrap:wrap;padding:20px 24px;border-bottom:1px solid var(--hair)}
-.htop h3{font-size:clamp(19px,2.1vw,27px);font-weight:600}
-.htag{font:700 11px var(--f-data);letter-spacing:.05em;background:var(--sea-tint);color:var(--sea);padding:5px 9px}
-.pick .htag{background:var(--gold);color:var(--night)}
-.hlinks{margin-left:auto;display:flex;gap:7px}.hlinks a,.map{display:inline-flex;align-items:center;min-height:39px;text-decoration:none;border:1px solid var(--line);padding:5px 10px;font-size:13px}
-.hlinks a:hover,.map:hover{background:var(--sea-tint);color:var(--sea)}
-.spec{display:grid;grid-template-columns:repeat(2,1fr);align-content:start}.spec>div{border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:15px 18px;min-width:0}
-.spec dt{font:700 11px var(--f-data);color:var(--muted);letter-spacing:.05em}.spec dd{margin:6px 0 0;font-size:14px;line-height:1.65}
-.yen{font-variant-numeric:tabular-nums;font-weight:700}
-.hbody{padding:22px 24px;font-size:14px;line-height:1.9;color:var(--ink-2)}
-.against{margin-top:16px;padding-top:13px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}.against b{color:var(--accent)}
-.dropped{padding:18px 22px;background:var(--paper);border:1px solid var(--line)}.dropped h4{font-size:15px}.dropped ul{padding-left:1.1em;margin:7px 0 0}.dropped li{font-size:13px;color:var(--muted)}
-/* Dates, timeline and tables */
-.cal{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:4px}
-.cal div{text-align:center;padding:8px 2px;background:var(--paper);border:1px solid var(--line)}
-.cal b{display:block;font:600 11px var(--f-data);color:var(--muted)}.cal i{display:block;font:600 18px var(--f-data);font-style:normal}
-.cal .go{background:var(--sea);color:white}.cal .go b{color:#d5ece9}.cal .peak{background:var(--accent-tint)}
-.callegend{display:flex;gap:12px 25px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:12px 0 25px}.callegend em{display:inline-block;width:10px;height:10px;background:var(--sea);margin-right:5px}.callegend em.p{background:var(--accent-tint);border:1px solid var(--accent)}
-.day{margin-top:40px}.dayhead{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;border-bottom:2px solid var(--ink);padding-bottom:10px}
-.dayhead .n{font:700 12px var(--f-data);color:var(--accent)}.dayhead h4{font-size:20px}.dayhead .m{margin-left:auto;color:var(--muted);font-size:12px}.dayhead .m.quiet{color:var(--sea)}
-.tl{margin:22px 0}.tlx{position:relative;height:23px;margin-left:70px;border-bottom:1px solid var(--line)}.tlx span{position:absolute;top:0;transform:translateX(-50%);font-size:10px;color:var(--muted)}
-.tlr{display:flex;align-items:center;margin-top:7px}.tll{width:70px;flex:none;font-size:10px;line-height:1.4;color:var(--muted)}.tll b{display:block;color:var(--ink)}
-.tlt{height:28px;flex:1;position:relative;background:var(--paper);border:1px solid var(--line);overflow:hidden}.sg{position:absolute;top:0;bottom:0}.sg.drive{background:repeating-linear-gradient(135deg,#80979b 0 3px,#d2dddd 3px 6px)}.sg.rest{background:var(--hair)}.sg.sight{background:var(--sea)}.sg.meal{background:var(--sea-tint)}.sg.stay{background:var(--gold)}
-.tlk{display:flex;flex-wrap:wrap;gap:10px 15px;margin:12px 0 0 70px;font-size:11px;color:var(--muted)}.tlk span{display:flex;align-items:center;gap:5px}.tlk i{width:13px;height:9px;display:inline-block}.tlk i.drive{background:#8ba6a9}.tlk i.rest{background:var(--hair)}.tlk i.sight{background:var(--sea)}.tlk i.meal{background:var(--sea-tint)}.tlk i.stay{background:var(--gold)}
-.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}table{border-collapse:collapse;width:100%;font-size:14px}thead th{text-align:left;font-size:11px;letter-spacing:.06em;color:var(--muted);border-bottom:1px solid var(--line);padding:10px}tbody td{padding:13px 10px;border-bottom:1px solid var(--hair);vertical-align:top;line-height:1.7}tbody tr:last-child td{border-bottom:0}td:empty::after{content:"—";color:var(--muted)}.t,.num{white-space:nowrap;font-variant-numeric:tabular-nums}.place{font-weight:700;min-width:7em}.num{text-align:right}tr.eat td{background:var(--sea-tint)}tr.in td{background:#fcf4ea}tr.go td{color:var(--muted)}tfoot td{border-top:2px solid var(--ink);padding-top:12px;font-weight:700}
-/* Photo interlude */
-.photo-essay{margin-top:clamp(80px,10vw,130px);display:grid;grid-template-columns:1.5fr .85fr;gap:18px}
-.photo-essay-head{grid-column:1/-1;display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 25px;border-top:1px solid var(--ink);padding-top:16px}.photo-essay-head span{font:700 11px var(--f-data);letter-spacing:.18em;color:var(--accent)}.photo-essay-head p{font-family:var(--f-disp);font-size:20px}
-.photo-essay figure{min-width:0}.photo-essay img{width:100%;height:clamp(240px,27vw,360px);object-fit:cover}.photo-essay figcaption{font-size:11px}
-/* Calls, rating and sources */
-.rate{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}.rrow{display:flex;gap:8px;align-items:flex-start}.rrow .l{width:6em;flex:none;font-size:13px}.pips{display:flex;gap:3px;padding-top:7px;flex:none}.pips i{width:12px;height:7px;background:var(--hair)}.pips i.on{background:var(--gold)}.pips i.mid{background:var(--accent)}.rrow .c2{font-size:12px;color:var(--muted)}
-.callout{background:var(--sea-tint);border-left:3px solid var(--sea);padding:22px 25px}.callout.risk{border-color:var(--accent);background:var(--accent-tint)}.callout h4{font-size:17px;margin-bottom:8px}.callout p{font-size:14px;color:var(--ink-2)}
-.src ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:8px 22px}.src li{border-bottom:1px solid var(--hair);font-size:13px;padding-bottom:9px}.src li b{display:block;color:var(--muted);font-size:11px}.src a{text-underline-offset:3px}
-footer{margin-top:70px;border-top:1px solid var(--line);padding:25px 0 0;color:var(--muted);font-size:12px}
-@media(max-width:800px){
- .cover{height:700px}.cover::after{background:linear-gradient(0deg,rgba(8,30,37,.93),rgba(8,30,37,.1) 85%)}
- .opening{grid-template-columns:1fr}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;border:0}.facts>div{display:block;border-top:2px solid var(--ink)}.facts small{display:block}
- .hotel.pick{display:block}.hotels{grid-template-columns:1fr}.src ul{grid-template-columns:1fr}
-}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.9 var(--f-body);-webkit-text-size-adjust:100%;overflow-x:hidden}
+h1,h2,h3{font-family:var(--f-disp);font-weight:700;line-height:1.45;letter-spacing:.03em;margin:0;text-wrap:balance}
+p{margin:0} a{color:inherit} button{font:inherit;color:inherit}
+img{display:block;max-width:100%} figure{margin:0}
+strong{font-weight:700}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{width:var(--w);margin:0 auto}
+.skip{position:absolute;left:12px;top:-80px;background:var(--surface);color:var(--ink);padding:10px;z-index:9}
+.skip:focus{top:12px}
+
+/* 案の色：data-p で切り替える */
+[data-p="a"]{--p:var(--pa)} [data-p="b"]{--p:var(--pb)} [data-p="c"]{--p:var(--pc)}
+[data-p="d"]{--p:var(--pd)} [data-p="e"]{--p:var(--pe)}
+
+/* ---------------- カバー ---------------- */
+.cover{position:relative;background:var(--night);color:#FFFFFF;overflow:hidden;
+  min-height:min(720px,92svh);display:flex;align-items:flex-end}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%;
+  filter:saturate(.7)}
+.cover::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg,rgba(9,28,34,.92) 0%,rgba(9,28,34,.55) 45%,rgba(9,28,34,.15) 100%)}
+.cover-in{position:relative;z-index:1;width:var(--w);margin:0 auto;padding:120px 0 34px}
+.kicker{font:700 12px var(--f-num);letter-spacing:.22em;color:var(--on-night)}
+.cover h1{font-size:clamp(38px,7vw,84px);font-weight:500;line-height:1.3;margin:16px 0 14px}
+.cover h1 em{font-style:normal;color:var(--on-night)}
+.nb{white-space:nowrap;display:inline-block}
+.cover .lede{font-family:var(--f-disp);font-size:clamp(15px,1.9vw,20px);line-height:1.9;max-width:34em;color:#E6EEF0}
+.cover-foot{margin-top:26px;padding-top:14px;border-top:1px solid rgba(255,255,255,.4);
+  display:flex;flex-wrap:wrap;gap:6px 22px;font:700 12px/1.7 var(--f-num);letter-spacing:.06em;color:#E6EEF0}
+.credit{position:absolute;right:14px;bottom:8px;z-index:1;font-size:10.5px;color:rgba(255,255,255,.78)}
+.credit a{color:inherit}
+
+/* ---------------- セクション共通 ---------------- */
+section{padding-top:clamp(52px,8vw,96px)}
+.eyebrow{font:700 11.5px var(--f-num);letter-spacing:.2em;color:var(--accent)}
+section h2{font-size:clamp(26px,4.4vw,44px);font-weight:500;margin:8px 0 10px}
+.sub{color:var(--ink-2);max-width:44em;font-size:15px}
+.panel{background:var(--surface);border:1px solid var(--hair);padding:clamp(18px,3vw,32px);margin-top:26px}
+.fig-note{font-size:12.5px;color:var(--muted);line-height:1.8;margin-top:14px;max-width:52em}
+.c{font:700 10px var(--f-num);letter-spacing:.03em;padding:1px 5px;border:1px solid var(--line);
+  color:var(--muted);white-space:nowrap;display:inline-block;vertical-align:1px;margin-left:3px}
+.c.ok{border-color:var(--ok);color:var(--ok)}
+.c.chk{border-color:var(--warn);color:var(--warn)}
+
+/* ---------------- 5案タイル ---------------- */
+.tiles{display:grid;gap:10px;grid-template-columns:1fr;margin-top:26px}
+@media(min-width:900px){.tiles{grid-template-columns:repeat(5,1fr);gap:12px}}
+.tile{position:relative;text-align:left;cursor:pointer;background:var(--surface);border:1px solid var(--hair);
+  border-top:5px solid var(--p);padding:14px 16px 16px;display:grid;gap:2px 14px;
+  grid-template-columns:auto 1fr;grid-template-areas:"let name" "let tag" "sum sum" "bar bar" "why why";
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+@media(min-width:900px){.tile{grid-template-columns:1fr;grid-template-areas:"let" "name" "tag" "sum" "bar" "why";padding:16px 16px 18px}}
+@media(hover:hover){.tile:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(20,40,45,.10)}}
+.tile[aria-pressed="true"]{border-color:var(--p);box-shadow:0 0 0 2px var(--p) inset,0 8px 22px rgba(20,40,45,.12)}
+.tile .let{grid-area:let;font:500 44px/1 var(--f-disp);color:var(--p);align-self:center}
+@media(min-width:900px){.tile .let{font-size:52px;margin-bottom:6px}}
+.tile .name{grid-area:name;font:700 16px/1.45 var(--f-disp)}
+.tile .tag{grid-area:tag;font-size:12px;color:var(--p);font-weight:700;letter-spacing:.06em}
+.tile .sum{grid-area:sum;margin-top:10px;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.tile .sum b{font:700 24px/1.1 var(--f-num);letter-spacing:.01em}
+.tile .sum small{font-size:11.5px;color:var(--muted)}
+.tile .why{grid-area:why;font-size:12.5px;line-height:1.7;color:var(--ink-2);margin-top:8px}
+.tile .badge{position:absolute;top:10px;right:10px;font:700 10.5px var(--f-num);letter-spacing:.08em;
+  background:var(--p);color:var(--surface);padding:2px 7px}
+/* 予算メーター：20万円に対して総額がどこまで届くか */
+.meter{grid-area:bar;position:relative;height:10px;background:var(--sunken);margin-top:8px}
+.meter i{position:absolute;top:0;bottom:0;background:var(--p)}
+.meter i.open{background:linear-gradient(90deg,var(--p),transparent)}
+.meter::after{content:"";position:absolute;top:-4px;bottom:-4px;left:var(--budget);border-left:2px solid var(--ink)}
+.hint{font-size:12px;color:var(--muted);margin-top:10px}
+
+/* ---------------- 比較マトリクス ---------------- */
+.matrix-wrap{overflow-x:auto}
+.matrix{width:100%;border-collapse:collapse;min-width:340px}
+.matrix th,.matrix td{padding:10px 6px;border-bottom:1px solid var(--hair);vertical-align:middle}
+.matrix thead th{font:700 12px var(--f-num);text-align:center;color:var(--p);border-bottom:2px solid var(--p)}
+.matrix thead th span{display:block;font:500 11px var(--f-body);color:var(--muted);white-space:nowrap}
+.matrix thead th:first-child{border-bottom-color:var(--line)}
+.matrix tbody th{text-align:left;font-size:13.5px;font-weight:700;width:34%}
+.matrix tbody th small{display:block;font-weight:400;font-size:11.5px;color:var(--muted);line-height:1.5;margin-top:2px}
+.matrix td{text-align:center}
+.matrix td.on{background:var(--sea-tint)}
+.matrix thead th.on{background:var(--sea-tint)}
+.dots{display:inline-flex;gap:3px}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--dot-off)}
+.dots i.f{background:var(--p)}
+.matrix tfoot td,.matrix tfoot th{padding-top:12px;border-bottom:none}
+.matrix tfoot th{text-align:left;font-size:13px}
+.matrix tfoot th .of{font-weight:400;color:var(--muted);font-size:11px;margin-left:2px}
+.matrix tfoot td b{font:700 18px var(--f-num);color:var(--p)}
 @media(max-width:600px){
- :root{--w:calc(100% - 32px)}
- body{font-size:15px}.mast{padding:15px 16px}.mast b{font-size:15px}.mast span{font-size:10px}
- .cover{height:670px;min-height:0}.cover img{object-position:52% center}.cover-content{padding-bottom:54px}.cover h1{font-size:clamp(39px,10vw,58px)}.cover-lede{font-size:17px}.cover-foot{font-size:11px;gap:4px 13px}.cover-credit{right:12px;bottom:10px;font-size:9px;max-width:75%}
- .toc-label{display:none}.toc a{padding:12px 0;min-height:44px;display:flex;align-items:center}
- .opening{padding:62px 0 45px}.opening h2{font-size:26px}.opening p{font-size:15px}.facts{grid-template-columns:1fr 1fr}.facts>div{padding:12px 0}
- section{padding-top:68px}section>h2{font-size:33px}section>.sub{font-size:15px}
- .card{padding:18px}.notes{grid-template-columns:1fr}.note{padding:18px}
- .htop{padding:17px}.hbody{padding:18px}.spec>div{padding:12px}.spec dd{font-size:13px}
- .cal i{font-size:14px}.cal b{font-size:10px}.callegend{font-size:11px}
- .itin{min-width:0;display:block}.itin thead{display:none}.itin tbody,.itin tr,.itin td{display:block;width:auto}
- .itin tr{border-bottom:1px solid var(--line);padding:12px 0}.itin td{border:0;padding:2px 0;display:grid;grid-template-columns:4.4em 1fr;gap:10px}
- .itin td::before{content:attr(data-l);font-size:11px;color:var(--muted)}.itin td:empty{display:none}.itin td.t{font-weight:700;font-size:16px}.itin td.place{font-size:15px}.scroll:has(.itin){overflow-x:visible}
- .tlx,.tlk{margin-left:55px}.tll{width:55px}.rate{grid-template-columns:1fr}
- .photo-essay{grid-template-columns:1fr}.photo-essay-head{display:block}.photo-essay-head p{margin-top:10px;font-size:17px}.photo-essay img{height:240px}
+  .matrix{min-width:0;table-layout:fixed}
+  .matrix thead th span{display:none}
+  .matrix thead th{font-size:14px}
+  .matrix thead th:first-child{width:31%}
+  .matrix tbody th{font-size:12px;line-height:1.45;padding-right:6px}
+  .matrix tfoot th{font-size:11.5px}
+  .matrix tfoot td b{font-size:15px}
+  .panel{padding:18px 14px}
+  .matrix tbody th small{display:none}
+  .dots{gap:2px}.dots i{width:6px;height:6px}
+  .matrix th,.matrix td{padding:9px 3px}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style></head><body>
-<a href="#content" class="skip">本文へ移動</a>
-<header class="mast"><b>旅日和</b><span>WINTER ISSUE · 2026</span></header>
+
+@media(max-width:360px){
+  .dots{gap:1px}.dots i{width:5px;height:5px}
+  .matrix th,.matrix td{padding:8px 1px}
+  .matrix thead th:first-child{width:30%}
+  .matrix tbody th{font-size:11.5px}
+  .panel{padding:16px 10px}
+}
+
+/* ---------------- 総額チャート（HTML製：どの幅でも収まる） ---------------- */
+.cost{display:grid;gap:14px;margin-top:6px}
+.crow{display:grid;grid-template-columns:5.5em 1fr;gap:10px;align-items:center}
+@media(min-width:700px){.crow{grid-template-columns:9em 1fr}}
+.crow .lb{font:700 13px/1.4 var(--f-disp)}
+.crow .lb b{color:var(--p);font-family:var(--f-num);margin-right:4px}
+.track{position:relative;height:18px;background:var(--sunken)}
+.track .rng{position:absolute;top:0;bottom:0;background:var(--p)}
+.track .rng.open{background:var(--p);background:linear-gradient(90deg,var(--p) 0 12px,color-mix(in srgb,var(--p) 35%,transparent) 12px,transparent)}
+.track::after{content:"";position:absolute;top:-5px;bottom:-5px;left:var(--budget);border-left:2px dashed var(--ink)}
+.crow .val{grid-column:2;font:700 12.5px var(--f-num);color:var(--ink-2);margin-top:-6px}
+@media(max-width:699px){
+  .crow{grid-template-columns:1fr;gap:4px}
+  .crow .val{grid-column:1;margin-top:0}
+  .axis{grid-template-columns:1fr}
+  .axis>div:first-child{display:none}
+}
+.crow.on .track{outline:2px solid var(--p);outline-offset:2px}
+.axis{display:grid;grid-template-columns:5.5em 1fr;gap:10px;margin-top:4px}
+@media(min-width:700px){.axis{grid-template-columns:9em 1fr}}
+.axis .ticks{position:relative;height:18px;font:500 11px var(--f-num);color:var(--muted)}
+.axis .ticks span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.axis .ticks span:first-child{transform:none}
+.budget-key{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;margin-bottom:10px}
+.budget-key i{width:0;height:16px;border-left:2px dashed var(--ink)}
+
+/* ---------------- 詳細（タブ） ---------------- */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:26px}
+.tabs button{cursor:pointer;background:var(--surface);border:1px solid var(--line);padding:7px 14px;
+  font:700 13px var(--f-body);display:flex;align-items:center;gap:7px}
+.tabs button b{font:700 15px var(--f-disp);color:var(--p)}
+.tabs button[aria-selected="true"]{background:var(--p);border-color:var(--p);color:var(--surface)}
+.tabs button[aria-selected="true"] b{color:var(--surface)}
+.detail{background:var(--surface);border:1px solid var(--hair);border-top:5px solid var(--p);margin-top:12px}
+.detail + .detail{margin-top:16px}
+.js .detail + .detail{margin-top:12px}
+.dhead{display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding:18px 20px 14px}
+.dhead .let{font:500 46px/1 var(--f-disp);color:var(--p)}
+.dhead h3{font-size:clamp(19px,2.6vw,26px)}
+.dhead .tag{display:block;font-size:12.5px;color:var(--p);font-weight:700;letter-spacing:.06em}
+.links{margin-left:auto;display:flex;gap:6px}
+.links a{font:700 12px var(--f-body);text-decoration:none;border:1px solid var(--line);padding:5px 11px;white-space:nowrap}
+.links a:hover{border-color:var(--p);color:var(--p)}
+.dgrid{display:grid;grid-template-columns:1fr;border-top:1px solid var(--hair)}
+@media(min-width:860px){.dgrid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}}
+.spec{display:grid;grid-template-columns:1fr 1fr;align-content:start;margin:0}
+.spec>dl{margin:0;padding:12px 20px;border-bottom:1px solid var(--hair);border-right:1px solid var(--hair);min-width:0}
+.spec>dl:nth-child(2n){border-right:none}
+.spec dt{font:700 11px var(--f-num);letter-spacing:.06em;color:var(--muted)}
+.spec dd{margin:3px 0 0;font-size:14px;line-height:1.6}
+.spec dd.num{font-size:15px;font-weight:700}
+.dtext{padding:16px 20px 20px;font-size:14.5px;line-height:1.95;color:var(--ink-2)}
+@media(min-width:860px){.dtext{border-left:1px solid var(--hair)}}
+.dtext .lead{color:var(--ink);font-weight:700}
+.dtext .against{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--muted)}
+.dtext .against b{color:var(--warn)}
+.dropped{margin-top:18px;padding:14px 18px;border:1px dashed var(--line);background:var(--sunken);font-size:13px;color:var(--ink-2)}
+.dropped h3{font-size:14.5px;margin-bottom:6px}
+.dropped ul{margin:0;padding-left:1.1em}.dropped li{margin-bottom:4px}
+
+/* ---------------- 旅程 ---------------- */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:24px}
+@media(min-width:760px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stats div{background:var(--surface);padding:14px 16px}
+.stats b{display:block;font:700 26px/1.2 var(--f-num);color:var(--sea)}
+.stats span{font-size:12.5px;color:var(--muted)}
+details.day{background:var(--surface);border:1px solid var(--hair);margin-top:12px}
+details.day>summary{cursor:pointer;list-style:none;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:14px 18px}
+details.day>summary::-webkit-details-marker{display:none}
+details.day>summary::before{content:"＋";font-weight:700;color:var(--sea);width:1em}
+details.day[open]>summary::before{content:"－"}
+details.day .n{font:700 12px var(--f-num);letter-spacing:.14em;color:var(--sea)}
+details.day h3{font-size:17px}
+details.day .m{margin-left:auto;font:700 12px var(--f-num);color:var(--muted)}
+.dbody{padding:0 18px 18px}
+.tl{margin:4px 0 14px}
+.tlx{position:relative;height:15px;margin-left:64px;border-bottom:1px solid var(--hair)}
+.tlx span{position:absolute;top:0;transform:translateX(-50%);font:500 10px var(--f-num);color:var(--muted)}
+.tlr{display:flex;align-items:center;margin-top:7px}
+.tll{width:64px;flex:none;font:500 10.5px/1.4 var(--f-num);color:var(--muted)}
+.tll b{display:block;color:var(--ink);font-size:11px}
+.tlt{position:relative;height:22px;flex:1;background:var(--sunken);overflow:hidden}
+.sg{position:absolute;top:0;bottom:0}
+.sg.drive{background:repeating-linear-gradient(135deg,var(--hatch) 0 3px,transparent 3px 6px)}
+.sg.rest{background:var(--hair)}.sg.sight{background:var(--sea)}.sg.meal{background:var(--sea-tint);box-shadow:inset 0 0 0 1px var(--line)}.sg.stay{background:var(--gold)}
+.tlk{display:flex;flex-wrap:wrap;gap:12px;margin:10px 0 0 64px;font:500 11px var(--f-num);color:var(--muted)}
+.tlk span{display:flex;align-items:center;gap:5px}.tlk i{width:13px;height:9px;display:inline-block}
+.tlk i.drive{background:repeating-linear-gradient(135deg,var(--hatch) 0 3px,transparent 3px 6px);box-shadow:inset 0 0 0 1px var(--hatch)}
+.tlk i.rest{background:var(--hair)}.tlk i.sight{background:var(--sea)}.tlk i.meal{background:var(--sea-tint);box-shadow:inset 0 0 0 1px var(--line)}.tlk i.stay{background:var(--gold)}
+.scroll{overflow-x:auto}
+table.itin{border-collapse:collapse;width:100%;font-size:13.5px;min-width:740px}
+.itin thead th{text-align:left;font:700 11px var(--f-num);letter-spacing:.06em;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.itin td{padding:10px;border-bottom:1px solid var(--hair);vertical-align:top;line-height:1.75}
+.itin td:empty::after{content:"—";color:var(--muted)}
+.itin .t{font-family:var(--f-num);font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+.itin .place{font-weight:700}
+.itin tr.go td{color:var(--muted);font-size:12.5px}
+.itin tr.eat td{background:var(--sea-tint)}
+.itin tr.in td{background:var(--accent-tint)}
+.map{font:700 10.5px var(--f-num);color:var(--sea);text-decoration:none;border:1px solid var(--line);padding:1px 6px;margin-left:6px;white-space:nowrap;display:inline-block}
+@media(max-width:760px){
+  table.itin{min-width:0;display:block}
+  .itin thead{display:none}
+  .itin tbody,.itin tr,.itin td{display:block;width:auto}
+  .itin tr{border:1px solid var(--hair);background:var(--surface);padding:10px 12px;margin-bottom:8px}
+  .itin tr.go{background:var(--sunken);border-style:dashed}
+  .itin td{border:none;padding:2px 0;display:grid;grid-template-columns:4.4em 1fr;gap:10px;align-items:baseline}
+  .itin td::before{content:attr(data-l);font:700 10.5px var(--f-num);color:var(--muted)}
+  .itin td:empty{display:none}
+  .itin td.t{font-size:15px}
+  .scroll:has(.itin){overflow-x:visible}
+  .tlx,.tlk{margin-left:52px}.tll{width:52px}
+}
+.notes{display:grid;gap:12px;grid-template-columns:1fr;margin-top:16px}
+@media(min-width:760px){.notes{grid-template-columns:1fr 1fr}}
+.note{background:var(--surface);border:1px solid var(--hair);padding:16px 18px}
+.note.warn{border-left:4px solid var(--warn)}
+.note.keep{border-left:4px solid var(--sea)}
+.note h3{font-size:15px;margin-bottom:8px}
+.note ul{margin:0;padding-left:1.1em}.note li{font-size:13.5px;color:var(--ink-2);margin-bottom:5px}
+
+/* ---------------- 日取り ---------------- */
+.cal{display:grid;grid-template-columns:repeat(9,1fr);gap:4px}
+.cal div{text-align:center;padding:8px 0;border:1px solid var(--hair);background:var(--surface)}
+.cal b{display:block;font:500 11px var(--f-num);color:var(--muted)}
+.cal i{display:block;font:700 17px var(--f-num);font-style:normal}
+.cal .go{background:var(--sea);border-color:var(--sea);color:var(--surface)}
+.cal .go b{color:var(--surface)}
+.cal .peak{background:var(--accent-tint)}
+.cal-key{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);margin-top:10px}
+.cal-key i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px}
+
+/* ---------------- 景色 ---------------- */
+.essay{display:grid;gap:14px;grid-template-columns:1fr;margin-top:24px}
+@media(min-width:860px){.essay{grid-template-columns:1.6fr 1fr}}
+.essay img{width:100%;height:clamp(200px,28vw,380px);object-fit:cover}
+.essay figcaption{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.6}
+
+/* ---------------- 出典 ---------------- */
+.src ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;grid-template-columns:1fr}
+@media(min-width:760px){.src ul{grid-template-columns:1fr 1fr}}
+.src li{font-size:13.5px;border-bottom:1px solid var(--hair);padding-bottom:8px}
+.src b{display:block;font:700 10.5px var(--f-num);letter-spacing:.12em;color:var(--muted)}
+footer{margin-top:60px;padding:26px 0 40px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<a class="skip" href="#compare">比較へ移動</a>
+
 <div class="cover">
- <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Matsushima_miyagi_z.JPG" alt="12月の松島湾に浮かぶ松の島々" width="3264" height="1840" fetchpriority="high">
- <div class="cover-content"><div class="issue">MIYAGI / MATSUSHIMA</div><h1>冬の松島に、<br><em>泊まりに行く。</em></h1><p class="cover-lede">景色をひとつ、宿をひとつ。<br>二泊三日を、ゆっくり使う。</p><div class="cover-foot"><span>2026.12.27 — 12.29</span><span>水戸発 · 車で2泊3日</span><span>ふたりの年末旅行</span></div></div>
- <div class="cover-credit"><a href="https://commons.wikimedia.org/wiki/File:Matsushima_miyagi_z.JPG" target="_blank" rel="noopener">Photo: Chensiyuan / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> · 2008年12月撮影、表示用にトリミング</div>
+  <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Matsushima_miyagi_z.JPG/1280px-Matsushima_miyagi_z.JPG"
+       srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Matsushima_miyagi_z.JPG/1280px-Matsushima_miyagi_z.JPG 1280w, https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Matsushima_miyagi_z.JPG/1920px-Matsushima_miyagi_z.JPG 1920w"
+       sizes="100vw" width="1280" height="722" alt="12月の夕暮れ、松の島々が浮かぶ松島湾" fetchpriority="high">
+  <div class="cover-in">
+    <div class="kicker">WINTER 2026 ／ 松島・二泊三日</div>
+    <h1><span class="nb">五つの宿で</span><br><span class="nb"><em>くらべる</em>、</span><span class="nb">冬の松島。</span></h1>
+    <p class="lede">出かけるのは二回だけ。あとは宿にいる旅なので、決めるのは実質ひとつ——<strong>どの宿に二泊するか</strong>。五つの案を、客室風呂・予算・冬の使いやすさ・静けさで並べました。</p>
+    <div class="cover-foot"><span class="num">2026.12.27 SUN — 12.29 TUE</span><span>水戸発・車</span><span>ふたり・妻 妊娠中</span><span>総額 20万円</span></div>
+  </div>
+  <p class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Matsushima_miyagi_z.JPG" target="_blank" rel="noopener">Chensiyuan</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>・2008年12月</p>
 </div>
-<nav class="toc" aria-label="目次"><div class="toc-inner"><span class="toc-label">CONTENTS</span><a href="#stay">01 宿</a><a href="#dates">02 日取り</a><a href="#plan">03 旅程</a><a href="#before">04 予約前</a><a href="#src">出典</a></div></nav>
-<main id="content">
-<div class="opening"><div><div class="kicker">A SLOW JOURNEY</div><h2>予定を減らすほど、<br>旅が豊かになる。</h2><p>水戸から松島へ。同じ部屋に二泊して、中日は車をほとんど出さない。どの宿で時間を過ごすかを軸に、客室風呂・食事・移動の負担・予算を比べました。料金と空室は予約時に確かめる前提の計画です。</p></div><div class="facts"><div><b>05</b><span>比較する宿</span><small>客室風呂を重視</small></div><div><b>02</b><span>同じ宿に連泊</span><small>荷物を動かさない</small></div><div><b>20万</b><span>ふたりの予算上限</span><small>宿泊・交通・食事の合計</small></div></div></div>
-<section id="stay">
-  <h2>宿を選ぶ</h2>
-  <p class="sub">外出をここまで削ると、満足度はほぼ宿で決まります。移動と食事に使うのは約36,300円なので、宿には2泊で163,700円まで充てられる計算です。</p>
 
-  <div class="card stack">
-    <figure>
-      <svg viewBox="0 0 600 178" role="img" aria-label="起きて動いている約30時間の内訳の比較。観光地を回る案は運転9時間30分・外出11時間20分・宿9時間20分。この案は運転7時間50分・外出5時間5分・宿17時間35分。">
-        <defs>
-          <pattern id="hy" width="6" height="6" patternTransform="rotate(135)" patternUnits="userSpaceOnUse">
-            <line x1="0" y1="0" x2="0" y2="6" stroke="var(--hatch)" stroke-width="3"/>
-          </pattern>
-        </defs>
-        <text x="94" y="42" text-anchor="end" fill="var(--muted)" font-family="var(--f-body)" font-size="12.5">観光中心なら</text>
-        <rect x="102" y="26" width="151" height="24" fill="url(#hy)" stroke="var(--hatch)"/>
-        <rect x="253" y="26" width="180" height="24" fill="var(--cold)"/>
-        <rect x="433" y="26" width="149" height="24" fill="var(--ember-fill)"/>
-        <text x="178" y="68" text-anchor="middle" fill="var(--muted)" font-family="var(--f-data)" font-size="10">9h30</text>
-        <text x="343" y="68" text-anchor="middle" fill="var(--cold)" font-family="var(--f-data)" font-size="10">11h20</text>
-        <text x="508" y="68" text-anchor="middle" fill="var(--ember)" font-family="var(--f-data)" font-size="10">9h20</text>
+<main class="wrap">
 
-        <text x="94" y="116" text-anchor="end" fill="var(--ink)" font-family="var(--f-body)" font-size="12.5" font-weight="700">この案</text>
-        <rect x="102" y="100" width="123" height="24" fill="url(#hy)" stroke="var(--hatch)"/>
-        <rect x="225" y="100" width="80" height="24" fill="var(--cold)"/>
-        <rect x="305" y="100" width="277" height="24" fill="var(--ember-fill)"/>
-        <text x="164" y="142" text-anchor="middle" fill="var(--muted)" font-family="var(--f-data)" font-size="10">7h50</text>
-        <text x="265" y="142" text-anchor="middle" fill="var(--cold)" font-family="var(--f-data)" font-size="10">5h05</text>
-        <text x="444" y="142" text-anchor="middle" fill="var(--ember)" font-family="var(--f-data)" font-size="11.5" font-weight="700">17h35</text>
+<!-- ========== 5案をひと目で ========== -->
+<section id="compare">
+  <div class="eyebrow">01 / FIVE PLANS</div>
+  <h2>五つの案をひと目で</h2>
+  <p class="sub">数字は<strong>旅の総額</strong>（宿2泊＋移動・食事など36,300円）。バーは予算20万円（黒い線）に対してどこまで届くか。タップすると、下の比較表と詳細がその案に切り替わります。</p>
 
-        <g font-family="var(--f-data)" font-size="9.5" fill="var(--muted)">
-          <rect x="102" y="160" width="12" height="10" fill="url(#hy)" stroke="var(--hatch)"/><text x="119" y="169">運転</text>
-          <rect x="168" y="160" width="12" height="10" fill="var(--cold)"/><text x="185" y="169">外出（観光・外食）</text>
-          <rect x="316" y="160" width="12" height="10" fill="var(--ember-fill)"/><text x="333" y="169">宿にいる時間</text>
-        </g>
-      </svg>
-      <figcaption>起きて動いている約30時間（初日9:00発〜最終日15:30着、就寝時間を除く）の内訳。<strong>宿にいる時間が17時間35分。</strong>ここが旅の中身なので、宿の選定に予算と手間を寄せる価値があります。</figcaption>
-    </figure>
+  <div class="tiles" id="tiles" style="--budget:57.14%">
+    <button class="tile" data-p="a" data-pick="a" aria-pressed="true" aria-controls="detail-a" type="button">
+      <span class="badge">本命</span>
+      <span class="let">A</span><span class="name">ホテル松島大観荘</span><span class="tag">条件を全部満たす</span>
+      <span class="sum"><b class="num">10.8〜12.4</b><small>万円</small></span>
+      <span class="meter" aria-hidden="true"><i style="left:30.94%;width:4.57%"></i></span>
+      <span class="why">露天風呂付和室の2食付が<strong>確認済みで予算の6割</strong>。</span>
+    </button>
+    <button class="tile" data-p="b" data-pick="b" aria-pressed="false" aria-controls="detail-b" type="button">
+      <span class="let">B</span><span class="name">小松館 好風亭</span><span class="tag">冬に強い</span>
+      <span class="sum"><b class="num">8.3〜</b><small>万円（上限 要確認）</small></span>
+      <span class="meter" aria-hidden="true"><i class="open" style="left:23.57%;width:22%"></i></span>
+      <span class="why">客室風呂に<strong>ガラスシャッター</strong>。寒い日も使える。</span>
+    </button>
+    <button class="tile" data-p="c" data-pick="c" aria-pressed="false" aria-controls="detail-c" type="button">
+      <span class="let">C</span><span class="name">松島センチュリーホテル</span><span class="tag">身軽さと価格の幅</span>
+      <span class="sum"><b class="num">8.9〜29.2</b><small>万円</small></span>
+      <span class="meter" aria-hidden="true"><i style="left:25.46%;width:57.83%"></i></span>
+      <span class="why">唯一の<strong>平地</strong>。中日は車が要らない。</span>
+    </button>
+    <button class="tile" data-p="d" data-pick="d" aria-pressed="false" aria-controls="detail-d" type="button">
+      <span class="let">D</span><span class="name">松島一の坊</span><span class="tag">全部込み</span>
+      <span class="sum"><b class="num">18.2〜33.9</b><small>万円</small></span>
+      <span class="meter" aria-hidden="true"><i style="left:51.86%;width:45.03%"></i></span>
+      <span class="why">オールインクルーシブ。<strong>こもる旅に最も向く</strong>が高い。</span>
+    </button>
+    <button class="tile" data-p="e" data-pick="e" aria-pressed="false" aria-controls="detail-e" type="button">
+      <span class="let">E</span><span class="name">松島佐勘 松庵</span><span class="tag">静けさ</span>
+      <span class="sum"><b class="num">20.8〜</b><small>万円（予算超過）</small></span>
+      <span class="meter" aria-hidden="true"><i class="open" style="left:59.40%;width:22%"></i></span>
+      <span class="why">全11室。<strong>下限で予算超過</strong>、客室風呂は未確認。</span>
+    </button>
+  </div>
+  <p class="hint">バーの目盛りは 0〜35万円。黒い線が予算20万円。グラデーションで消えていく棒は、上限が未確認のもの。</p>
 
-    <div class="notes" style="margin-top:0">
-      <div class="note warm">
-        <h4>先に決めた条件</h4>
-        <ul>
-          <li><strong>客室に露天風呂か展望風呂があること。</strong>最優先。大浴場まで移動せず、混雑も気にせず、妻が自分のペースで何度でも入れます。</li>
-          <li><strong>連泊できること。</strong>二泊とも同じ部屋。荷物を出したままにできるのが妊娠中には大きい。</li>
-          <li><strong>駐車場が無料で、部屋まで階段がないこと。</strong>松島の宿は高台に多く、ここは実際に差が出ます。</li>
-          <li><strong>2食付き。</strong>夜に車を出さないための条件です。</li>
-          <li><strong>部屋以外の居場所があること。</strong>こもる旅では、中日の5時間をどこで過ごすかが効きます。</li>
-        </ul>
-      </div>
-      <div class="note warn">
-        <h4>温泉について（事実関係）</h4>
-        <ul>
-          <li>温泉の禁忌症にあった「妊娠中」の記載は、<strong>2014年に環境省が削除しました</strong>。医学的根拠がないというのが理由です<span class="c ok">確認済 08-16</span>。</li>
-          <li>削除されたのは一般則であって、<strong>個別の注意が消えたわけではありません</strong>。のぼせ・脱水・浴室での転倒は妊娠中でなくても起きます。</li>
-          <li>実務的には<strong>長湯をしない・湯温を上げすぎない・一人で入らない</strong>。客室風呂を条件にしているのは、この全部が自分の裁量でできるからです。</li>
-          <li><strong>かかりつけ医に一度確認してください。</strong>経過によっては個別に止められることがあります。</li>
-        </ul>
-      </div>
+  <!-- 比較マトリクス -->
+  <div class="panel">
+    <h3 style="font-size:18px">項目ごとの比較</h3>
+    <p class="fig-note" style="margin-top:4px">●が多いほどこの旅に向く。調べた事実をもとにした<strong>目安</strong>で、各項目の根拠は下の詳細にあります。</p>
+    <div class="matrix-wrap">
+      <table class="matrix" id="matrix">
+        <thead>
+          <tr><th scope="col"></th>
+            <th scope="col" data-p="a" data-col="a">A<span>大観荘</span></th>
+            <th scope="col" data-p="b" data-col="b">B<span>好風亭</span></th>
+            <th scope="col" data-p="c" data-col="c">C<span>センチュリー</span></th>
+            <th scope="col" data-p="d" data-col="d">D<span>一の坊</span></th>
+            <th scope="col" data-p="e" data-col="e">E<span>松庵</span></th></tr>
+        </thead>
+        <tbody id="mrows"></tbody>
+        <tfoot><tr><th scope="row">合計<small class="of">／35点</small></th>
+          <td data-p="a" data-col="a"><b class="num" data-total="a"></b></td>
+          <td data-p="b" data-col="b"><b class="num" data-total="b"></b></td>
+          <td data-p="c" data-col="c"><b class="num" data-total="c"></b></td>
+          <td data-p="d" data-col="d"><b class="num" data-total="d"></b></td>
+          <td data-p="e" data-col="e"><b class="num" data-total="e"></b></td></tr></tfoot>
+      </table>
     </div>
-
-    <figure>
-      <svg viewBox="0 0 600 246" role="img" aria-label="五軒の2泊料金と予算上限の比較。宿に使える上限は163,700円。大観荘は72,000から88,000円、好風亭は46,200円から、センチュリーホテルは52,800から255,200円、一の坊は145,200から302,820円、松庵は171,600円から。">
-        <defs>
-          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
-            <path d="M0,1 L9,5 L0,9 z" fill="var(--muted)"/>
-          </marker>
-        </defs>
-        <!-- 予算上限 -->
-        <rect x="360" y="18" width="220" height="176" fill="var(--alert)" opacity=".05"/>
-        <line x1="360" y1="18" x2="360" y2="200" stroke="var(--ember)" stroke-width="1.6" stroke-dasharray="4 3"/>
-        <text x="356" y="14" text-anchor="end" fill="var(--ember)" font-family="var(--f-data)" font-size="10" font-weight="600">宿に使える上限 163,700円</text>
-        <text x="366" y="14" fill="var(--alert)" font-family="var(--f-data)" font-size="10">予算超過</text>
-
-        <!-- 大観荘 -->
-        <text x="124" y="40" text-anchor="end" fill="var(--ink)" font-family="var(--f-body)" font-size="12" font-weight="700">大観荘</text>
-        <rect x="231" y="26" width="23" height="18" fill="var(--ember-fill)"/>
-        <text x="262" y="40" fill="var(--ember)" font-family="var(--f-data)" font-size="10" font-weight="600">72,000–88,000</text>
-        <!-- 好風亭 -->
-        <text x="124" y="76" text-anchor="end" fill="var(--ink)" font-family="var(--f-body)" font-size="12">好風亭</text>
-        <rect x="195" y="62" width="4" height="18" fill="var(--cold)"/>
-        <line x1="199" y1="71" x2="300" y2="71" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#ar)"/>
-        <text x="310" y="76" fill="var(--muted)" font-family="var(--f-data)" font-size="10">46,200〜（上限 要確認）</text>
-        <!-- センチュリー -->
-        <text x="124" y="112" text-anchor="end" fill="var(--ink)" font-family="var(--f-body)" font-size="12">センチュリー</text>
-        <rect x="204" y="98" width="285" height="18" fill="var(--cold)" opacity=".55"/>
-        <text x="204" y="132" fill="var(--cold)" font-family="var(--f-data)" font-size="10">52,800–255,200（プラン幅が広い）</text>
-        <!-- 一の坊 -->
-        <text x="124" y="156" text-anchor="end" fill="var(--ink)" font-family="var(--f-body)" font-size="12">一の坊</text>
-        <rect x="334" y="142" width="222" height="18" fill="var(--alert)" opacity=".55"/>
-        <text x="334" y="176" fill="var(--alert)" font-family="var(--f-data)" font-size="10">145,200–302,820</text>
-        <!-- 松庵 -->
-        <text x="124" y="192" text-anchor="end" fill="var(--ink)" font-family="var(--f-body)" font-size="12">松庵</text>
-        <rect x="371" y="178" width="4" height="18" fill="var(--alert)"/>
-        <line x1="375" y1="187" x2="480" y2="187" stroke="var(--alert)" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#ar)"/>
-        <text x="490" y="192" fill="var(--alert)" font-family="var(--f-data)" font-size="10">171,600〜</text>
-
-        <!-- 軸 -->
-        <line x1="130" y1="206" x2="580" y2="206" stroke="var(--line)" stroke-width="1"/>
-        <g fill="var(--muted)" font-family="var(--f-data)" font-size="9" text-anchor="middle">
-          <text x="130" y="220">0</text><text x="271" y="220">10万</text>
-          <text x="411" y="220">20万</text><text x="552" y="220">30万</text>
-        </g>
-        <text x="130" y="240" fill="var(--muted)" font-family="var(--f-body)" font-size="11">2泊・2名・税込（円）</text>
-      </svg>
-      <figcaption>移動と食事の36,300円は動かせないので、宿に回せるのは<strong>2泊で163,700円まで</strong>。この線を引くと候補が三群に分かれます——<strong>確実に収まる</strong>のが大観荘と好風亭、<strong>プランの選び方次第</strong>がセンチュリー、<strong>予算を超える／使い切る</strong>のが一の坊と松庵。料金は調査日時点の公開範囲で、年末年始料金は別途<span class="c chk">要確認</span>。</figcaption>
-    </figure>
   </div>
 
-  <div class="hotels" style="margin-top:16px">
-
-    <!-- 1 -->
-    <div class="hotel pick">
-      <div class="htop">
-        <span class="htag">本命</span>
-        <h3>ホテル松島大観荘</h3>
-        <span class="hlinks">
-          <a href="https://www.taikanso.co.jp/" target="_blank" rel="noopener">公式</a>
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%BE%E5%B3%B6%E5%A4%A7%E8%A6%B3%E8%8D%98" target="_blank" rel="noopener">地図</a>
-        </span>
-      </div>
-      <div class="spec">
-        <div><dt>客室風呂</dt><dd>露天風呂付和室<span class="c ok">確認済 08-16</span></dd></div>
-        <div><dt>1泊2名・2食付</dt><dd><span class="yen">36,000〜44,000円</span><span class="c ok">確認済 08-16</span></dd></div>
-        <div><dt>駐車場</dt><dd>無料<span class="c ok">確認済 08-16</span></dd></div>
-        <div><dt>位置</dt><dd>高台・海側<br>瑞巌寺まで車5分</dd></div>
-      </div>
-      <div class="hbody">
-        <strong>条件を全部満たしたうえで、いちばん素直に予算に収まります。</strong>露天風呂付和室の1泊2食付が2名36,000〜44,000円と明示されており、2泊でも72,000〜88,000円。上限163,700円に対して半分程度で、余った分を部屋のグレードか食事に回せます。駐車場無料も確認済み。高台からの松島湾の眺望が売りで、一の坊とは約20mの隣接なので立地条件はほぼ同じです。
-        <div class="against"><b>弱いところ：</b>大型ホテルなので、こもる旅で効く「静けさ」では松庵に劣ります。館内で過ごす仕掛けも一の坊ほどではありません。</div>
-      </div>
+  <!-- 総額チャート -->
+  <div class="panel">
+    <h3 style="font-size:18px">旅の総額と予算</h3>
+    <p class="fig-note" style="margin:4px 0 14px">宿の料金は2名・税込・調査日時点の公開範囲。年末年始料金は上振れします<span class="c chk">要確認</span>。</p>
+    <div class="budget-key"><i></i>予算 200,000円</div>
+    <div class="cost" id="cost" style="--budget:57.14%">
+      <div class="crow" data-p="a" data-col="a"><div class="lb"><b>A</b>大観荘</div><div class="track"><span class="rng" style="left:30.94%;width:4.57%"></span></div><div class="val num">108,300 – 124,300円</div></div>
+      <div class="crow" data-p="b" data-col="b"><div class="lb"><b>B</b>好風亭</div><div class="track"><span class="rng open" style="left:23.57%;width:22%"></span></div><div class="val num">82,500円〜（客室風呂付の価格は要確認）</div></div>
+      <div class="crow" data-p="c" data-col="c"><div class="lb"><b>C</b>センチュリー</div><div class="track"><span class="rng" style="left:25.46%;width:57.83%"></span></div><div class="val num">89,100 – 291,500円（プランの幅が大きい）</div></div>
+      <div class="crow" data-p="d" data-col="d"><div class="lb"><b>D</b>一の坊</div><div class="track"><span class="rng" style="left:51.86%;width:45.03%"></span></div><div class="val num">181,500 – 339,120円</div></div>
+      <div class="crow" data-p="e" data-col="e"><div class="lb"><b>E</b>松庵</div><div class="track"><span class="rng open" style="left:59.40%;width:22%"></span></div><div class="val num">207,900円〜（下限で予算超過）</div></div>
     </div>
-
-    <!-- 2 -->
-    <div class="hotel">
-      <div class="htop">
-        <span class="htag">冬に強い</span>
-        <h3>松島温泉 小松館 好風亭</h3>
-        <span class="hlinks">
-          <a href="https://komatsukan-kofutei.co.jp/oheya/with_roten/" target="_blank" rel="noopener">公式</a>
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E6%B8%A9%E6%B3%89%20%E5%B0%8F%E6%9D%BE%E9%A4%A8%E5%A5%BD%E9%A2%A8%E4%BA%AD" target="_blank" rel="noopener">地図</a>
-        </span>
-      </div>
-      <div class="spec">
-        <div><dt>客室風呂</dt><dd>展望温泉付客室<br>ガラスシャッター付<span class="c ok">確認済 08-16</span></dd></div>
-        <div><dt>1泊2名</dt><dd><span class="yen">23,100円〜</span><br>客室風呂付は上振れ<span class="c chk">要確認</span></dd></div>
-        <div><dt>駐車場</dt><dd>要確認<span class="c chk">要確認</span></dd></div>
-        <div><dt>位置</dt><dd>松島湾の目の前<span class="c ok">確認済 08-16</span></dd></div>
-      </div>
-      <div class="hbody">
-        <strong>12月末に泊まるなら、この一点で有利です。</strong>客室風呂にガラスシャッターが付いており、寒い日は閉めて内風呂として使えます。冬の客室露天は「寒すぎて結局使わなかった」が起こりがちで、そうなると最優先条件そのものが無駄になる——好風亭にはその取りこぼしがありません。松島湾の目の前という立地で、風呂は全てオーシャンビュー。夕食は「和のフルコース」「炭火焼きコース」「お部屋食」から選べるので、<strong>部屋食にすれば移動ゼロで食べられます</strong>。チェックイン15:00／アウト10:00。
-        <div class="against"><b>弱いところ：</b>駐車場の条件と、客室風呂付きプランの実勢価格が未確認。最安23,100円は客室風呂なしのプランです。</div>
-      </div>
-    </div>
-
-    <!-- 3 -->
-    <div class="hotel">
-      <div class="htop">
-        <span class="htag">価格を抑える</span>
-        <h3>松島センチュリーホテル</h3>
-        <span class="hlinks">
-          <a href="https://ssl.centuryhotel.co.jp/" target="_blank" rel="noopener">公式</a>
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E3%82%BB%E3%83%B3%E3%83%81%E3%83%A5%E3%83%AA%E3%83%BC%E3%83%9B%E3%83%86%E3%83%AB" target="_blank" rel="noopener">地図</a>
-        </span>
-      </div>
-      <div class="spec">
-        <div><dt>客室風呂</dt><dd>天然温泉露天風呂付<br>55㎡・65㎡<span class="c ok">確認済 08-16</span></dd></div>
-        <div><dt>1泊2名</dt><dd><span class="yen">26,400〜127,600円</span><span class="c ok">確認済 08-16</span></dd></div>
-        <div><dt>駐車場</dt><dd>無料<span class="c ok">確認済 08-16</span></dd></div>
-        <div><dt>位置</dt><dd>松島海岸・平地<br>瑞巌寺まで徒歩圏</dd></div>
-      </div>
-      <div class="hbody">
-        <strong>唯一、平地にあります。</strong>他の四軒が高台か岬にあるのに対し、ここは松島海岸の平地で瑞巌寺まで歩ける距離。中日に車を出さずに済む可能性があるのはこの宿だけです。客室露天付きの部屋は55㎡・65㎡と広く、価格幅が26,400〜127,600円と大きいので、<strong>予算に合わせて調整できる余地が最も大きい</strong>。駐車場無料。
-        <div class="against"><b>弱いところ：</b>価格幅が広いぶん、安いプランは客室風呂なし。この旅の条件を満たす部屋がいくらになるかは個別に見る必要があります。旅館というよりホテルなので、和の設えを期待すると外れます。</div>
-      </div>
-    </div>
-
-    <!-- 4 -->
-    <div class="hotel">
-      <div class="htop">
-        <span class="htag">全部込み</span>
-        <h3>松島一の坊</h3>
-        <span class="hlinks">
-          <a href="https://www.ichinobo.com/matsushima/" target="_blank" rel="noopener">公式</a>
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E4%B8%80%E3%81%AE%E5%9D%8A" target="_blank" rel="noopener">地図</a>
-        </span>
-      </div>
-      <div class="spec">
-        <div><dt>客室風呂</dt><dd>露天風呂付き客室あり<span class="c chk">要確認</span></dd></div>
-        <div><dt>1泊2名</dt><dd><span class="yen">72,600〜151,410円</span><span class="c ok">確認済 08-16</span></dd></div>
-        <div><dt>駐車場</dt><dd>無料<span class="c ok">確認済 08-16</span></dd></div>
-        <div><dt>位置</dt><dd>高台・七千坪の庭園<br>松島駅から徒歩15分</dd></div>
-      </div>
-      <div class="hbody">
-        <strong>こもる旅との相性だけを見れば、五軒で最も良い宿です。</strong>オールインクルーシブで、ラウンジのドリンク・スイーツ、館内アクティビティ、ガラス美術館が宿泊料に含まれます。中日の5時間を持て余さない仕掛けが館内に揃っていて、酒を飲まない妊娠中でもソフトドリンクと甘味で元が取れる。七千坪の庭園も、寒くない日なら散歩になります。連泊割引あり<span class="c chk">要確認</span>。
-        <div class="against"><b>弱いところ：</b>2泊145,200〜302,820円。<b>安いプランでも予算の大半を、高いプランでは予算を超えます。</b>総額は約186,300円（1泊75,000円想定）で、20万円には収まるものの使い切る計算です。</div>
-      </div>
-    </div>
-
-    <!-- 5 -->
-    <div class="hotel">
-      <div class="htop">
-        <span class="htag">静けさ</span>
-        <h3>松島佐勘 松庵</h3>
-        <span class="hlinks">
-          <a href="https://www.jalan.net/yad374328/" target="_blank" rel="noopener">詳細</a>
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E4%BD%90%E5%8B%98%20%E6%9D%BE%E5%BA%B5" target="_blank" rel="noopener">地図</a>
-        </span>
-      </div>
-      <div class="spec">
-        <div><dt>客室風呂</dt><dd>要確認<br>大浴場に露天あり<span class="c ok">確認済 08-16</span></dd></div>
-        <div><dt>1泊2名・2食付</dt><dd><span class="yen">85,800円〜</span><span class="c ok">確認済 08-16</span></dd></div>
-        <div><dt>駐車場</dt><dd>無料・25台<br>24時間・予約不要<span class="c ok">確認済 08-16</span></dd></div>
-        <div><dt>位置</dt><dd>静かな岬・約3000坪<br>全11室</dd></div>
-      </div>
-      <div class="hbody">
-        <strong>全11室。五軒でいちばん静かに過ごせます。</strong>約3000坪の敷地に11室だけという密度で、松島湾を一望する岬に建っています。大浴場は男女で設えが異なり、岩風呂と潮風の露天。人の少なさを重視するならここです。駐車場は無料・24時間・予約不要と条件が明確。
-        <div class="against"><b>弱いところ：</b>2泊171,600円〜で、<b>下限ですでに予算上限を超えます。</b>加えて<b>客室に風呂があるかを確認できていません</b>——最優先条件が未確認のまま残っており、無ければこの旅の前提から外れます。予約前にここを最初に確かめてください。</div>
-      </div>
-    </div>
+    <div class="axis"><div></div><div class="ticks"><span style="left:0">0</span><span style="left:28.57%">10万</span><span style="left:57.14%">20万</span><span style="left:85.71%">30万</span></div></div>
+    <p class="fig-note">移動・食事の36,300円は宿によらず固定なので、宿に回せるのは<strong>2泊で163,700円まで</strong>。確実に収まるのは A と B、プラン次第が C、使い切る／超えるのが D と E です。</p>
   </div>
+</section>
+
+<!-- ========== 案ごとの詳細 ========== -->
+<section id="plans">
+  <div class="eyebrow">02 / EACH PLAN</div>
+  <h2>案ごとの詳細</h2>
+  <p class="sub">決めた条件は、<strong>客室に露天風呂か展望風呂があること</strong>（最優先）・連泊できること・駐車場無料で部屋まで階段がないこと・2食付き・部屋以外の居場所があること。</p>
+
+  <div class="tabs" role="tablist" aria-label="案を選ぶ" id="tabs" hidden>
+    <button role="tab" data-p="a" data-pick="a" aria-selected="true"  aria-controls="detail-a" id="tab-a"><b>A</b>大観荘</button>
+    <button role="tab" data-p="b" data-pick="b" aria-selected="false" aria-controls="detail-b" id="tab-b"><b>B</b>好風亭</button>
+    <button role="tab" data-p="c" data-pick="c" aria-selected="false" aria-controls="detail-c" id="tab-c"><b>C</b>センチュリー</button>
+    <button role="tab" data-p="d" data-pick="d" aria-selected="false" aria-controls="detail-d" id="tab-d"><b>D</b>一の坊</button>
+    <button role="tab" data-p="e" data-pick="e" aria-selected="false" aria-controls="detail-e" id="tab-e"><b>E</b>松庵</button>
+  </div>
+
+  <article class="detail" data-p="a" id="detail-a" role="tabpanel" aria-labelledby="tab-a">
+    <div class="dhead"><span class="let">A</span><div><span class="tag">本命・条件を全部満たす</span><h3>ホテル松島大観荘</h3></div>
+      <span class="links"><a href="https://www.taikanso.co.jp/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%BE%E5%B3%B6%E5%A4%A7%E8%A6%B3%E8%8D%98" target="_blank" rel="noopener">地図</a></span></div>
+    <div class="dgrid">
+      <div class="spec">
+        <dl><dt>客室風呂</dt><dd>露天風呂付和室<span class="c ok">確認済</span></dd></dl>
+        <dl><dt>1泊2名・2食付</dt><dd class="num">36,000〜44,000円<span class="c ok">確認済</span></dd></dl>
+        <dl><dt>駐車場</dt><dd>無料<span class="c ok">確認済</span></dd></dl>
+        <dl><dt>位置</dt><dd>高台・海側／瑞巌寺まで車5分</dd></dl>
+        <dl><dt>旅の総額</dt><dd class="num">108,300〜124,300円</dd></dl>
+        <dl><dt>予算の残り</dt><dd class="num">約75,700円〜</dd></dl>
+      </div>
+      <div class="dtext">
+        <p><span class="lead">条件を全部満たしたうえで、いちばん素直に予算に収まります。</span>露天風呂付和室の2食付が2名36,000〜44,000円と明示されており、2泊でも72,000〜88,000円。宿に回せる163,700円の半分程度なので、余りを部屋のグレードか食事に回せます。高台から松島湾を見下ろす眺望が売りで、D の一の坊とは約20mの隣接です。</p>
+        <p class="against"><b>弱いところ：</b>大型ホテルなので、静けさでは E の松庵に劣ります。館内で過ごす仕掛けも D ほどではありません。</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="detail" data-p="b" id="detail-b" role="tabpanel" aria-labelledby="tab-b">
+    <div class="dhead"><span class="let">B</span><div><span class="tag">冬に強い</span><h3>松島温泉 小松館 好風亭</h3></div>
+      <span class="links"><a href="https://komatsukan-kofutei.co.jp/oheya/with_roten/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E6%B8%A9%E6%B3%89%20%E5%B0%8F%E6%9D%BE%E9%A4%A8%E5%A5%BD%E9%A2%A8%E4%BA%AD" target="_blank" rel="noopener">地図</a></span></div>
+    <div class="dgrid">
+      <div class="spec">
+        <dl><dt>客室風呂</dt><dd>展望温泉付客室・ガラスシャッター付<span class="c ok">確認済</span></dd></dl>
+        <dl><dt>1泊2名</dt><dd class="num">23,100円〜<span class="c ok">確認済</span></dd></dl>
+        <dl><dt>駐車場</dt><dd>要確認<span class="c chk">要確認</span></dd></dl>
+        <dl><dt>位置</dt><dd>松島湾の目の前<span class="c ok">確認済</span></dd></dl>
+        <dl><dt>旅の総額</dt><dd class="num">82,500円〜</dd></dl>
+        <dl><dt>チェックイン／アウト</dt><dd class="num">15:00 ／ 10:00<span class="c ok">確認済</span></dd></dl>
+      </div>
+      <div class="dtext">
+        <p><span class="lead">12月末に泊まるなら、この一点で有利です。</span>客室風呂にガラスシャッターが付いていて、寒い日は閉めて内風呂として使えます。冬の客室露天は「寒すぎて結局使わなかった」が起こりがちで、そうなると最優先条件そのものが無駄になる——好風亭にはその取りこぼしがありません。夕食は「和のフルコース」「炭火焼き」「お部屋食」から選べ、<strong>部屋食なら移動ゼロ</strong>で食べられます。</p>
+        <p class="against"><b>弱いところ：</b>最安23,100円は客室風呂なしのプランです。客室風呂付きの実勢価格と、駐車場の条件がまだ確認できていません。</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="detail" data-p="c" id="detail-c" role="tabpanel" aria-labelledby="tab-c">
+    <div class="dhead"><span class="let">C</span><div><span class="tag">身軽さと価格の幅</span><h3>松島センチュリーホテル</h3></div>
+      <span class="links"><a href="https://ssl.centuryhotel.co.jp/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E3%82%BB%E3%83%B3%E3%83%81%E3%83%A5%E3%83%AA%E3%83%BC%E3%83%9B%E3%83%86%E3%83%AB" target="_blank" rel="noopener">地図</a></span></div>
+    <div class="dgrid">
+      <div class="spec">
+        <dl><dt>客室風呂</dt><dd>天然温泉露天風呂付（55㎡・65㎡）<span class="c ok">確認済</span></dd></dl>
+        <dl><dt>1泊2名</dt><dd class="num">26,400〜127,600円<span class="c ok">確認済</span></dd></dl>
+        <dl><dt>駐車場</dt><dd>無料<span class="c ok">確認済</span></dd></dl>
+        <dl><dt>位置</dt><dd>松島海岸の平地／瑞巌寺まで徒歩圏</dd></dl>
+        <dl><dt>旅の総額</dt><dd class="num">89,100〜291,500円</dd></dl>
+        <dl><dt>中日の車</dt><dd>不要にできる</dd></dl>
+      </div>
+      <div class="dtext">
+        <p><span class="lead">五つの中で唯一、平地にあります。</span>他の四軒が高台か岬にあるのに対し、ここは松島海岸の平地で瑞巌寺まで歩ける距離。<strong>中日に車を一度も出さずに済む</strong>のはこの宿だけです。客室露天付きの部屋は55㎡・65㎡と広く、価格の幅が大きいぶん予算に合わせて調整できる余地も最大です。</p>
+        <p class="against"><b>弱いところ：</b>安いプランは客室風呂なし。条件を満たす部屋がいくらになるかは個別に見る必要があります。旅館というよりホテルなので、和の設えを期待すると外れます。</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="detail" data-p="d" id="detail-d" role="tabpanel" aria-labelledby="tab-d">
+    <div class="dhead"><span class="let">D</span><div><span class="tag">全部込み</span><h3>松島一の坊</h3></div>
+      <span class="links"><a href="https://www.ichinobo.com/matsushima/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E4%B8%80%E3%81%AE%E5%9D%8A" target="_blank" rel="noopener">地図</a></span></div>
+    <div class="dgrid">
+      <div class="spec">
+        <dl><dt>客室風呂</dt><dd>露天風呂付き客室あり<span class="c chk">要確認</span></dd></dl>
+        <dl><dt>1泊2名</dt><dd class="num">72,600〜151,410円<span class="c ok">確認済</span></dd></dl>
+        <dl><dt>駐車場</dt><dd>無料<span class="c ok">確認済</span></dd></dl>
+        <dl><dt>位置</dt><dd>高台・七千坪の庭園</dd></dl>
+        <dl><dt>旅の総額</dt><dd class="num">181,500〜339,120円</dd></dl>
+        <dl><dt>含まれるもの</dt><dd>ラウンジの飲み物・甘味、館内アクティビティ<span class="c ok">確認済</span></dd></dl>
+      </div>
+      <div class="dtext">
+        <p><span class="lead">こもる旅との相性だけを見れば、五つで最も良い宿です。</span>オールインクルーシブで、ラウンジのドリンクやスイーツ、館内アクティビティ、ガラス美術館が宿泊料に含まれます。中日の5時間を持て余さない仕掛けが館内に揃っていて、酒を飲まない妊娠中でもソフトドリンクと甘味で元が取れる。連泊割引もあります<span class="c chk">要確認</span>。</p>
+        <p class="against"><b>弱いところ：</b>安いプランでも総額181,500円で<b>予算のほぼ全部</b>、高いプランでは超えます。選ぶなら「予算を使い切ってよいか」を先に決める必要があります。</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="detail" data-p="e" id="detail-e" role="tabpanel" aria-labelledby="tab-e">
+    <div class="dhead"><span class="let">E</span><div><span class="tag">静けさ</span><h3>松島佐勘 松庵</h3></div>
+      <span class="links"><a href="https://www.jalan.net/yad374328/" target="_blank" rel="noopener">詳細</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E4%BD%90%E5%8B%98%20%E6%9D%BE%E5%BA%B5" target="_blank" rel="noopener">地図</a></span></div>
+    <div class="dgrid">
+      <div class="spec">
+        <dl><dt>客室風呂</dt><dd>未確認（大浴場の露天は確認済）<span class="c chk">要確認</span></dd></dl>
+        <dl><dt>1泊2名・2食付</dt><dd class="num">85,800円〜<span class="c ok">確認済</span></dd></dl>
+        <dl><dt>駐車場</dt><dd>無料・24時間・予約不要<span class="c ok">確認済</span></dd></dl>
+        <dl><dt>位置</dt><dd>静かな岬・約3000坪に全11室</dd></dl>
+        <dl><dt>旅の総額</dt><dd class="num">207,900円〜</dd></dl>
+        <dl><dt>予算</dt><dd>下限で約7,900円の超過</dd></dl>
+      </div>
+      <div class="dtext">
+        <p><span class="lead">全11室。五つでいちばん静かに過ごせます。</span>約3000坪の敷地に11室だけという密度で、松島湾を一望する岬に建っています。大浴場は男女で設えが異なり、岩風呂と潮風の露天。人の少なさを重視するならここです。</p>
+        <p class="against"><b>弱いところ：</b>下限の時点で<b>予算を超えます</b>。さらに<b>客室に風呂があるかを確認できていません</b>——無ければこの旅の前提から外れるので、予約前に最初に確かめてください。</p>
+      </div>
+    </div>
+  </article>
 
   <div class="dropped">
-    <h4>候補から外した宿</h4>
+    <h3>候補から外した宿</h3>
     <ul>
-      <li><strong>松島温泉元湯 ホテル海風土（うぶど）</strong>——客室露天風呂があり条件に合っていましたが、<strong>2025年1月31日で閉館</strong>していました<span class="c ok">確認済 08-16</span>。古い記事や比較サイトにはまだ載っているので注意。</li>
-      <li><strong>大江戸温泉物語Premium ホテル壮観</strong>——高台の立地・駐車場無料・バイキングと条件は良いのですが、<strong>客室風呂が確認できず</strong>、最優先条件を満たさないため外しました<span class="c chk">要確認</span>。バイキングは生ものを自分で避けて選べるので、その点はむしろ妊娠中向きです。</li>
+      <li><strong>ホテル海風土（うぶど）</strong>——客室露天があり条件に合っていましたが、<strong>2025年1月31日で閉館</strong><span class="c ok">確認済</span>。比較サイトにはまだ載っているので注意。</li>
+      <li><strong>大江戸温泉物語Premium ホテル壮観</strong>——高台・駐車場無料と条件は良いものの、<strong>客室風呂が確認できず</strong>最優先条件を満たさないため除外<span class="c chk">要確認</span>。</li>
     </ul>
   </div>
 </section>
-<section id="dates">
-  <h2>日取り</h2>
-  <p class="sub">12/26〜1/3の九日間のうち、宿代が跳ねるのは12/29から1/3です。多くの宿がこの区間を年末年始特別料金にし、平常時の1.5〜2倍になります。その直前の日曜発・月曜泊が最も安く、しかも空いています。</p>
-  <div class="card">
-    <div class="cal">
-      <div class="go"><b>土</b><i>26</i></div>
-      <div class="go"><b>日</b><i>27</i></div>
-      <div class="go"><b>月</b><i>28</i></div>
-      <div class="peak"><b>火</b><i>29</i></div>
-      <div class="peak"><b>水</b><i>30</i></div>
-      <div class="peak"><b>木</b><i>31</i></div>
-      <div class="peak"><b>金</b><i>1</i></div>
-      <div class="peak"><b>土</b><i>2</i></div>
-      <div class="peak"><b>日</b><i>3</i></div>
-    </div>
-    <div class="callegend">
-      <span><em class="g"></em>通常料金・道も空いている</span>
-      <span><em class="p"></em>年末年始料金・渋滞・施設休業</span>
-    </div>
 
-    <figure>
-      <svg viewBox="0 0 620 148" role="img" aria-label="12月26日から1月3日の宿泊料金の推移。26日から28日は平常料金、29日から1月3日にかけて1.5倍から2倍に上昇する。">
-        <g stroke="var(--hair)" stroke-width="1">
-          <line x1="46" y1="110" x2="608" y2="110"/><line x1="46" y1="72" x2="608" y2="72"/><line x1="46" y1="34" x2="608" y2="34"/>
-        </g>
-        <g fill="var(--muted)" font-family="var(--f-data)" font-size="9" text-anchor="end">
-          <text x="40" y="114">1.0x</text><text x="40" y="76">1.5x</text><text x="40" y="38">2.0x</text>
-        </g>
-        <path d="M66,110 L132,108 L198,106 L264,70 L330,48 L396,34 L462,36 L528,46 L594,68 L594,122 L66,122 Z"
-              fill="var(--alert)" opacity=".08"/>
-        <path d="M66,110 L132,108 L198,106 L264,70 L330,48 L396,34 L462,36 L528,46 L594,68"
-              fill="none" stroke="var(--alert)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-        <rect x="118" y="18" width="94" height="104" fill="var(--ember-fill)" opacity=".18"/>
-        <rect x="118" y="18" width="94" height="104" fill="none" stroke="var(--ember)" stroke-width="1.2" stroke-dasharray="3 3"/>
-        <text x="165" y="14" text-anchor="middle" fill="var(--ember)" font-family="var(--f-data)" font-size="9.5" font-weight="600">推奨 27–29</text>
-        <g fill="var(--muted)" font-family="var(--f-data)" font-size="9" text-anchor="middle">
-          <text x="66" y="138">12/26</text><text x="132" y="138">27</text><text x="198" y="138">28</text>
-          <text x="264" y="138">29</text><text x="330" y="138">30</text><text x="396" y="138">31</text>
-          <text x="462" y="138">1/1</text><text x="528" y="138">2</text><text x="594" y="138">3</text>
-        </g>
-        <circle cx="264" cy="70" r="3.5" fill="var(--alert)"/>
-        <text x="272" y="64" fill="var(--alert)" font-family="var(--f-data)" font-size="9">ここから年末料金</text>
-      </svg>
-      <figcaption>料金倍率は例年の傾向にもとづく<span class="c">推定</span>。29日を境に跳ね上がり、31日〜1/1で頂点に達します。<strong>推奨枠の最終日（29日）は帰るだけの日</strong>なので、値上がりの影響を受けません。</figcaption>
-    </figure>
-
-    <div class="notes">
-      <div class="note warm">
-        <h4>推奨：12月27日（日）発 — 12月29日（火）帰着</h4>
-        <ul>
-          <li>泊まるのは日曜夜・月曜夜。宿の最安ゾーンで、年末特別料金の開始直前。</li>
-          <li>高速の下り渋滞ピークは12/29〜30。その手前で動き切れます。</li>
-          <li>飲食店・観光施設の年末休業（多くは12/30または12/31から）に一切かかりません。</li>
-          <li>12/26（土）発でも成立しますが、土曜泊のぶん宿代が上がります。</li>
-        </ul>
-      </div>
-      <div class="note warn">
-        <h4>1/1〜1/3にかける場合</h4>
-        <ul>
-          <li>個人経営の食事処はほぼ休業。「行けば何かある」が通用しない期間です。</li>
-          <li>初詣渋滞が寺社周辺の道と駐車場を潰します。瑞巌寺・五大堂まわりも該当。</li>
-          <li>宿代が上がるうえ、二泊三日では予約自体が取りにくくなります。</li>
-          <li>行くなら<strong>食事が全て宿で完結するプラン</strong>に切り替えるのが現実的です。</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-<aside class="photo-essay" aria-label="松島の風景">
-  <div class="photo-essay-head"><span>FIELD NOTES / 旅先の景色</span><p>泊まるために行く旅にも、少しだけ外の風景を。</p></div>
-  <figure class="essay-panorama"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Matsushima_islands_panorama.jpg/1280px-Matsushima_islands_panorama.jpg" alt="福浦島から望む松島湾と松の島々" loading="lazy" decoding="async"><figcaption>01 / 松島湾 — 福浦島から。10月撮影。<a href="https://commons.wikimedia.org/wiki/File:Matsushima_islands_panorama.jpg" target="_blank" rel="noopener">Ivan Mlinaric</a> · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · 表示用にトリミング</figcaption></figure>
-  <figure class="essay-portrait"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Fukuura.bridge.jpg/1280px-Fukuura.bridge.jpg" alt="松島湾に架かる朱色の福浦橋" loading="lazy" decoding="async"><figcaption>02 / 福浦橋 — 2021年2月撮影。<a href="https://commons.wikimedia.org/wiki/File:Fukuura.bridge.jpg" target="_blank" rel="noopener">ブルーノ・プラス</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> · 表示用にトリミング</figcaption></figure>
-</aside>
+<!-- ========== 旅程（どの案でも共通） ========== -->
 <section id="plan">
-  <h2>旅程</h2>
-  <p class="sub">初日に距離を使い切り、中日は宿から出ない。観光地を回るのではなく、宿に居続けるための組み方をしています。</p>
+  <div class="eyebrow">03 / THE TRIP</div>
+  <h2>三日間の旅程</h2>
+  <p class="sub">どの宿を選んでも旅程はほぼ同じです。初日に距離を使い切り、中日は宿から出ない。違いは C（センチュリー）だけで、瑞巌寺まで歩けるので中日の車が要らなくなります。</p>
+  <div class="stats">
+    <div><b class="num">2</b><span>外出の回数</span></div>
+    <div><b class="num">7h50</b><span>3日間の運転</span></div>
+    <div><b class="num">17h35</b><span>起きていて宿にいる時間</span></div>
+    <div><b class="num">36,300</b><span>宿以外の費用（円）</span></div>
+  </div>
 
-  <div class="day">
-    <div class="dayhead"><span class="n">1日目</span><h4>水戸 → 仙台（昼食）→ 松島</h4><span class="m">運転 4h00 ／ 外出 1件</span></div>
-    <div class="tl" data-tl="D1"></div>
-    <div class="scroll">
-      <table class="itin">
+  <details class="day" open>
+    <summary><span class="n">1日目</span><h3>水戸 → 仙台（昼食）→ 松島</h3><span class="m">運転 4h00</span></summary>
+    <div class="dbody"><div class="tl" data-tl="D1"></div><div class="scroll"><table class="itin">
         <thead><tr><th>時刻</th><th>行き先</th><th>滞在</th><th>移動・所要</th><th>駐車場</th><th>営業時間</th><th>メモ</th></tr></thead>
         <tbody>
           <tr>
@@ -505,15 +607,11 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:25px 0 0;color:v
             <td data-l="メモ">予約時に<strong>刺身を加熱料理へ変更</strong>・<strong>貝と甲殻類を外す</strong>ことを依頼</td>
           </tr>
         </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="day">
-    <div class="dayhead"><span class="n">2日目</span><h4>松島に滞在（連泊・荷造りなし）</h4><span class="m quiet">運転 0h20 ／ 外出 1件</span></div>
-    <div class="tl" data-tl="D2"></div>
-    <div class="scroll">
-      <table class="itin">
+      </table></div></div>
+  </details>
+  <details class="day">
+    <summary><span class="n">2日目</span><h3>松島に滞在（連泊・荷造りなし）</h3><span class="m">運転 0h20</span></summary>
+    <div class="dbody"><div class="tl" data-tl="D2"></div><div class="scroll"><table class="itin">
         <thead><tr><th>時刻</th><th>行き先</th><th>滞在</th><th>移動・所要</th><th>駐車場</th><th>営業時間</th><th>メモ</th></tr></thead>
         <tbody>
           <tr class="in">
@@ -574,15 +672,11 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:25px 0 0;color:v
             <td data-l="メモ">二泊とも宿食。<strong>2日目は献立を変えてもらえるか予約時に確認</strong>（同じ会席が2回続く宿がある）</td>
           </tr>
         </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="day">
-    <div class="dayhead"><span class="n">3日目</span><h4>松島 → 水戸</h4><span class="m">運転 3h30 ／ 外出 0件</span></div>
-    <div class="tl" data-tl="D3"></div>
-    <div class="scroll">
-      <table class="itin">
+      </table></div></div>
+  </details>
+  <details class="day">
+    <summary><span class="n">3日目</span><h3>松島 → 水戸</h3><span class="m">運転 3h30</span></summary>
+    <div class="dbody"><div class="tl" data-tl="D3"></div><div class="scroll"><table class="itin">
         <thead><tr><th>時刻</th><th>行き先</th><th>滞在</th><th>移動・所要</th><th>駐車場</th><th>営業時間</th><th>メモ</th></tr></thead>
         <tbody>
           <tr class="in">
@@ -630,109 +724,174 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:25px 0 0;color:v
             <td data-l="メモ">明るいうちに帰着。<strong>最終日に観光を入れていない</strong>ので、遅れても崩れない</td>
           </tr>
         </tbody>
-      </table>
-    </div>
-  </div>
+      </table></div></div>
+  </details>
 
   <div class="notes">
     <div class="note keep">
-      <h4>雨天・体調不良のとき</h4>
+      <h3>雨・雪・体調がすぐれないとき</h3>
       <ul>
-        <li><strong>1日目：</strong>移動と昼食だけなので雨の影響を受けません。</li>
-        <li><strong>2日目：</strong>外出は瑞巌寺・五大堂の2時間だけ。雨・雪・寒さ・体調のいずれでも<strong>丸ごと中止して宿にいれば済みます</strong>。中止しても旅程は何も壊れません——これがこの組み方の一番の利点です。</li>
-        <li><strong>3日目：</strong>帰るだけなので影響なし。雨天時は所要時間を30分上乗せして見てください。</li>
+        <li>外出は2日目の瑞巌寺・五大堂の2時間だけ。<strong>丸ごと中止して宿にいれば済み</strong>、旅程は何も壊れません。</li>
+        <li>雨天時は往復の所要時間を30分上乗せして見てください。</li>
       </ul>
     </div>
     <div class="note warn">
-      <h4>残っている負担</h4>
+      <h3>残っている負担</h3>
       <ul>
-        <li><strong>初日4時間・最終日3時間30分の運転</strong>は実質1人にかかったままです。松島まで行く以上、ここは削れません。上の休憩は省略不可。</li>
-        <li><strong>宿代が「1室20,000円」の前提を大きく超えます。</strong>意図的な超過です。</li>
-        <li><strong>中日に何もしない時間が5時間あります。</strong>設計であって余りではありませんが、人によっては手持ち無沙汰になります。館内施設のある宿を勧めているのはそのためです。</li>
-        <li><strong>宿の食事が2晩続きます。</strong>同じ会席が2回出る宿があるので、予約時に確認を。</li>
-        <li>客室露天は<strong>冬に寒くて使わない</strong>ことがあります。好風亭のガラスシャッター付きだとこの取りこぼしがありません。</li>
+        <li><strong>初日4時間・最終日3時間30分の運転</strong>は実質1人にかかります。休憩は省略不可。</li>
+        <li>宿の食事が2晩続きます。<strong>献立が変わるか</strong>予約時に確認を。</li>
+        <li>温泉の禁忌症から「妊娠中」は2014年に削除されましたが<span class="c ok">確認済</span>、長湯・高温・一人での入浴は避け、<strong>かかりつけ医に一度確認</strong>してください。</li>
       </ul>
     </div>
   </div>
+</section>
 
-  <div class="day">
-    <div class="dayhead"><span class="n">費用</span><h4>内訳</h4><span class="m">2名・2泊3日／大観荘の場合</span></div>
-    <div class="scroll">
-      <table style="min-width:480px;margin-top:2px">
-        <thead><tr><th>項目</th><th>内容</th><th style="text-align:right">概算</th></tr></thead>
-        <tbody>
-          <tr><td>宿泊</td><td>大観荘 露天風呂付和室・2食付<br>2泊 × 44,000円<span class="c ok">確認済 08-16</span></td><td class="num">88,000</td></tr>
-          <tr><td>高速代</td><td>水戸IC〜仙台方面 往復（普通車・ETC）<span class="c">推定</span></td><td class="num">12,600</td></tr>
-          <tr><td>ガソリン</td><td>往復約540km＋現地20分 ／ 12km/L ／ 175円/L<span class="c">推定</span></td><td class="num">7,900</td></tr>
-          <tr><td>食事</td><td>昼3回のみ（朝2・夕2は宿食）<span class="c">推定</span></td><td class="num">13,000</td></tr>
-          <tr><td>入場料</td><td>瑞巌寺 700円 × 2名</td><td class="num">1,400</td></tr>
-          <tr><td>駐車場</td><td>仙台の昼食コインP 800＋瑞巌寺 町営P 600<span class="c">推定</span></td><td class="num">1,400</td></tr>
-        </tbody>
-        <tfoot><tr><td>合計</td><td>予算に約75,700円の余裕。<br>宿を替えると総額は<strong>好風亭 約82,500円〜／センチュリー 約89,100円〜／一の坊 約181,500円〜／松庵 約207,900円〜（予算超過）</strong></td><td class="num">124,300</td></tr></tfoot>
-      </table>
+<!-- ========== 日取り ========== -->
+<section id="dates">
+  <div class="eyebrow">04 / THE DATES</div>
+  <h2>日取り</h2>
+  <p class="sub">年末休み（12/26〜1/3）のうち、宿代が跳ねるのは12/29からです。直前の<strong>日曜発・月曜泊</strong>が最も安く空いていて、飲食店や施設の年末休業にもかかりません。</p>
+  <div class="panel">
+    <div class="cal">
+      <div class="go"><b>土</b><i>26</i></div><div class="go"><b>日</b><i>27</i></div><div class="go"><b>月</b><i>28</i></div>
+      <div class="peak"><b>火</b><i>29</i></div><div class="peak"><b>水</b><i>30</i></div><div class="peak"><b>木</b><i>31</i></div>
+      <div class="peak"><b>金</b><i>1</i></div><div class="peak"><b>土</b><i>2</i></div><div class="peak"><b>日</b><i>3</i></div>
     </div>
-  </div>
-
-  <div class="rate">
-    <div class="rrow"><span class="l">実行可能性</span><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="c2">★5 — 時間に追われる箇所が一つもない</span></div>
-    <div class="rrow"><span class="l">移動効率</span><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="c2">★5 — 連泊で荷物移動2回、牛たんは通り道、中日の運転20分</span></div>
-    <div class="rrow"><span class="l">余裕</span><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="c2">★5 — 中日は全部中止しても成立する</span></div>
-    <div class="rrow"><span class="l">コスパ</span><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span><span class="c2">★4 — 大観荘なら予算の6割。<strong>一の坊・松庵を選ぶと★2まで落ちます</strong></span></div>
+    <div class="cal-key"><span><i style="background:var(--sea)"></i>通常料金・道も空いている</span><span><i style="background:var(--accent-tint);box-shadow:inset 0 0 0 1px var(--line)"></i>年末年始料金・渋滞・休業</span></div>
+    <p class="fig-note">推奨は <strong>12月27日（日）発 — 29日（火）帰着</strong>。29日は帰るだけの日なので値上がりの影響を受けません。料金の傾向は例年にもとづく<span class="c">推定</span>。</p>
   </div>
 </section>
+
+<!-- ========== 景色 ========== -->
+<section id="scenes">
+  <div class="eyebrow">05 / FIELD NOTES</div>
+  <h2>少しだけ、外の景色</h2>
+  <div class="essay">
+    <figure>
+      <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Matsushima_islands_panorama.jpg/1280px-Matsushima_islands_panorama.jpg" width="1280" height="320" alt="福浦島から望む松島湾と松の島々" loading="lazy" decoding="async">
+      <figcaption>松島湾 — 福浦島から。<a href="https://commons.wikimedia.org/wiki/File:Matsushima_islands_panorama.jpg" target="_blank" rel="noopener">Ivan Mlinaric</a> / <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>・2010年10月</figcaption>
+    </figure>
+    <figure>
+      <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Fukuura.bridge.jpg/1280px-Fukuura.bridge.jpg" width="1280" height="960" alt="松島湾に架かる朱色の福浦橋" loading="lazy" decoding="async">
+      <figcaption>福浦橋。<a href="https://commons.wikimedia.org/wiki/File:Fukuura.bridge.jpg" target="_blank" rel="noopener">ブルーノ・プラス</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>・2021年2月</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ========== 予約前に ========== -->
 <section id="before">
-  <h2>予約前に</h2>
-  <div class="card stack">
-    <div class="notes" style="margin-top:0">
-      <div class="note warn">
-        <h4>どの宿でも必ず確認すること</h4>
-        <ul>
-          <li><strong>客室風呂の仕様。</strong>源泉か沸かし湯か、冬に使えるか（シャッターや囲いの有無）、湯温を自分で調整できるか。<strong>松庵は客室風呂の有無そのものが未確認</strong>です。</li>
-          <li><strong>妊娠中である旨。</strong>刺身・生ものを加熱料理へ変更できるか。多くの旅館は事前連絡で対応します。</li>
-          <li><strong>貝・海老・甲殻類が食べられない人がいる旨。</strong>会席の献立には高確率で入っています。</li>
-          <li><strong>二泊で献立が変わるか。</strong>同じ会席が2回出る宿があります。</li>
-          <li><strong>駐車場から客室までの動線。</strong>「駐車場無料」でも階段しかない宿があります。松島は高台の宿が多いので特に。</li>
-          <li><strong>レイトチェックアウトの可否</strong>と、年末年始のチェックイン最終時刻・夕食開始時刻。</li>
-        </ul>
-      </div>
-      <div class="note warm">
-        <h4>五軒をどう絞るか</h4>
-        <ul>
-          <li><strong>迷ったら大観荘。</strong>条件を全部満たし、価格が明示されていて、予算に無理なく収まります。</li>
-          <li><strong>寒がりなら好風亭。</strong>ガラスシャッター付きの客室風呂は12月末に効きます。ただし駐車場と実勢価格の確認が先。</li>
-          <li><strong>中日も歩きたいならセンチュリー。</strong>唯一の平地で、瑞巌寺まで歩けます。</li>
-          <li><strong>予算を使い切ってよいなら一の坊。</strong>館内で過ごす仕掛けが最も充実しています。<strong>ここは要相談。</strong></li>
-          <li><strong>静けさが最優先なら松庵。</strong>ただし予算超過が確定的で、客室風呂も未確認です。</li>
-        </ul>
-      </div>
+  <div class="eyebrow">06 / BEFORE BOOKING</div>
+  <h2>予約前に確認すること</h2>
+  <div class="notes">
+    <div class="note warn">
+      <h3>どの案でも伝える・確かめる</h3>
+      <ul>
+        <li><strong>妊娠中である旨</strong>。刺身・生ものを加熱料理に変えられるか。</li>
+        <li><strong>貝・海老・甲殻類を食べられない人がいる旨</strong>。会席には高確率で入っています。</li>
+        <li><strong>客室風呂の仕様</strong>（冬に使えるか、湯温を調整できるか）。E は有無そのものが未確認。</li>
+        <li><strong>駐車場から部屋までの動線</strong>と、<strong>レイトチェックアウト</strong>の可否。</li>
+      </ul>
     </div>
-    <div class="callout risk">
-      <h4>情報の鮮度について</h4>
-      <p>調査日は<strong>2026年8月16日</strong>、対象は<strong>2026年12月末</strong>です。約4か月先のため、年末年始の営業日程・宿の料金設定・空室は<strong>まだ公表されていないものが大半</strong>です。掲載の料金は調査日時点で公開されていた通常期の範囲で、<strong>年末年始料金は上振れします</strong>。<span class="c ok">確認済</span>は調査日時点で確認が取れた項目、<span class="c">推定</span>は例年の傾向からの見込み、<span class="c chk">要確認</span>は<strong>予約前に必ず個別確認が必要な項目</strong>です。</p>
+    <div class="note keep">
+      <h3>迷ったときの選び方</h3>
+      <ul>
+        <li><strong>迷ったら A（大観荘）</strong>。条件を全部満たし、価格が明示されていて予算に収まる。</li>
+        <li><strong>寒がりなら B（好風亭）</strong>。先に価格と駐車場を確認。</li>
+        <li><strong>中日も歩きたいなら C（センチュリー）</strong>。</li>
+        <li><strong>予算を使い切ってよいなら D（一の坊）</strong>——要相談。</li>
+        <li><strong>静けさ最優先なら E（松庵）</strong>——ただし予算超過と客室風呂が未確認。</li>
+      </ul>
     </div>
   </div>
+  <p class="fig-note">調査日は2026年8月16日、対象は2026年12月末です。<span class="c ok">確認済</span>は調査日時点で確認できた項目、<span class="c">推定</span>は例年からの見込み、<span class="c chk">要確認</span>は予約前に必ず個別確認が必要な項目です。</p>
 </section>
+
+<!-- ========== 出典 ========== -->
 <section id="src" class="src">
+  <div class="eyebrow">SOURCES</div>
   <h2>出典</h2>
-  <div class="card">
+  <div class="panel">
     <ul>
-      <li><b>宿</b><a href="https://www.taikanso.co.jp/" target="_blank" rel="noopener">ホテル松島大観荘 公式</a></li>
-      <li><b>宿</b><a href="https://komatsukan-kofutei.co.jp/oheya/with_roten/" target="_blank" rel="noopener">小松館 好風亭 展望温泉付客室</a></li>
-      <li><b>宿</b><a href="https://ssl.centuryhotel.co.jp/" target="_blank" rel="noopener">松島センチュリーホテル 公式</a></li>
-      <li><b>宿</b><a href="https://www.ichinobo.com/matsushima/" target="_blank" rel="noopener">松島一の坊 公式</a></li>
-      <li><b>宿</b><a href="https://www.jalan.net/yad374328/" target="_blank" rel="noopener">松島佐勘 松庵（じゃらん）</a></li>
-      <li><b>宿の比較</b><a href="https://www.jtb.co.jp/kokunai-hotel/list/040302/feature/rotenroom/" target="_blank" rel="noopener">露天風呂付き客室のある宿・松島（JTB）</a></li>
+      <li><b>A</b><a href="https://www.taikanso.co.jp/" target="_blank" rel="noopener">ホテル松島大観荘 公式</a></li>
+      <li><b>B</b><a href="https://komatsukan-kofutei.co.jp/oheya/with_roten/" target="_blank" rel="noopener">小松館 好風亭 展望温泉付客室</a></li>
+      <li><b>C</b><a href="https://ssl.centuryhotel.co.jp/" target="_blank" rel="noopener">松島センチュリーホテル 公式</a></li>
+      <li><b>D</b><a href="https://www.ichinobo.com/matsushima/" target="_blank" rel="noopener">松島一の坊 公式</a></li>
+      <li><b>E</b><a href="https://www.jalan.net/yad374328/" target="_blank" rel="noopener">松島佐勘 松庵（じゃらん）</a></li>
       <li><b>閉館情報</b><a href="https://www.ubudo.jp/" target="_blank" rel="noopener">ホテル海風土 閉館のおしらせ</a></li>
-      <li><b>松島</b><a href="https://www.matsushima-kanko.com/" target="_blank" rel="noopener">日本三景 松島 観光協会</a></li>
       <li><b>松島</b><a href="https://www.zuiganji.or.jp/" target="_blank" rel="noopener">国宝 瑞巌寺 公式</a></li>
       <li><b>仙台</b><a href="https://www.rikyu-gyutan.co.jp/" target="_blank" rel="noopener">牛たん炭焼 利久 公式</a></li>
       <li><b>温泉と妊娠</b><a href="https://www.env.go.jp/council/12nature/y123-14/900434128.pdf" target="_blank" rel="noopener">環境省 温泉法 禁忌症等の掲示について</a></li>
-      <li><b>高速料金</b><a href="https://www.driveplaza.com/search/e_tolls/" target="_blank" rel="noopener">ドラぷら 料金検索（NEXCO東日本）</a></li>
+      <li><b>高速料金</b><a href="https://www.driveplaza.com/search/e_tolls/" target="_blank" rel="noopener">ドラぷら 料金検索</a></li>
     </ul>
   </div>
 </section>
-<footer><p>冬の松島に、泊まりに行く。／ 年末2泊3日の旅行計画</p><p>宿泊料金・空室・営業日・所要時間は変動します。各公式情報で予約前に確認してください。掲載画像は実際の宿泊プランを示すものではありません。</p></footer></main>
+
+<footer>
+  <p>松島の宿 五案くらべ ／ 水戸発・2泊3日・年末休み ／ 調査日 2026年8月16日</p>
+  <p>写真は Wikimedia Commons の各作者による（ライセンスは各写真に記載）。営業時間・料金・空室は変動します。予約前に公式情報で再確認してください。</p>
+</footer>
+
+</main>
+
 <script>
+/* ---------- 比較表のデータ（●の数と、その根拠） ---------- */
+(function(){
+  var ROWS = [
+    ["客室風呂", "最優先条件。あるかどうか・確認済みか", {a:5,b:5,c:5,d:3,e:1}],
+    ["予算への収まり", "旅の総額が20万円に対してどうか", {a:5,b:4,c:3,d:2,e:1}],
+    ["冬の使いやすさ", "寒い日も客室風呂を使えるか", {a:3,b:5,c:3,d:3,e:2}],
+    ["静けさ", "客室数・立地", {a:2,b:3,c:2,d:3,e:5}],
+    ["館内で過ごせる", "中日の5時間をどこで過ごすか", {a:3,b:3,c:2,d:5,e:3}],
+    ["中日の身軽さ", "瑞巌寺まで歩けるか・車が要るか", {a:3,b:3,c:5,d:3,e:2}],
+    ["情報の確かさ", "確認済みの項目の多さ", {a:5,b:2,c:4,d:3,e:2}]
+  ];
+  var KEYS = ["a","b","c","d","e"], body = document.getElementById("mrows");
+  var total = {a:0,b:0,c:0,d:0,e:0};
+  ROWS.forEach(function(r){
+    var tr = document.createElement("tr");
+    var th = document.createElement("th"); th.scope = "row";
+    th.innerHTML = r[0] + "<small>" + r[1] + "</small>";
+    tr.appendChild(th);
+    KEYS.forEach(function(k){
+      var v = r[2][k]; total[k] += v;
+      var td = document.createElement("td");
+      td.setAttribute("data-p", k); td.setAttribute("data-col", k);
+      var s = '<span class="dots" role="img" aria-label="' + r[0] + ' 5段階中' + v + '">';
+      for (var i = 1; i <= 5; i++) s += '<i' + (i <= v ? ' class="f"' : '') + '></i>';
+      td.innerHTML = s + "</span>";
+      tr.appendChild(td);
+    });
+    body.appendChild(tr);
+  });
+  KEYS.forEach(function(k){ document.querySelector('[data-total="' + k + '"]').textContent = total[k]; });
+})();
+
+/* ---------- 案の選択：タイル・比較表・料金図・詳細を連動 ---------- */
+(function(){
+  document.documentElement.classList.add("js");
+  var tabs = document.getElementById("tabs"); tabs.hidden = false;
+  function pick(k){
+    document.querySelectorAll(".tile").forEach(function(t){ t.setAttribute("aria-pressed", t.dataset.pick === k); });
+    document.querySelectorAll("#tabs [role=tab]").forEach(function(t){
+      var on = t.dataset.pick === k; t.setAttribute("aria-selected", on); t.tabIndex = on ? 0 : -1; });
+    document.querySelectorAll(".detail").forEach(function(d){ d.hidden = d.id !== "detail-" + k; });
+    document.querySelectorAll("[data-col]").forEach(function(c){ c.classList.toggle("on", c.dataset.col === k); });
+  }
+  document.querySelectorAll(".tile").forEach(function(t){
+    t.addEventListener("click", function(){ pick(t.dataset.pick); });
+  });
+  var tabList = Array.prototype.slice.call(document.querySelectorAll("#tabs [role=tab]"));
+  tabList.forEach(function(t, i){
+    t.addEventListener("click", function(){ pick(t.dataset.pick); });
+    t.addEventListener("keydown", function(e){
+      var d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+      if (!d) return;
+      var n = tabList[(i + d + tabList.length) % tabList.length]; n.focus(); pick(n.dataset.pick);
+    });
+  });
+  pick("a");
+})();
+
 /* ---------- 日ごとのタイムライン帯 ---------- */
 (function(){
   var DAY = {
@@ -743,105 +902,27 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:25px 0 0;color:v
   var NAME = {drive:"運転",rest:"休憩",sight:"観光",meal:"食事",stay:"宿にいる"};
   var START = 8*60, SPAN = 13*60;
   function m(s){ var p = s.split(":"); return (+p[0])*60 + (+p[1]); }
-
+  function hm(x){ return Math.floor(x/60) + "h" + String(x%60).padStart(2,"0"); }
   document.querySelectorAll("[data-tl]").forEach(function(host){
-    var segs = DAY[host.getAttribute("data-tl")];
-    if(!segs) return;
-
-    var axis = document.createElement("div");
-    axis.className = "tlx";
+    var segs = DAY[host.getAttribute("data-tl")]; if(!segs) return;
+    var axis = document.createElement("div"); axis.className = "tlx";
     [8,10,12,14,16,18,20].forEach(function(h){
-      var s = document.createElement("span");
-      s.textContent = h + ":00";
-      s.style.left = ((h*60 - START) / SPAN * 100) + "%";
-      axis.appendChild(s);
-    });
+      var s = document.createElement("span"); s.textContent = h + ":00";
+      s.style.left = ((h*60 - START) / SPAN * 100) + "%"; axis.appendChild(s); });
     host.appendChild(axis);
-
-    var drive = 0;
-    var row = document.createElement("div"); row.className = "tlr";
-    var lab = document.createElement("div"); lab.className = "tll";
-    var track = document.createElement("div"); track.className = "tlt";
-
+    var drive = 0, row = document.createElement("div"), lab = document.createElement("div"), track = document.createElement("div");
+    row.className = "tlr"; lab.className = "tll"; track.className = "tlt";
     segs.forEach(function(sg){
-      var a = m(sg[0]), b = m(sg[1]);
-      if(sg[2] === "drive") drive += (b - a);
-      var el = document.createElement("div");
-      el.className = "sg " + sg[2];
-      el.style.left  = ((a - START) / SPAN * 100) + "%";
-      el.style.width = ((b - a) / SPAN * 100) + "%";
-      el.title = NAME[sg[2]] + " " + sg[0] + "–" + sg[1];
-      track.appendChild(el);
-    });
-
-    function hm(x){ return Math.floor(x/60) + "h" + String(x%60).padStart(2,"0"); }
+      var a = m(sg[0]), b = m(sg[1]); if(sg[2] === "drive") drive += b - a;
+      var el = document.createElement("div"); el.className = "sg " + sg[2];
+      el.style.left = ((a - START) / SPAN * 100) + "%"; el.style.width = ((b - a) / SPAN * 100) + "%";
+      el.title = NAME[sg[2]] + " " + sg[0] + "–" + sg[1]; track.appendChild(el); });
     lab.innerHTML = "<b>運転</b>" + hm(drive);
-    row.appendChild(lab); row.appendChild(track);
-    host.appendChild(row);
-
-    var key = document.createElement("div");
-    key.className = "tlk";
+    row.appendChild(lab); row.appendChild(track); host.appendChild(row);
+    var key = document.createElement("div"); key.className = "tlk";
     ["drive","rest","sight","meal","stay"].forEach(function(k){
-      var s = document.createElement("span");
-      s.innerHTML = '<i class="' + k + '"></i>' + NAME[k];
-      key.appendChild(s);
-    });
+      var s = document.createElement("span"); s.innerHTML = '<i class="' + k + '"></i>' + NAME[k]; key.appendChild(s); });
     host.appendChild(key);
   });
 })();
-
-/* ---------- ヒーローの雪 ---------- */
-(function(){
-  var c = document.getElementById("snow");
-  if(!c) return;
-  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  var ctx = c.getContext("2d"), flakes = [], w = 0, h = 0, raf;
-
-  function size(){
-    var r = c.getBoundingClientRect();
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    w = r.width; h = r.height;
-    c.width = w * dpr; c.height = h * dpr;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    build();
-  }
-  function build(){
-    var n = Math.round(Math.min(w, 1200) / 15);
-    flakes = [];
-    for(var i = 0; i < n; i++){
-      flakes.push({
-        x: Math.random() * w, y: Math.random() * h,
-        r: Math.random() * 1.4 + 0.4,
-        vy: Math.random() * 0.26 + 0.09,
-        vx: (Math.random() - 0.5) * 0.15,
-        a: Math.random() * 0.38 + 0.1,
-        p: Math.random() * Math.PI * 2
-      });
-    }
-  }
-  function draw(){
-    ctx.clearRect(0, 0, w, h);
-    for(var i = 0; i < flakes.length; i++){
-      var f = flakes[i];
-      f.p += 0.008; f.y += f.vy; f.x += f.vx + Math.sin(f.p) * 0.17;
-      if(f.y > h + 4){ f.y = -4; f.x = Math.random() * w; }
-      if(f.x > w + 4) f.x = -4;
-      if(f.x < -4) f.x = w + 4;
-      ctx.beginPath();
-      ctx.fillStyle = "rgba(214,229,242," + f.a + ")";
-      ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
-      ctx.fill();
-    }
-    raf = requestAnimationFrame(draw);
-  }
-  size(); draw();
-  var t;
-  window.addEventListener("resize", function(){ clearTimeout(t); t = setTimeout(size, 180); });
-  document.addEventListener("visibilitychange", function(){
-    if(document.hidden){ cancelAnimationFrame(raf); }
-    else { raf = requestAnimationFrame(draw); }
-  });
-})();
 </script>
-
-</body></html>
