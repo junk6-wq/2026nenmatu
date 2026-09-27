@@ -37,3 +37,9 @@ npx wrangler login     # ブラウザで Cloudflare にログイン
 npx wrangler deploy    # docs/ を公開
 npx wrangler dev       # http://localhost:8787 で確認
 ```
+
+## 自動マージ
+
+`.github/workflows/verify.yml` の `automerge` ジョブが、`claude/` で始まるブランチの PR を、
+構造検証（structure）と表示検証（rendered）が両方通ったときだけ main にマージする。
+人が作った PR は対象外。マージ後は Cloudflare が自動で再公開する。
