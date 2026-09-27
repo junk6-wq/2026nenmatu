@@ -23,15 +23,15 @@
    ========================================================== */
 :root{
   --paper:#FFF6E6; --surface:#FFFFFF; --sunken:#F6EFE2; --line:#D8CFBE; --hair:#ECE4D4;
-  --ink:#1E1B3A; --ink-2:#3B3760; --muted:#5B5673;
-  --edge:#1E1B3A;
+  --ink:#2B2013; --ink-2:#4A3B26; --muted:#6E5D45;
+  --edge:#2B2013;
   --sea:#0B6F75; --sea-tint:#DDF3EF; --accent:#B8285A; --accent-tint:#FFE3EC; --gold:#FFC93C;
   --yellow:#FFD23F; --pink:#FF5C8A; --sky:#5CC8FF;
   --ok:#1C6E47; --warn:#B3261E; --hatch:#8A84A8;
-  --pa:#0A7268; --pb:#2459C9; --pc:#42700A; --pd:#B23A0B; --pe:#8138C7;
+  --pa:#0A7268; --pb:#2459C9; --pc:#42700A; --pd:#B23A0B; --pe:#9C3F8F;
   --on-p:#FFFFFF;
   --dot-off:#E4DCCB;
-  --band:#1E1B3A; --on-band:#FFFFFF; --on-band-2:#D4CFF2;
+  --band:#173F3E; --on-band:#FFFFFF; --on-band-2:#BFE8DE;
   --f-disp:"Mochiy Pop One","Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;
   --f-body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Yu Gothic",YuGothic,Meiryo,system-ui,sans-serif;
   --f-num:"Poppins","Zen Maru Gothic","Hiragino Sans",system-ui,sans-serif;
@@ -40,29 +40,29 @@
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --paper:#15132A; --surface:#211E3D; --sunken:#2A2750; --line:#4A4672; --hair:#34305B;
-    --ink:#F4F1FF; --ink-2:#D6D1F2; --muted:#B0AAD3;
-    --edge:#8C86C9;
-    --sea:#5FD3C8; --sea-tint:#1D3B45; --accent:#FF8FB1; --accent-tint:#48223A; --gold:#D9A92E;
+    --paper:#1C160F; --surface:#28211A; --sunken:#332A1E; --line:#4E4128; --hair:#3A3021;
+    --ink:#F7EFE0; --ink-2:#DCD0B8; --muted:#AA9C7F;
+    --edge:#C9B27A;
+    --sea:#5FD3C8; --sea-tint:#1E3A38; --accent:#FF8FB1; --accent-tint:#4A2A22; --gold:#D9A92E;
     --yellow:#FFD23F; --pink:#FF5C8A; --sky:#5CC8FF;
-    --ok:#6FD6A0; --warn:#FF9C85; --hatch:#7C77A6;
-    --pa:#4FD1C0; --pb:#86ABFF; --pc:#A9D65E; --pd:#FF9A63; --pe:#CBA0FF;
-    --on-p:#15132A;
-    --dot-off:#3A3663;
-    --band:#0C0B1C; --on-band:#FFFFFF; --on-band-2:#D4CFF2;
+    --ok:#6FD6A0; --warn:#FF9C85; --hatch:#8C8264;
+    --pa:#4FD1C0; --pb:#86ABFF; --pc:#A9D65E; --pd:#FF9A63; --pe:#D9A0E0;
+    --on-p:#1C160F;
+    --dot-off:#453B28;
+    --band:#0E2B29; --on-band:#FFFFFF; --on-band-2:#BFE8DE;
   }
 }
 :root[data-theme="dark"]{
-  --paper:#15132A; --surface:#211E3D; --sunken:#2A2750; --line:#4A4672; --hair:#34305B;
-  --ink:#F4F1FF; --ink-2:#D6D1F2; --muted:#B0AAD3;
-  --edge:#8C86C9;
-  --sea:#5FD3C8; --sea-tint:#1D3B45; --accent:#FF8FB1; --accent-tint:#48223A; --gold:#D9A92E;
+  --paper:#1C160F; --surface:#28211A; --sunken:#332A1E; --line:#4E4128; --hair:#3A3021;
+  --ink:#F7EFE0; --ink-2:#DCD0B8; --muted:#AA9C7F;
+  --edge:#C9B27A;
+  --sea:#5FD3C8; --sea-tint:#1E3A38; --accent:#FF8FB1; --accent-tint:#4A2A22; --gold:#D9A92E;
   --yellow:#FFD23F; --pink:#FF5C8A; --sky:#5CC8FF;
-  --ok:#6FD6A0; --warn:#FF9C85; --hatch:#7C77A6;
-  --pa:#4FD1C0; --pb:#86ABFF; --pc:#A9D65E; --pd:#FF9A63; --pe:#CBA0FF;
-  --on-p:#15132A;
-  --dot-off:#3A3663;
-  --band:#0C0B1C; --on-band:#FFFFFF; --on-band-2:#D4CFF2;
+  --ok:#6FD6A0; --warn:#FF9C85; --hatch:#8C8264;
+  --pa:#4FD1C0; --pb:#86ABFF; --pc:#A9D65E; --pd:#FF9A63; --pe:#D9A0E0;
+  --on-p:#1C160F;
+  --dot-off:#453B28;
+  --band:#0E2B29; --on-band:#FFFFFF; --on-band-2:#BFE8DE;
 }
 
 *{box-sizing:border-box}
@@ -94,7 +94,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .hero .lede{font-size:clamp(15px,1.8vw,18px);line-height:1.95;font-weight:700;max-width:32em;color:var(--ink-2)}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0;padding:0;list-style:none}
 .chips li{font:700 13.5px/1 var(--f-body);background:var(--surface);border:2.5px solid var(--edge);border-radius:99px;padding:9px 14px;box-shadow:3px 3px 0 var(--edge)}
-.chips li.hot{background:var(--yellow);color:#1E1B3A}
+.chips li.hot{background:var(--yellow);color:#2B2013}
 .chips .num{font-weight:700}
 .hero-pic{position:relative;margin:10px 8px 0}
 .hero-pic::before,.hero-pic::after{content:"";position:absolute;border-radius:50%;z-index:0}
@@ -104,9 +104,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   box-shadow:10px 10px 0 var(--edge);transform:rotate(-3deg);background:var(--sea)}
 .hero-pic img{width:100%;aspect-ratio:3/2;object-fit:cover}
 .sticker{position:absolute;z-index:2;font:400 clamp(13px,1.6vw,16px)/1 var(--f-disp);padding:10px 16px;border-radius:99px;
-  border:2.5px solid #1E1B3A;box-shadow:4px 4px 0 #1E1B3A;white-space:nowrap}
-.sticker.s1{left:-6px;top:-18px;background:#FFFFFF;color:#1E1B3A;transform:rotate(-6deg)}
-.sticker.s2{right:-10px;bottom:56px;background:#1E1B3A;color:#FFD23F;transform:rotate(5deg)}
+  border:2.5px solid #2B2013;box-shadow:4px 4px 0 #2B2013;white-space:nowrap}
+.sticker.s1{left:-6px;top:-18px;background:#FFFFFF;color:#2B2013;transform:rotate(-6deg)}
+.sticker.s2{right:-10px;bottom:56px;background:#2B2013;color:#FFD23F;transform:rotate(5deg)}
 @media(max-width:899px){.hero-pic::after{right:auto;left:-6%;bottom:auto;top:62%;width:26%}}
 .hero-pic figcaption{position:relative;z-index:2;margin-top:26px;font-size:11.5px;line-height:1.6;color:var(--muted);text-align:right}
 .hero-pic figcaption a{color:inherit}
@@ -114,7 +114,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 
 /* ---------------- セクション共通 ---------------- */
 section{padding-top:clamp(56px,8vw,100px)}
-.eyebrow{display:inline-block;font:700 12px/1 var(--f-num);letter-spacing:.12em;padding:7px 12px;border-radius:99px;background:var(--yellow);color:#1E1B3A;border:2px solid var(--edge)}
+.eyebrow{display:inline-block;font:700 12px/1 var(--f-num);letter-spacing:.12em;padding:7px 12px;border-radius:99px;background:var(--yellow);color:#2B2013;border:2px solid var(--edge)}
 section h2{font-size:clamp(27px,4.6vw,46px);margin:14px 0 10px}
 .sub{color:var(--ink-2);max-width:44em;font-size:15px}
 .panel{background:var(--surface);border:3px solid var(--edge);border-radius:var(--r);padding:clamp(18px,3vw,32px);margin-top:28px;box-shadow:8px 8px 0 var(--yellow)}
@@ -158,7 +158,7 @@ section h2{font-size:clamp(27px,4.6vw,46px);margin:14px 0 10px}
 .tile .sum small{font-size:11.5px;color:var(--muted);font-weight:700}
 .tile .why{grid-area:why;font-size:12.5px;line-height:1.7;color:var(--ink-2);margin-top:8px}
 .tile .badge{position:absolute;top:10px;right:10px;z-index:1;font:400 13px/1 var(--f-disp);
-  background:var(--yellow);color:#1E1B3A;border:2.5px solid #1E1B3A;padding:7px 11px;border-radius:99px;transform:rotate(6deg);box-shadow:3px 3px 0 #1E1B3A}
+  background:var(--yellow);color:#2B2013;border:2.5px solid #2B2013;padding:7px 11px;border-radius:99px;transform:rotate(6deg);box-shadow:3px 3px 0 #2B2013}
 /* 予算メーター：20万円に対して総額がどこまで届くか */
 .meter{grid-area:bar;position:relative;height:12px;background:var(--sunken);margin-top:8px;border:2px solid var(--edge);border-radius:99px;overflow:hidden}
 .meter i{position:absolute;top:0;bottom:0;background:var(--p)}
@@ -230,8 +230,8 @@ section h2{font-size:clamp(27px,4.6vw,46px);margin:14px 0 10px}
 .axis .ticks{position:relative;height:18px;font:700 11px var(--f-num);color:var(--muted)}
 .axis .ticks span{position:absolute;transform:translateX(-50%);white-space:nowrap}
 .axis .ticks span:first-child{transform:none}
-.budget-key{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:900;margin-bottom:12px;background:var(--yellow);color:#1E1B3A;border-radius:99px;padding:4px 12px}
-.budget-key i{width:0;height:14px;border-left:3px solid #1E1B3A}
+.budget-key{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:900;margin-bottom:12px;background:var(--yellow);color:#2B2013;border-radius:99px;padding:4px 12px}
+.budget-key i{width:0;height:14px;border-left:3px solid #2B2013}
 
 /* ---------------- 詳細（タブ） ---------------- */
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
@@ -254,7 +254,7 @@ section h2{font-size:clamp(27px,4.6vw,46px);margin:14px 0 10px}
 .dhead .tag{display:inline-block;font-size:12px;color:var(--p);font-weight:900;letter-spacing:.04em;border:2px solid var(--p);border-radius:99px;padding:1px 10px;margin-bottom:4px}
 .links{margin-left:auto;display:flex;gap:8px}
 .links a{font:700 12.5px var(--f-body);text-decoration:none;border:2.5px solid var(--edge);border-radius:99px;padding:5px 14px;white-space:nowrap;background:var(--surface);box-shadow:2px 2px 0 var(--edge)}
-.links a:hover{background:var(--yellow);color:#1E1B3A}
+.links a:hover{background:var(--yellow);color:#2B2013}
 .dgrid{display:grid;grid-template-columns:1fr;border-top:2px dashed var(--line)}
 @media(min-width:860px){.dgrid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}}
 .spec{display:grid;grid-template-columns:1fr 1fr;align-content:start;margin:0}
@@ -284,7 +284,7 @@ section h2{font-size:clamp(27px,4.6vw,46px);margin:14px 0 10px}
 details.day{background:var(--surface);border:3px solid var(--edge);border-radius:var(--r);margin-top:16px;overflow:hidden}
 details.day>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 18px}
 details.day>summary::-webkit-details-marker{display:none}
-details.day>summary::before{content:"＋";display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--yellow);color:#1E1B3A;font-weight:900;flex:none}
+details.day>summary::before{content:"＋";display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--yellow);color:#2B2013;font-weight:900;flex:none}
 details.day[open]>summary::before{content:"－"}
 details.day[open]>summary{border-bottom:2px dashed var(--line)}
 details.day .n{font:800 12px var(--f-num);letter-spacing:.08em;color:var(--sea)}
