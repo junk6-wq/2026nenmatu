@@ -2,6 +2,7 @@ name: verify
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
   push:
     branches: [main]
 
@@ -86,3 +87,24 @@ jobs:
         with:
           name: lighthouse-report
           path: lh.json
+
+  automerge:
+    # Claude が作ったブランチ（claude/…）の PR だけ、検証が全部通ったら main にマージする。
+    # 人が作った PR・フォークからの PR は対象外。マージ後の main への push で Cloudflare が公開する。
+    needs: [structure, rendered]
+    if: >-
+      github.event_name == 'pull_request' &&
+      startsWith(github.head_ref, 'claude/') &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: 下書きを解除してマージ
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.html_url }}
+        run: |
+          gh pr ready "$PR" || true
+          gh pr merge "$PR" --merge
