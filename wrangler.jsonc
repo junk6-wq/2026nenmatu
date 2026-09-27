@@ -1,0 +1,12 @@
+// Cloudflare Workers（静的アセット）で docs/ をそのまま配信する設定。
+// ビルド工程は無い。docs/index.html が全て（.claude/skills/shiori/SKILL.md 参照）。
+// Cloudflare ダッシュボードの Git 連携からは、ビルドコマンド空欄・
+// デプロイコマンド `npx wrangler deploy` で動く。
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "matsushima-shiori",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./docs"
+  }
+}
