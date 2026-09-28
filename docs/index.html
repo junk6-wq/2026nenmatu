@@ -157,6 +157,9 @@ section h2{font-size:clamp(27px,4.6vw,46px);margin:14px 0 10px}
 .tile .sum b{font:800 26px/1.1 var(--f-num);letter-spacing:-.01em;color:var(--p)}
 .tile .sum small{font-size:11.5px;color:var(--muted);font-weight:700}
 .tile .why{grid-area:why;font-size:12.5px;line-height:1.7;color:var(--ink-2);margin-top:8px}
+.tile .badge.been{background:var(--surface);color:var(--ink);border-color:var(--edge);transform:rotate(-4deg)}
+.tile.been .tpic img{filter:grayscale(.55)}
+.dtext .been-note{margin-bottom:12px;padding:10px 14px;border-radius:14px;background:var(--sunken);color:var(--ink);border:2px dashed var(--line)}
 .tile .badge{position:absolute;top:10px;right:10px;z-index:1;font:400 13px/1 var(--f-disp);
   background:var(--yellow);color:#2B2013;border:2.5px solid #2B2013;padding:7px 11px;border-radius:99px;transform:rotate(6deg);box-shadow:3px 3px 0 #2B2013}
 /* 予算メーター：20万円に対して総額がどこまで届くか */
@@ -403,16 +406,17 @@ footer .bye{font:400 clamp(18px,3vw,24px)/1.4 var(--f-disp);color:var(--on-band)
   <p class="sub">数字は<strong>旅の総額</strong>（宿2泊＋移動・食事など36,300円）。バーは予算20万円（黒い線）に対してどこまで届くか。タップすると、下の比較表と詳細がその案に切り替わります。</p>
 
   <div class="tiles" id="tiles" style="--budget:57.14%">
-    <button class="tile" data-p="a" data-pick="a" aria-pressed="true" aria-controls="detail-a" type="button">
+    <button class="tile been" data-p="a" data-pick="a" aria-pressed="false" aria-controls="detail-a" type="button">
       <span class="tpic"><img src="https://www.taikanso.co.jp/rooms/renewal/images/img_rooms1-1-2.webp" width="1090" height="750" alt="" loading="lazy" decoding="async"><span class="pk">公式写真</span></span>
-      <span class="badge">本命</span>
-      <span class="let">A</span><span class="name">ホテル松島大観荘</span><span class="tag">条件を全部満たす</span>
+      <span class="badge been">前回泊まった</span>
+      <span class="let">A</span><span class="name">ホテル松島大観荘</span><span class="tag">今回は見送り</span>
       <span class="sum"><b class="num">10.8〜12.4</b><small>万円</small></span>
       <span class="meter" aria-hidden="true"><i style="left:30.94%;width:4.57%"></i></span>
-      <span class="why">露天風呂付和室の2食付が<strong>確認済みで予算の6割</strong>。</span>
+      <span class="why">条件は全部満たすが、<strong>前に泊まったので今回は別の宿に</strong>。満室時の控え。</span>
     </button>
-    <button class="tile" data-p="b" data-pick="b" aria-pressed="false" aria-controls="detail-b" type="button">
+    <button class="tile" data-p="b" data-pick="b" aria-pressed="true" aria-controls="detail-b" type="button">
       <span class="tpic"><img src="https://komatsukan-kofutei.co.jp/wp-content/themes/komatsukan/img/oheya/with_roten/shiosai2.jpg" width="1034" height="672" alt="" loading="lazy" decoding="async"><span class="pk">公式写真</span></span>
+      <span class="badge">本命</span>
       <span class="let">B</span><span class="name">小松館 好風亭</span><span class="tag">冬に強い</span>
       <span class="sum"><b class="num">8.3〜</b><small>万円（上限 要確認）</small></span>
       <span class="meter" aria-hidden="true"><i class="open" style="left:23.57%;width:22%"></i></span>
@@ -491,8 +495,8 @@ footer .bye{font:400 clamp(18px,3vw,24px)/1.4 var(--f-disp);color:var(--on-band)
   <p class="sub">決めた条件は、<strong>客室に露天風呂か展望風呂があること</strong>（最優先）・連泊できること・駐車場無料で部屋まで階段がないこと・2食付き・部屋以外の居場所があること。</p>
 
   <div class="tabs" role="tablist" aria-label="案を選ぶ" id="tabs" hidden>
-    <button role="tab" data-p="a" data-pick="a" aria-selected="true"  aria-controls="detail-a" id="tab-a"><b>A</b>大観荘</button>
-    <button role="tab" data-p="b" data-pick="b" aria-selected="false" aria-controls="detail-b" id="tab-b"><b>B</b>好風亭</button>
+    <button role="tab" data-p="a" data-pick="a" aria-selected="false" aria-controls="detail-a" id="tab-a"><b>A</b>大観荘</button>
+    <button role="tab" data-p="b" data-pick="b" aria-selected="true"  aria-controls="detail-b" id="tab-b"><b>B</b>好風亭</button>
     <button role="tab" data-p="c" data-pick="c" aria-selected="false" aria-controls="detail-c" id="tab-c"><b>C</b>センチュリー</button>
     <button role="tab" data-p="d" data-pick="d" aria-selected="false" aria-controls="detail-d" id="tab-d"><b>D</b>一の坊</button>
     <button role="tab" data-p="e" data-pick="e" aria-selected="false" aria-controls="detail-e" id="tab-e"><b>E</b>松庵</button>
@@ -500,7 +504,7 @@ footer .bye{font:400 clamp(18px,3vw,24px)/1.4 var(--f-disp);color:var(--on-band)
 
   <article class="detail" data-p="a" id="detail-a" role="tabpanel" aria-labelledby="tab-a">
     <figure class="dpic"><img src="https://www.taikanso.co.jp/rooms/renewal/images/img_rooms1-1-2.webp" width="1090" height="750" loading="lazy" decoding="async" alt="大観荘の客室。大きな窓の向こうに松島湾の島々"><span class="pk">公式写真</span><figcaption>ホテル松島大観荘の客室（リニューアル客室）。写真：<a href="https://www.taikanso.co.jp/rooms/renewal/" target="_blank" rel="noopener">ホテル松島大観荘 公式サイト</a>より</figcaption></figure>
-    <div class="dhead"><span class="let">A</span><div><span class="tag">本命・条件を全部満たす</span><h3>ホテル松島大観荘</h3></div>
+    <div class="dhead"><span class="let">A</span><div><span class="tag">前回泊まった宿・今回は見送り</span><h3>ホテル松島大観荘</h3></div>
       <span class="links"><a href="https://www.taikanso.co.jp/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%BE%E5%B3%B6%E5%A4%A7%E8%A6%B3%E8%8D%98" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
       <div class="spec">
@@ -512,6 +516,7 @@ footer .bye{font:400 clamp(18px,3vw,24px)/1.4 var(--f-disp);color:var(--on-band)
         <dl><dt>予算の残り</dt><dd class="num">約75,700円〜</dd></dl>
       </div>
       <div class="dtext">
+        <p class="been-note"><strong>前に泊まったことがあるので、今回は別の宿にします。</strong>条件は全部満たしているので、ほかの宿が満室だったときの控えとして残しています。</p>
         <p><span class="lead">条件を全部満たしたうえで、いちばん素直に予算に収まります。</span>露天風呂付和室の2食付が2名36,000〜44,000円と明示されており、2泊でも72,000〜88,000円。宿に回せる163,700円の半分程度なので、余りを部屋のグレードか食事に回せます。高台から松島湾を見下ろす眺望が売りで、D の一の坊とは約20mの隣接です。</p>
         <p class="against"><b>弱いところ：</b>大型ホテルなので、静けさでは E の松庵に劣ります。館内で過ごす仕掛けも D ほどではありません。</p>
       </div>
@@ -520,7 +525,7 @@ footer .bye{font:400 clamp(18px,3vw,24px)/1.4 var(--f-disp);color:var(--on-band)
 
   <article class="detail" data-p="b" id="detail-b" role="tabpanel" aria-labelledby="tab-b">
     <figure class="dpic"><img src="https://komatsukan-kofutei.co.jp/wp-content/themes/komatsukan/img/oheya/with_roten/shiosai2.jpg" width="1034" height="672" loading="lazy" decoding="async" alt="好風亭の展望温泉付客室。窓辺の湯船から松島湾を望む"><span class="pk">公式写真</span><figcaption>小松館 好風亭の展望温泉付客室。写真：<a href="https://komatsukan-kofutei.co.jp/oheya/with_roten/" target="_blank" rel="noopener">小松館 好風亭 公式サイト</a>より</figcaption></figure>
-    <div class="dhead"><span class="let">B</span><div><span class="tag">冬に強い</span><h3>松島温泉 小松館 好風亭</h3></div>
+    <div class="dhead"><span class="let">B</span><div><span class="tag">本命・冬に強い</span><h3>松島温泉 小松館 好風亭</h3></div>
       <span class="links"><a href="https://komatsukan-kofutei.co.jp/oheya/with_roten/" target="_blank" rel="noopener">公式</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B3%B6%E6%B8%A9%E6%B3%89%20%E5%B0%8F%E6%9D%BE%E9%A4%A8%E5%A5%BD%E9%A2%A8%E4%BA%AD" target="_blank" rel="noopener">地図</a></span></div>
     <div class="dgrid">
       <div class="spec">
@@ -875,8 +880,8 @@ footer .bye{font:400 clamp(18px,3vw,24px)/1.4 var(--f-disp);color:var(--on-band)
     <div class="note keep">
       <h3>迷ったときの選び方</h3>
       <ul>
-        <li><strong>迷ったら A（大観荘）</strong>。条件を全部満たし、価格が明示されていて予算に収まる。</li>
-        <li><strong>寒がりなら B（好風亭）</strong>。先に価格と駐車場を確認。</li>
+        <li><strong>迷ったら B（好風亭）</strong>。冬でも客室風呂が使え、予算にも収まる見込み。<strong>客室風呂付きの価格と駐車場を先に確認</strong>。</li>
+        <li><strong>A（大観荘）は前に泊まったので今回は見送り</strong>。条件は全部満たすので、B〜D が満室のときの控えに。</li>
         <li><strong>中日も歩きたいなら C（センチュリー）</strong>。</li>
         <li><strong>予算を使い切ってよいなら D（一の坊）</strong>——要相談。</li>
         <li><strong>静けさ最優先なら E（松庵）</strong>——ただし予算超過と客室風呂が未確認。</li>
@@ -970,7 +975,7 @@ footer .bye{font:400 clamp(18px,3vw,24px)/1.4 var(--f-disp);color:var(--on-band)
       var n = tabList[(i + d + tabList.length) % tabList.length]; n.focus(); pick(n.dataset.pick);
     });
   });
-  pick("a");
+  pick("b");
 })();
 
 /* ---------- 日ごとのタイムライン帯 ---------- */
